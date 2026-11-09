@@ -103,13 +103,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   const projectData = {
     drone: {
-      title: "ESP32 Drone Flight Controller & Firmware",
-      subtitle: "Custom FreeRTOS C++ Firmware • 1kHz Loop • MPU-6050 6-DOF IMU • PID Closed-Loop",
+      title: "ESP32 Drone Flight Controller & Control Software",
+      subtitle: "Custom FreeRTOS C++ Software • 1kHz Loop • MPU-6050 6-DOF IMU • PID Closed-Loop",
       period: "2025 - 2026 | Project Lead",
       content: `
         <div class="space-y-4 text-slate-300 text-sm font-body leading-relaxed">
           <div class="p-3.5 bg-[#fbf9f4] rounded-xl border-2 border-[#1e2022] shadow-[2px_2px_0px_#1e2022]">
-            <h4 class="font-display text-cyan-400 text-sm font-bold uppercase mb-1">Architecture & Hardware Pinout</h4>
+            <h4 class="font-display text-cyan-400 text-sm font-bold uppercase mb-1">Software Architecture & Task Isolation</h4>
             <p>Built directly around the ESP32 dual-core Xtensa 32-bit LX6 processor running at 240MHz. The flight controller operates a deterministic 1kHz control loop pinned to Core 1, isolating sensor reading and motor calculation from Core 0 which handles wireless telemetry and PPM receiver decoding.</p>
           </div>
           <div>
@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `
     },
     rccar: {
-      title: "RC Car Robotics Workshop & Hardware Platform",
+      title: "IEEE Robotics & Firmware Workshop Lead",
       subtitle: "IEEE Student Branch PACE & ComedKares • Motor Drivers • Volunteer Leadership",
       period: "2024 - 2025 | Head Volunteer",
       content: `
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
     help: () => `
       <div class="text-cyan-400 font-bold mb-1 font-display text-sm">AVAILABLE FIELD COMMANDS:</div>
       <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-slate-300">
-        <div><span class="text-amber-400 font-bold font-mono">skills</span> - Hardware, firmware & languages</div>
+        <div><span class="text-amber-400 font-bold font-mono">skills</span> - Software stack & developer tools</div>
         <div><span class="text-amber-400 font-bold font-mono">drone</span> - ESP32 flight controller notes</div>
         <div><span class="text-amber-400 font-bold font-mono">hydro</span> - Hydroponic AgTech telemetry</div>
         <div><span class="text-amber-400 font-bold font-mono">ieee</span> - IEEE SB, GRSS & SPS leadership</div>
@@ -267,13 +267,13 @@ document.addEventListener('DOMContentLoaded', () => {
     `,
     skills: () => `
       <div class="text-cyan-400 font-bold font-display text-sm">TECHNICAL ARSENAL:</div>
-      <div>• <span class="font-bold text-dark">Languages:</span> C++, C, Python, Java, JavaScript, Lua, SQL, HTML/CSS</div>
-      <div>• <span class="font-bold text-dark">Embedded & Hardware:</span> ESP32, MPU6050, FreeRTOS, PID Control, PWM, PPM, Sensors (pH, EC, DHT22)</div>
-      <div>• <span class="font-bold text-dark">Tools:</span> Linux/Bash (GLUB), Git/GitHub, Home Assistant, VS Code, PlatformIO</div>
+      <div>• <span class="font-bold text-dark">Languages:</span> Python, Java, C++, C, JavaScript, SQL, HTML/CSS, Lua</div>
+      <div>• <span class="font-bold text-dark">Software & Systems:</span> OOP Architecture, RESTful APIs, FreeRTOS Multithreading, MQTT Telemetry, PID Algorithms, State Machines</div>
+      <div>• <span class="font-bold text-dark">DevOps & Linux:</span> Linux / Bash (GLUB), Git/GitHub, Node.js, Home Assistant, VS Code, PlatformIO</div>
     `,
     drone: () => `
-      <div class="text-amber-400 font-bold font-display text-sm">ESP32 DRONE FLIGHT CONTROLLER:</div>
-      <div>Firmware Lead: Custom flight controller with MPU-6050 IMU, PPM receiver decode, PWM ESCs & PID tuning. Successfully eliminated gyro drift and oscillation through hardware filtering.</div>
+      <div class="text-amber-400 font-bold font-display text-sm">ESP32 DRONE CONTROL SOFTWARE:</div>
+      <div>Software Lead: Architected real-time flight-control software with MPU-6050 IMU, PPM pulse decoding, high-resolution PWM loops & PID algorithms. Eliminated sensor drift with digital complementary filtering.</div>
     `,
     hydro: () => `
       <div class="text-emerald-500 font-bold font-display text-sm">SMART HYDROPONIC FARMING (2026 - CURRENT):</div>
@@ -292,8 +292,8 @@ document.addEventListener('DOMContentLoaded', () => {
     `,
     clubs: () => `
       <div class="text-cyan-400 font-bold font-display text-sm">CAMPUS CLUBS:</div>
-      <div>• <span class="text-emerald-500 font-bold">EMBED Club:</span> Active hardware tinkering, robotics and microcontroller firmware labs.</div>
-      <div>• <span class="text-amber-400 font-bold">GLUB (PACE):</span> GNU/Linux Users' Branch — promoting open-source software, terminal tools, and Linux adoption.</div>
+      <div>• <span class="text-amber-400 font-bold">GLUB (PACE):</span> GNU/Linux Users' Branch — promoting open-source software, terminal tools, Git workflows, and Linux adoption.</div>
+      <div>• <span class="text-emerald-500 font-bold">EMBED Club:</span> Microcontroller software, sensor telemetry, and embedded logic programming.</div>
     `,
     edu: () => `
       <div class="text-dark font-bold font-display text-sm">EDUCATION:</div>

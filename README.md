@@ -1,6 +1,6 @@
 # Farseen Ahras Raufali — Personal Portfolio Website
 
-A bespoke, high-performance portfolio website engineered for **Farseen Ahras Raufali** — Computer Science & Engineering Undergraduate, Embedded Systems & Firmware Developer, IoT Innovator, and IEEE Student Leader at P A College of Engineering (PACE).
+A bespoke, high-performance portfolio website engineered for **Farseen Ahras Raufali** — Computer Science & Engineering Undergraduate, Software Engineer, Backend & Systems Developer, and IEEE Student Leader at P A College of Engineering (PACE).
 
 ## 🚀 Live Preview & Deployment
 To view the portfolio locally:
