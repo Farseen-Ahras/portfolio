@@ -25,6 +25,22 @@ This file tracks pending information to be provided by Farseen Ahras to expand t
 
 ---
 
+## ✅ Completed: GitHub Profile Integration
+*Status: Verified & fully integrated across Navigation, Hero, Contact Cards, Footer, Resume, and Terminal.*
+
+- **GitHub Profile**: `https://github.com/Farseen-Ahras`
+- **User**: Farseen Ahras (`@Farseen-Ahras`)
+- **Integration Points**:
+  - Desktop Navigation Quick Actions (with GitHub mark)
+  - Mobile Drawer Navigation
+  - Hero CTA stamp buttons
+  - Contact Section: Dedicated Source Repositories Card
+  - Curriculum Vitae / Resume header details
+  - Terminal playground (`github` and `contact` commands)
+  - Footer bottom credits
+
+---
+
 ## 💡 Future Enhancements You Can Add Anytime:
 - Direct PDF link / proceedings URL for the IEEE DISCOVER 2025 Book of Abstracts once published online.
-- Links to GitHub repositories for your ESP32 Drone or Hydroponics project.
+- Specific repository links for your ESP32 Drone (`https://github.com/Farseen-Ahras/...`) or Hydroponics project.

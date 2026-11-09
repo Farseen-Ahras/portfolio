@@ -260,7 +260,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <div><span class="text-amber-400 font-bold font-mono">abstracts</span> - IEEE DISCOVER 2025 Book of Abstracts</div>
         <div><span class="text-amber-400 font-bold font-mono">clubs</span> - EMBED Club & GLUB activities</div>
         <div><span class="text-amber-400 font-bold font-mono">edu</span> - Academic background & CGPA</div>
-        <div><span class="text-amber-400 font-bold font-mono">contact</span> - Email, WhatsApp & LinkedIn</div>
+        <div><span class="text-amber-400 font-bold font-mono">github</span> - Official GitHub profile & repos</div>
+        <div><span class="text-amber-400 font-bold font-mono">contact</span> - Email, WhatsApp, LinkedIn & GitHub</div>
         <div><span class="text-amber-400 font-bold font-mono">pid-tune</span> - ESP32 PID loop parameters</div>
         <div><span class="text-amber-400 font-bold font-mono">clear</span> - Clear logbook screen</div>
       </div>
@@ -303,10 +304,16 @@ document.addEventListener('DOMContentLoaded', () => {
       <div>• <span class="text-cyan-400 font-bold">High School (PCMC)</span> | Dhakeerath EMHSS | 90%</div>
       <div>• <span class="text-cyan-400 font-bold">CS50x</span> | Harvard University</div>
     `,
+    github: () => `
+      <div class="text-cyan-400 font-bold font-display text-sm">GITHUB PROFILE & OPEN-SOURCE CODE:</div>
+      <div>• <span class="font-bold text-dark">URL:</span> <a href="https://github.com/Farseen-Ahras" target="_blank" class="text-pen-blue underline font-bold">github.com/Farseen-Ahras</a></div>
+      <div>• Explore source code repositories, ESP32 flight controller firmware, hydroponic AgTech modules, and computer science projects.</div>
+    `,
     contact: () => `
       <div class="text-cyan-400 font-bold font-display text-sm">DIRECT CONTACT INFO:</div>
       <div>Email: <a href="mailto:farseenahrasraufali@gmail.com" class="text-pen-blue underline">farseenahrasraufali@gmail.com</a></div>
       <div>Phone: <a href="tel:+917012653215" class="text-pen-blue underline">+91 7012653215</a></div>
+      <div>GitHub: <a href="https://github.com/Farseen-Ahras" target="_blank" class="text-pen-blue underline">github.com/Farseen-Ahras</a></div>
       <div>LinkedIn: <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" class="text-pen-blue underline">linkedin.com/in/farseen-ahras</a></div>
       <div>Location: Mogral Puthur, Kasaragod, Kerala, India</div>
     `,

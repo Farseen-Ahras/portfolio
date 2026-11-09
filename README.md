@@ -12,10 +12,15 @@ To view the portfolio locally:
   and visit `http://localhost:3000`.
 
 ### Deploying to GitHub Pages (0 Build Steps)
-1. Push this repository to GitHub.
-2. In your repository, go to **Settings** > **Pages**.
-3. Under **Branch**, select `main` (or `master`) and folder `/ (root)`.
-4. Click **Save** — your site will be live at `https://<your-username>.github.io/<repo-name>/`.
+1. Create a repository on GitHub (e.g. `portfolio` or `Farseen-Ahras.github.io`) under your account `https://github.com/Farseen-Ahras`.
+2. Connect and push your local commits:
+   ```bash
+   git remote add origin https://github.com/Farseen-Ahras/portfolio.git
+   git push -u origin main
+   ```
+3. In your repository, go to **Settings** > **Pages**.
+4. Under **Branch**, select `main` and folder `/ (root)`.
+5. Click **Save** — your site will be live at `https://Farseen-Ahras.github.io/portfolio/` (or `https://Farseen-Ahras.github.io/`).
 
 ---
 
