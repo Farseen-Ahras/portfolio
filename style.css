@@ -115,6 +115,18 @@ body {
   }
 }
 
+/* Mobile Text Break & Responsiveness */
+.break-all { word-break: break-all; }
+.break-words { overflow-wrap: break-word; word-break: break-word; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.75rem !important;
+    line-height: 1.15 !important;
+  }
+}
+
 /* --- Typography Classes --- */
 .font-display {
   font-family: var(--font-display);
