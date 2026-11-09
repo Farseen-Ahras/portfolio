@@ -291,6 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div><span class="text-amber-400 font-bold font-mono">abstracts</span> - IEEE DISCOVER 2025 Book of Abstracts</div>
         <div><span class="text-amber-400 font-bold font-mono">clubs</span> - EMBED Club & GLUB activities</div>
         <div><span class="text-amber-400 font-bold font-mono">edu</span> - Academic background & CGPA</div>
+        <div><span class="text-amber-400 font-bold font-mono">resume</span> - Official Resume & CV Page</div>
         <div><span class="text-amber-400 font-bold font-mono">biodata</span> - Official Personal & Academic Biodata</div>
         <div><span class="text-amber-400 font-bold font-mono">github</span> - Official GitHub profile & repos</div>
         <div><span class="text-amber-400 font-bold font-mono">contact</span> - Email, WhatsApp, LinkedIn & GitHub</div>
@@ -298,6 +299,15 @@ document.addEventListener('DOMContentLoaded', () => {
         <div><span class="text-amber-400 font-bold font-mono">clear</span> - Clear logbook screen</div>
       </div>
     `,
+    resume: () => {
+      setTimeout(() => { window.location.href = 'resume.html'; }, 1200);
+      return `
+        <div class="text-cyan-400 font-bold font-display text-sm">OFFICIAL RESUME & CURRICULUM VITAE:</div>
+        <div>• Document: Interactive CV & Official PDF (Farseen Ahras Raufali)</div>
+        <div>• Direct URL: <a href="resume.html" class="text-pen-blue underline font-bold">resume.html</a></div>
+        <div class="text-amber-400 font-mono text-xs mt-1">Navigating to Resume page in 1.2s...</div>
+      `;
+    },
     biodata: () => {
       setTimeout(() => { window.location.href = 'biodata.html'; }, 1200);
       return `
