@@ -372,44 +372,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ==========================================
-  // 7. 1-CLICK EMAIL & PHONE COPY WITH TOAST
+  // 7. TOAST NOTIFICATION SYSTEM
   // ==========================================
-  const copyEmailQuickBtn = document.getElementById('copyEmailQuickBtn');
-  const copyEmailCardBtn = document.getElementById('copyEmailCardBtn');
-  const copyEmailText = document.getElementById('copyEmailText');
   const toastNotification = document.getElementById('toastNotification');
   const toastMessage = document.getElementById('toastMessage');
-
-  const emailToCopy = "farseenahrasraufali@gmail.com";
-
-  function copyToClipboard(text, successMsg) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(() => {
-        showToast(successMsg);
-      }).catch(() => {
-        fallbackCopy(text, successMsg);
-      });
-    } else {
-      fallbackCopy(text, successMsg);
-    }
-  }
-
-  function fallbackCopy(text, successMsg) {
-    const textArea = document.createElement("textarea");
-    textArea.value = text;
-    textArea.style.position = "fixed";
-    textArea.style.opacity = "0";
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-    try {
-      document.execCommand('copy');
-      showToast(successMsg);
-    } catch (err) {
-      prompt("Copy to clipboard:", text);
-    }
-    document.body.removeChild(textArea);
-  }
 
   function showToast(message) {
     if (!toastNotification || !toastMessage) return;
@@ -421,22 +387,6 @@ document.addEventListener('DOMContentLoaded', () => {
       toastNotification.classList.remove('opacity-100', 'translate-y-0');
       toastNotification.classList.add('opacity-0', 'translate-y-24');
     }, 3200);
-  }
-
-  if (copyEmailQuickBtn) {
-    copyEmailQuickBtn.addEventListener('click', () => {
-      copyToClipboard(emailToCopy, 'Email copied to clipboard!');
-      if (copyEmailText) {
-        copyEmailText.textContent = "Copied! ✓";
-        setTimeout(() => { copyEmailText.textContent = "Copy Email"; }, 2000);
-      }
-    });
-  }
-
-  if (copyEmailCardBtn) {
-    copyEmailCardBtn.addEventListener('click', () => {
-      copyToClipboard(emailToCopy, 'Email copied to clipboard!');
-    });
   }
 
 
