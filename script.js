@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 700);
       };
 
-      // Auto-minimize in ~1.3 seconds to top-left
-      setTimeout(dismissSplash, 1300);
+      // Auto-minimize in ~1.8 seconds to top-left
+      setTimeout(dismissSplash, 1800);
 
       // Tap or click to unveil immediately
       splash.addEventListener('click', dismissSplash);
