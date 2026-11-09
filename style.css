@@ -62,6 +62,27 @@
   padding: 0;
 }
 
+a {
+  color: var(--ink-primary, #1e2022);
+  text-decoration: none;
+}
+a:visited {
+  color: var(--ink-primary, #1e2022);
+}
+
+.text-black,
+.text-dark,
+.text-\[\#1e2022\] {
+  color: #1e2022 !important;
+}
+
+.nav-brand-link,
+.nav-brand-name,
+.nav-brand-title {
+  color: #1e2022 !important;
+  text-decoration: none !important;
+}
+
 html {
   scroll-behavior: smooth;
   background-color: var(--paper-bg);
