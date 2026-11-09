@@ -5,6 +5,31 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // 0. STARTUP SPLASH ANIMATION (Displays name, then minimizes to top right unveiling website)
+  const splash = document.getElementById('startupSplash');
+  if (splash) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      splash.classList.add('is-hidden');
+    } else {
+      let dismissed = false;
+      const dismissSplash = () => {
+        if (dismissed) return;
+        dismissed = true;
+        splash.classList.add('is-minimizing');
+        setTimeout(() => {
+          splash.classList.add('is-hidden');
+        }, 700);
+      };
+
+      // Auto-minimize in ~1.3 seconds to top-right
+      setTimeout(dismissSplash, 1300);
+
+      // Tap or click to unveil immediately
+      splash.addEventListener('click', dismissSplash);
+    }
+  }
+
+
   // ==========================================
   // 1. NAVBAR SCROLL EFFECT & MOBILE MENU
   // ==========================================
