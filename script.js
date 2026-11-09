@@ -291,12 +291,22 @@ document.addEventListener('DOMContentLoaded', () => {
         <div><span class="text-amber-400 font-bold font-mono">abstracts</span> - IEEE DISCOVER 2025 Book of Abstracts</div>
         <div><span class="text-amber-400 font-bold font-mono">clubs</span> - EMBED Club & GLUB activities</div>
         <div><span class="text-amber-400 font-bold font-mono">edu</span> - Academic background & CGPA</div>
+        <div><span class="text-amber-400 font-bold font-mono">biodata</span> - Official Personal & Academic Biodata</div>
         <div><span class="text-amber-400 font-bold font-mono">github</span> - Official GitHub profile & repos</div>
         <div><span class="text-amber-400 font-bold font-mono">contact</span> - Email, WhatsApp, LinkedIn & GitHub</div>
         <div><span class="text-amber-400 font-bold font-mono">pid-tune</span> - ESP32 PID loop parameters</div>
         <div><span class="text-amber-400 font-bold font-mono">clear</span> - Clear logbook screen</div>
       </div>
     `,
+    biodata: () => {
+      setTimeout(() => { window.location.href = 'biodata.html'; }, 1200);
+      return `
+        <div class="text-cyan-400 font-bold font-display text-sm">OFFICIAL BIODATA DOSSIER:</div>
+        <div>• Document: Personal & Academic Biodata Sheet (Farseen Ahras Raufali)</div>
+        <div>• Direct URL: <a href="biodata.html" class="text-pen-blue underline font-bold">biodata.html</a></div>
+        <div class="text-amber-400 font-mono text-xs mt-1">Navigating to Biodata page in 1.2s...</div>
+      `;
+    },
     skills: () => `
       <div class="text-cyan-400 font-bold font-display text-sm">TECHNICAL ARSENAL:</div>
       <div>• <span class="font-bold text-dark">Languages:</span> Python, Java, C++, C, JavaScript, SQL, HTML/CSS, Lua</div>
