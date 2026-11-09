@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Kalam:wght@400;700&family=Patrick+Hand&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=3.2">
+  <link rel="stylesheet" href="style.css?v=3.3">
 </head>
 <body class="bg-paper text-dark selection-yellow">
 
@@ -88,36 +88,23 @@
 
         <!-- Right: Direct Buttons (Placed after the name on the right, on the same line) -->
         <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-1">
-          <!-- Direct Section Buttons -->
-          <nav class="flex items-center gap-1 sm:gap-1.5 shrink-0">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#leadership" class="nav-link">Leadership</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#education" class="nav-link">Education</a>
-            <a href="#terminal" class="nav-link">Terminal</a>
-            <a href="#contact" class="nav-link">Contact</a>
-          </nav>
-
-          <div class="h-5 w-[1.5px] bg-[#1e2022]/20 shrink-0 mx-0.5"></div>
-
-          <!-- Direct Action Buttons (Matching Size & Width) -->
+          
+          <!-- Direct Action Buttons (Placed immediately after the name for 100% instant visibility) -->
           <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
             
-            <!-- Resume / PDF Button -->
-            <button id="resumeModalOpenBtn" class="resume-open-btn btn-stamp-primary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="Open Interactive Resume Viewer & Download Official PDF">
-              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-              <span class="hidden md:inline whitespace-nowrap">View &amp; Download</span>
-              <span class="md:hidden whitespace-nowrap">Resume</span>
-            </button>
-
-            <!-- Biodata Page Button (Opens standalone biodata.html) -->
-            <a href="biodata.html" class="btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="Open Official Biodata Sheet">
+            <!-- Biodata Page Button (Prominent 1st Button in Vivid Yellow) -->
+            <a href="biodata.html" class="btn-stamp-primary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0 shadow-[2px_2px_0px_#1e2022]" title="Open Official Biodata Sheet">
               <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
               <span class="hidden md:inline whitespace-nowrap">Biodata Sheet</span>
               <span class="md:hidden whitespace-nowrap">Biodata</span>
             </a>
+
+            <!-- Resume / PDF Button -->
+            <button id="resumeModalOpenBtn" class="resume-open-btn btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="Open Interactive Resume Viewer & Download Official PDF">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <span class="hidden md:inline whitespace-nowrap">View &amp; Download</span>
+              <span class="md:hidden whitespace-nowrap">Resume</span>
+            </button>
 
             <!-- GitHub Button (Same size as PDF one) -->
             <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="GitHub Profile">
@@ -134,6 +121,23 @@
             </a>
 
           </div>
+
+          <div class="h-5 w-[1.5px] bg-[#1e2022]/20 shrink-0 mx-0.5"></div>
+
+          <!-- Direct Section Buttons -->
+          <nav class="flex items-center gap-1 sm:gap-1.5 shrink-0">
+            <a href="#home" class="nav-link">Home</a>
+            <!-- Direct Biodata Chip in Navigation -->
+            <a href="biodata.html" class="nav-link font-bold text-[#1e2022]" style="background: #fef08a !important; border-color: #1e2022 !important;" title="Open Official Biodata Sheet">Biodata ↗</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#leadership" class="nav-link">Leadership</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#terminal" class="nav-link">Terminal</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </nav>
+
         </div>
 
       </div>
@@ -1609,6 +1613,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="script.js?v=3.2"></script>
+  <script src="script.js?v=3.3"></script>
 </body>
 </html>

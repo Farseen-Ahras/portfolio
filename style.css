@@ -982,6 +982,18 @@ input[type=range]::-webkit-slider-thumb:hover {
 
 .overflow-hidden { overflow: hidden; }
 .overflow-y-auto { overflow-y: auto; }
+.overflow-x-auto { 
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .w-fit { width: fit-content; }
 .leading-none { line-height: 1.1; }
 .leading-relaxed { line-height: 1.6; }
