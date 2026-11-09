@@ -441,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ==========================================
-  // 8. RESUME MODAL & TAB HANDLERS
+  // 8. RESUME MODAL HANDLERS (RESPONSIVE TEXT VIEW)
   // ==========================================
   const resumeModal = document.getElementById('resumeModal');
   const resumeModalContainer = document.getElementById('resumeModalContainer');
@@ -453,11 +453,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const expandIcon = document.getElementById('expandIcon');
   const collapseIcon = document.getElementById('collapseIcon');
   const expandText = document.getElementById('expandText');
-
-  const resumeTabPdfBtn = document.getElementById('resumeTabPdfBtn');
-  const resumeTabHtmlBtn = document.getElementById('resumeTabHtmlBtn');
-  const resumePdfView = document.getElementById('resumePdfView');
-  const resumeHtmlView = document.getElementById('resumeHtmlView');
   const resumePrintBtn = document.getElementById('resumePrintBtn');
 
   function openResumeModal() {
@@ -488,55 +483,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (expandText) expandText.textContent = isMax ? 'Exit Fullscreen' : 'Fullscreen';
   }
 
-  function setResumeTab(tab) {
-    if (tab === 'pdf') {
-      if (resumePdfView) resumePdfView.classList.remove('hidden');
-      if (resumeHtmlView) resumeHtmlView.classList.add('hidden');
-      if (resumeTabPdfBtn) {
-        resumeTabPdfBtn.classList.remove('inactive');
-        resumeTabPdfBtn.classList.add('active');
-        resumeTabPdfBtn.setAttribute('aria-selected', 'true');
-      }
-      if (resumeTabHtmlBtn) {
-        resumeTabHtmlBtn.classList.remove('active');
-        resumeTabHtmlBtn.classList.add('inactive');
-        resumeTabHtmlBtn.setAttribute('aria-selected', 'false');
-      }
-    } else {
-      if (resumePdfView) resumePdfView.classList.add('hidden');
-      if (resumeHtmlView) resumeHtmlView.classList.remove('hidden');
-      if (resumeTabHtmlBtn) {
-        resumeTabHtmlBtn.classList.remove('inactive');
-        resumeTabHtmlBtn.classList.add('active');
-        resumeTabHtmlBtn.setAttribute('aria-selected', 'true');
-      }
-      if (resumeTabPdfBtn) {
-        resumeTabPdfBtn.classList.remove('active');
-        resumeTabPdfBtn.classList.add('inactive');
-        resumeTabPdfBtn.setAttribute('aria-selected', 'false');
-      }
-    }
-  }
-
   if (resumeModalOpenBtn) resumeModalOpenBtn.addEventListener('click', openResumeModal);
   if (mobileResumeBtn) mobileResumeBtn.addEventListener('click', openResumeModal);
   if (heroResumeModalBtn) heroResumeModalBtn.addEventListener('click', openResumeModal);
   if (resumeModalCloseBtn) resumeModalCloseBtn.addEventListener('click', closeResumeModal);
   if (resumeModalExpandBtn) resumeModalExpandBtn.addEventListener('click', toggleModalMaximize);
 
-  if (resumeTabPdfBtn) {
-    resumeTabPdfBtn.addEventListener('click', () => setResumeTab('pdf'));
-  }
-  if (resumeTabHtmlBtn) {
-    resumeTabHtmlBtn.addEventListener('click', () => setResumeTab('html'));
-  }
-
   if (resumePrintBtn) {
     resumePrintBtn.addEventListener('click', () => {
-      setResumeTab('html');
-      setTimeout(() => {
-        window.print();
-      }, 150);
+      window.print();
     });
   }
 
