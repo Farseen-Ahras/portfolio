@@ -87,20 +87,26 @@
         </nav>
 
         <!-- Right Side Quick Actions -->
-        <div class="hidden md:flex items-center gap-3">
+        <div class="hidden md:flex items-center gap-2.5">
           <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary px-3 py-1.5 text-xs flex items-center gap-1.5" title="LinkedIn Profile">
             <svg class="w-4 h-4 text-[#0a66c2]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
             </svg>
             <span>LinkedIn</span>
           </a>
-          <button id="resumeModalOpenBtn" class="btn-stamp-primary text-xs py-2 px-3.5 flex items-center gap-1.5">
+          <button id="resumeModalOpenBtn" class="btn-stamp-primary text-xs py-2 px-3 flex items-center gap-1.5" title="Open Interactive Resume Viewer">
             <svg class="w-4 h-4 text-[#1e2022]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
             </svg>
-            <span>Resume (CV)</span>
+            <span>Resume</span>
           </button>
-          <a href="#contact" class="btn-stamp-coral text-xs py-2 px-4 font-bold">
+          <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-green text-xs py-2 px-3 flex items-center gap-1.5 font-bold" title="Download Official PDF Resume (75 KB)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Download PDF</span>
+          </a>
+          <a href="#contact" class="btn-stamp-coral text-xs py-2 px-3.5 font-bold">
             Drop a Line
           </a>
         </div>
@@ -124,13 +130,21 @@
         <a href="#skills" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-lg">04 // Software & Skills Stack</a>
         <a href="#education" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-lg">05 // Education & Honors</a>
         <a href="#contact" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-lg">06 // Contact</a>
-        <div class="pt-4 border-t-2 border-dashed border-[#1e2022] flex items-center justify-between gap-3">
-          <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-sm flex-1 text-center py-2.5">
-            LinkedIn Profile
+        <div class="pt-4 border-t-2 border-dashed border-[#1e2022] flex flex-col gap-2.5">
+          <div class="flex items-center justify-between gap-2.5">
+            <button id="mobileResumeBtn" class="btn-stamp-primary text-sm flex-1 text-center py-2.5 flex items-center justify-center gap-1.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+              <span>View Resume</span>
+            </button>
+            <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-green text-sm flex-1 text-center py-2.5 flex items-center justify-center gap-1.5 font-bold">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+              <span>Download PDF</span>
+            </a>
+          </div>
+          <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-sm text-center py-2 flex items-center justify-center gap-1.5">
+            <svg class="w-4 h-4 text-[#0a66c2]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <span>LinkedIn Profile</span>
           </a>
-          <button id="mobileResumeBtn" class="btn-stamp-primary text-sm flex-1 text-center py-2.5">
-            View Resume
-          </button>
         </div>
       </div>
     </div>
@@ -211,18 +225,30 @@
             </div>
 
             <!-- Call To Actions (Stamp Buttons) -->
-            <div class="flex flex-wrap items-center gap-4 mb-8 w-full sm:w-auto">
+            <div class="flex flex-wrap items-center gap-3.5 mb-8 w-full sm:w-auto">
               <a href="#projects" class="btn-stamp-primary text-base font-bold px-6 py-3.5 shadow-[4px_4px_0px_#1e2022] flex items-center justify-center gap-2 w-full sm:w-auto">
                 <span>Explore Projects & Software</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
               </a>
-              <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="btn-stamp-blue text-sm font-bold px-5 py-3.5 flex items-center justify-center gap-2 w-full sm:w-auto">
+              <button id="heroResumeModalBtn" class="btn-stamp-secondary text-sm font-bold px-4 py-3.5 flex items-center justify-center gap-2 w-full sm:w-auto" title="Open Interactive Resume Viewer">
+                <svg class="w-4 h-4 text-[#1e2022]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                <span>View Resume</span>
+              </button>
+              <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-green text-sm font-bold px-4 py-3.5 flex items-center justify-center gap-2 w-full sm:w-auto shadow-[3px_3px_0px_#1e2022]" title="Download Official PDF Resume (75 KB)">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                <span>Download Resume (PDF)</span>
+              </a>
+              <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="btn-stamp-blue text-sm font-bold px-4 py-3.5 flex items-center justify-center gap-2 w-full sm:w-auto">
                 <svg class="w-4 h-4 text-[#1e40af]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
-                <span>Connect on LinkedIn</span>
+                <span>LinkedIn</span>
               </a>
               <button id="copyEmailQuickBtn" class="btn-stamp-secondary text-xs text-[#1e2022] flex items-center gap-1.5 py-3 px-3.5">
                 <svg class="w-4 h-4 text-[#1e2022]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1412,28 +1438,88 @@
   </footer>
 
   <!-- MODAL: RESUME VIEWER & PRINT GENERATOR -->
-  <div id="resumeModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 hidden">
-    <div class="bg-[#faf8f5] border-3 border-[#1e2022] rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-hidden flex flex-col shadow-[8px_8px_0px_#1e2022] relative">
+  <div id="resumeModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 hidden">
+    <div class="bg-[#faf8f5] border-3 border-[#1e2022] rounded-2xl w-full max-w-4xl max-h-[92vh] overflow-hidden flex flex-col shadow-[8px_8px_0px_#1e2022] relative">
       <div class="washi-tape"></div>
       
       <!-- Modal Header -->
-      <div class="flex items-center justify-between px-6 py-4 bg-[#f4f0e6] border-b-2 border-[#1e2022]">
+      <div class="flex items-center justify-between px-5 sm:px-6 py-3.5 bg-[#f4f0e6] border-b-2 border-[#1e2022]">
         <div class="flex items-center gap-3">
           <div class="w-9 h-9 rounded-lg bg-[#fef08a] border-2 border-[#1e2022] flex items-center justify-center text-[#1e2022] font-display font-bold text-sm shadow-[1px_1px_0px_#1e2022]">
             CV
           </div>
           <div>
-            <h3 class="font-display font-bold text-[#1e2022] text-lg">Farseen Ahras Raufali — Verified Curriculum Vitae</h3>
-            <p class="text-[11px] font-mono text-[#6b7280] font-bold">P A College of Engineering • Kasaragod, Kerala</p>
+            <h3 class="font-display font-bold text-[#1e2022] text-lg leading-tight">Farseen Ahras Raufali — Verified Curriculum Vitae</h3>
+            <p class="text-[11px] font-mono text-[#6b7280] font-bold">B.E. CSE • P A College of Engineering • Kasaragod, Kerala</p>
           </div>
         </div>
-        <button id="resumeModalCloseBtn" class="text-slate-600 hover:text-black p-1 rounded-lg hover:bg-black/5" aria-label="Close modal">
+        <button id="resumeModalCloseBtn" class="text-slate-600 hover:text-black p-1.5 rounded-lg hover:bg-black/5" aria-label="Close modal">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
       </div>
 
-      <!-- Modal Body (Printable Resume Content) -->
-      <div class="p-6 overflow-y-auto space-y-6 text-[#1e2022] text-sm font-body leading-relaxed bg-white">
+      <!-- Tab Switcher Bar -->
+      <div class="resume-modal-tabs px-5 sm:px-6 pt-2.5 bg-[#ebe5d8] border-b-2 border-[#1e2022] flex items-center justify-between gap-2 overflow-x-auto">
+        <div class="flex items-center gap-1.5">
+          <!-- Tab 1: PDF Viewer -->
+          <button id="resumeTabPdfBtn" class="notebook-tab active" type="button" aria-selected="true" aria-controls="resumePdfView">
+            <svg class="w-4 h-4 text-[#dc2626]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+            </svg>
+            <span>Official PDF Document</span>
+            <span class="text-[10px] font-mono bg-[#dc2626] text-white px-1.5 py-0.5 rounded font-bold">PDF</span>
+          </button>
+
+          <!-- Tab 2: Formatted Text Sheet -->
+          <button id="resumeTabHtmlBtn" class="notebook-tab inactive" type="button" aria-selected="false" aria-controls="resumeHtmlView">
+            <svg class="w-4 h-4 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+            </svg>
+            <span>Printable Text Sheet</span>
+          </button>
+        </div>
+
+        <!-- Quick External Link -->
+        <a href="Farseen_Ahras_Resume.pdf" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1 text-xs font-mono font-bold text-[#2563eb] hover:underline whitespace-nowrap mb-1">
+          <span>Open PDF in Tab</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        </a>
+      </div>
+
+      <!-- Tab 1: PDF Viewer Container -->
+      <div id="resumePdfView" class="flex-1 flex flex-col bg-[#404347] p-2.5 sm:p-3 overflow-hidden">
+        <!-- PDF Info and Quick Actions Bar -->
+        <div class="flex items-center justify-between gap-2 px-3 py-2 bg-white/95 border border-[#1e2022] rounded-lg mb-2 text-xs font-mono shadow-sm">
+          <div class="flex items-center gap-2 truncate">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#10b981] animate-pulse"></span>
+            <span class="font-bold text-[#1e2022] truncate">Farseen_Ahras_Resume.pdf</span>
+            <span class="text-[#6b7280] hidden sm:inline">(75 KB • Official Resume)</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <a href="Farseen_Ahras_Resume.pdf" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-[#e5e7eb] hover:bg-[#d1d5db] text-[#1e2022] font-bold text-xs flex items-center gap-1 transition-colors">
+              <span>New Tab</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+            <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="px-3 py-1 rounded bg-[#059669] hover:bg-[#047857] text-white font-bold text-xs flex items-center gap-1 shadow-sm transition-colors">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+              <span>Download PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Embedded PDF iframe -->
+        <div class="flex-1 w-full relative min-h-[50vh] sm:min-h-[58vh]">
+          <iframe src="Farseen_Ahras_Resume.pdf#toolbar=1" class="w-full h-full min-h-[50vh] sm:min-h-[58vh] rounded-lg border-2 border-[#1e2022] bg-[#2b2d30] shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]" title="Farseen Ahras Resume PDF">
+            <div class="p-6 text-center text-white font-mono">
+              <p class="mb-4">Your browser does not support embedded PDF preview.</p>
+              <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-green px-4 py-2 text-sm font-bold">Download Resume PDF</a>
+            </div>
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Tab 2: Printable Text Sheet Body -->
+      <div id="resumeHtmlView" class="hidden p-6 overflow-y-auto space-y-6 text-[#1e2022] text-sm font-body leading-relaxed bg-white flex-1 min-h-[50vh] sm:min-h-[58vh] max-h-[62vh]">
         
         <!-- Header details -->
         <div class="border-b-2 border-[#1e2022] pb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
@@ -1527,15 +1613,22 @@
       </div>
 
       <!-- Modal Footer -->
-      <div class="px-6 py-4 bg-[#f4f0e6] border-t-2 border-[#1e2022] flex items-center justify-between">
-        <span class="text-xs font-mono text-[#6b7280] font-bold">Document generated from verified profile</span>
-        <div class="flex items-center gap-3">
-          <button onclick="window.print()" class="btn-stamp-secondary text-sm px-4 py-2 flex items-center gap-1.5 font-display font-bold">
+      <div class="resume-modal-footer px-5 sm:px-6 py-3.5 bg-[#f4f0e6] border-t-2 border-[#1e2022] flex flex-col sm:flex-row items-center justify-between gap-3">
+        <span class="text-xs font-mono text-[#6b7280] font-bold text-center sm:text-left">
+          Official Dossier • Verified Portfolio Profile
+        </span>
+        <div class="flex flex-wrap items-center justify-center gap-2.5 w-full sm:w-auto">
+          <a href="Farseen_Ahras_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-xs sm:text-sm px-3.5 py-2 flex items-center gap-1.5 font-display font-bold">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            <span>Open in Tab</span>
+          </a>
+          <button onclick="window.print()" class="btn-stamp-secondary text-xs sm:text-sm px-3.5 py-2 flex items-center gap-1.5 font-display font-bold">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
-            <span>Print / Save as PDF</span>
+            <span>Print Sheet</span>
           </button>
-          <a href="mailto:farseenahrasraufali@gmail.com?subject=Requesting%20Official%20PDF%20Resume" class="btn-stamp-primary text-sm px-4 py-2 font-display font-bold">
-            Request Official PDF
+          <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-green text-xs sm:text-sm px-4 py-2 flex items-center gap-1.5 font-display font-bold shadow-[2px_2px_0px_#1e2022]">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            <span>Download PDF (75 KB)</span>
           </a>
         </div>
       </div>

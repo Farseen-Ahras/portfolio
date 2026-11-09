@@ -441,12 +441,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ==========================================
-  // 8. RESUME MODAL HANDLERS
+  // 8. RESUME MODAL & TAB HANDLERS
   // ==========================================
   const resumeModal = document.getElementById('resumeModal');
   const resumeModalOpenBtn = document.getElementById('resumeModalOpenBtn');
   const mobileResumeBtn = document.getElementById('mobileResumeBtn');
+  const heroResumeModalBtn = document.getElementById('heroResumeModalBtn');
   const resumeModalCloseBtn = document.getElementById('resumeModalCloseBtn');
+
+  const resumeTabPdfBtn = document.getElementById('resumeTabPdfBtn');
+  const resumeTabHtmlBtn = document.getElementById('resumeTabHtmlBtn');
+  const resumePdfView = document.getElementById('resumePdfView');
+  const resumeHtmlView = document.getElementById('resumeHtmlView');
 
   function openResumeModal() {
     if (resumeModal) resumeModal.classList.remove('hidden');
@@ -455,9 +461,47 @@ document.addEventListener('DOMContentLoaded', () => {
     if (resumeModal) resumeModal.classList.add('hidden');
   }
 
+  function setResumeTab(tab) {
+    if (tab === 'pdf') {
+      if (resumePdfView) resumePdfView.classList.remove('hidden');
+      if (resumeHtmlView) resumeHtmlView.classList.add('hidden');
+      if (resumeTabPdfBtn) {
+        resumeTabPdfBtn.classList.remove('inactive');
+        resumeTabPdfBtn.classList.add('active');
+        resumeTabPdfBtn.setAttribute('aria-selected', 'true');
+      }
+      if (resumeTabHtmlBtn) {
+        resumeTabHtmlBtn.classList.remove('active');
+        resumeTabHtmlBtn.classList.add('inactive');
+        resumeTabHtmlBtn.setAttribute('aria-selected', 'false');
+      }
+    } else {
+      if (resumePdfView) resumePdfView.classList.add('hidden');
+      if (resumeHtmlView) resumeHtmlView.classList.remove('hidden');
+      if (resumeTabHtmlBtn) {
+        resumeTabHtmlBtn.classList.remove('inactive');
+        resumeTabHtmlBtn.classList.add('active');
+        resumeTabHtmlBtn.setAttribute('aria-selected', 'true');
+      }
+      if (resumeTabPdfBtn) {
+        resumeTabPdfBtn.classList.remove('active');
+        resumeTabPdfBtn.classList.add('inactive');
+        resumeTabPdfBtn.setAttribute('aria-selected', 'false');
+      }
+    }
+  }
+
   if (resumeModalOpenBtn) resumeModalOpenBtn.addEventListener('click', openResumeModal);
   if (mobileResumeBtn) mobileResumeBtn.addEventListener('click', openResumeModal);
+  if (heroResumeModalBtn) heroResumeModalBtn.addEventListener('click', openResumeModal);
   if (resumeModalCloseBtn) resumeModalCloseBtn.addEventListener('click', closeResumeModal);
+
+  if (resumeTabPdfBtn) {
+    resumeTabPdfBtn.addEventListener('click', () => setResumeTab('pdf'));
+  }
+  if (resumeTabHtmlBtn) {
+    resumeTabHtmlBtn.addEventListener('click', () => setResumeTab('html'));
+  }
 
   if (resumeModal) {
     resumeModal.addEventListener('click', (e) => {

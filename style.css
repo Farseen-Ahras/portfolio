@@ -455,6 +455,32 @@ body {
   box-shadow: 1px 1px 0px #1e2022;
 }
 
+.btn-stamp-green {
+  font-family: var(--font-display);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #dcfce7;
+  color: #065f46;
+  border: 2px solid #1e2022;
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  box-shadow: 3px 3px 0px #1e2022;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-height: 44px;
+}
+.btn-stamp-green:hover {
+  background: #bbf7d0;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #1e2022;
+}
+.btn-stamp-green:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #1e2022;
+}
+
 /* Tool chip / Badge pill in Sketch style */
 .tool-chip {
   display: inline-flex;
@@ -921,6 +947,41 @@ input[type=range]::-webkit-slider-thumb:hover {
   border-color: #2563eb;
 }
 
+/* Notebook Tabs for Resume Viewer */
+.notebook-tab {
+  font-family: var(--font-display);
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-top: 2px solid #1e2022;
+  border-left: 2px solid #1e2022;
+  border-right: 2px solid #1e2022;
+  border-bottom: 2px solid transparent;
+  border-radius: 8px 8px 0 0;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+.notebook-tab.active {
+  background: #ffffff;
+  color: #1e2022;
+  border-bottom: 2px solid #ffffff;
+  margin-bottom: -2px;
+  position: relative;
+  z-index: 10;
+}
+.notebook-tab.inactive {
+  background: #e5e0d4;
+  color: #4b5563;
+  border-bottom: 2px solid #1e2022;
+}
+.notebook-tab.inactive:hover {
+  background: #f0ebe0;
+  color: #1e2022;
+}
+
 /* Printable Resume Formatter */
 @media print {
   body {
@@ -938,7 +999,12 @@ input[type=range]::-webkit-slider-thumb:hover {
   #skills,
   #education,
   #contact,
-  .spiral-logbook {
+  .spiral-logbook,
+  .resume-modal-tabs,
+  .resume-modal-footer,
+  #resumeModalCloseBtn,
+  #resumePdfView,
+  .washi-tape {
     display: none !important;
   }
   #resumeModal {
@@ -946,13 +1012,17 @@ input[type=range]::-webkit-slider-thumb:hover {
     display: block !important;
     background: transparent !important;
     padding: 0 !important;
+    max-height: none !important;
   }
   #resumeModal .w-full {
     box-shadow: none !important;
     border: none !important;
+    max-height: none !important;
   }
-  #resumeModalCloseBtn,
-  #resumeModal .bg-slate-950.border-t {
-    display: none !important;
+  #resumeHtmlView {
+    display: block !important;
+    max-height: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
   }
 }
