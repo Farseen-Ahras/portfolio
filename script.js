@@ -5,7 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 0. STARTUP SPLASH ANIMATION (Displays name, then minimizes to top right unveiling website)
+  // 0. STARTUP SPLASH ANIMATION (Displays name, then minimizes to top left unveiling website)
   const splash = document.getElementById('startupSplash');
   if (splash) {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 700);
       };
 
-      // Auto-minimize in ~1.3 seconds to top-right
+      // Auto-minimize in ~1.3 seconds to top-left
       setTimeout(dismissSplash, 1300);
 
       // Tap or click to unveil immediately

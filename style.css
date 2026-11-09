@@ -1145,14 +1145,14 @@ input[type=range]::-webkit-slider-thumb:hover {
   will-change: transform, opacity;
 }
 
-/* Minimizing state: shrinks and glides toward top right, unveiling website */
+/* Minimizing state: shrinks and glides toward top left, unveiling website */
 #startupSplash.is-minimizing {
   opacity: 0;
   pointer-events: none;
 }
 
 #startupSplash.is-minimizing .splash-card {
-  transform: translate(38vw, -42vh) scale(0.12);
+  transform: translate(-38vw, -42vh) scale(0.12);
   opacity: 0;
 }
 
