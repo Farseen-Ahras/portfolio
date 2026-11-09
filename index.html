@@ -34,12 +34,12 @@
   <div class="notebook-margin-line"></div>
 
   <!-- Header / Navigation Bar (Hand-drawn Paper Strip) -->
-  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
+  <header class="fixed top-0 left-0 right-0 w-full z-[1000] transition-all duration-300" id="navbar">
+    <div class="w-full px-4 sm:px-6 lg:px-8 xl:px-10">
+      <div class="flex items-center justify-between h-20 gap-3 xl:gap-6">
         
         <!-- Logo / Software Engineer Stamp & Name Badge -->
-        <a href="#home" class="group flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-[#2563eb]" aria-label="Farseen Ahras Portfolio Home">
+        <a href="#home" class="group flex items-center gap-3 shrink-0 focus-visible:outline-2 focus-visible:outline-[#2563eb]" aria-label="Farseen Ahras Portfolio Home">
           <!-- Name & Professional Title -->
           <div class="flex flex-col">
             <span class="font-display font-extrabold text-[#1e2022] text-xl tracking-tight leading-tight group-hover:text-[#2563eb] transition-colors">
@@ -53,18 +53,20 @@
           </div>
         </a>
 
-        <!-- Desktop Navigation Links -->
-        <nav class="hidden md:flex items-center gap-1.5 bg-white/90 border-2 border-[#1e2022] rounded-full px-4 py-1.5 shadow-[3px_3px_0px_#1e2022]">
-          <a href="#about" class="nav-link px-3.5 py-1 text-sm font-bold text-[#374151] hover:text-[#1e2022]">About</a>
-          <a href="#projects" class="nav-link px-3.5 py-1 text-sm font-bold text-[#374151] hover:text-[#1e2022]">Projects</a>
-          <a href="#leadership" class="nav-link px-3.5 py-1 text-sm font-bold text-[#374151] hover:text-[#1e2022]">Leadership & IEEE</a>
-          <a href="#skills" class="nav-link px-3.5 py-1 text-sm font-bold text-[#374151] hover:text-[#1e2022]">Skills & Stack</a>
-          <a href="#education" class="nav-link px-3.5 py-1 text-sm font-bold text-[#374151] hover:text-[#1e2022]">Education</a>
-          <a href="#contact" class="nav-link px-3.5 py-1 text-sm font-bold text-[#374151] hover:text-[#1e2022]">Contact</a>
+        <!-- Desktop Navigation Links (Extended Central Area) -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 bg-white/95 border-2 border-[#1e2022] rounded-full px-3 py-1.5 shadow-[3px_3px_0px_#1e2022]">
+          <a href="#home" class="nav-link px-3 py-1 text-xs xl:text-sm font-bold text-[#374151] hover:text-[#1e2022]">Home</a>
+          <a href="#about" class="nav-link px-3 py-1 text-xs xl:text-sm font-bold text-[#374151] hover:text-[#1e2022]">About</a>
+          <a href="#projects" class="nav-link px-3 py-1 text-xs xl:text-sm font-bold text-[#374151] hover:text-[#1e2022]">Projects</a>
+          <a href="#leadership" class="nav-link px-3 py-1 text-xs xl:text-sm font-bold text-[#374151] hover:text-[#1e2022]">Leadership</a>
+          <a href="#skills" class="nav-link px-3 py-1 text-xs xl:text-sm font-bold text-[#374151] hover:text-[#1e2022]">Skills</a>
+          <a href="#education" class="nav-link px-3 py-1 text-xs xl:text-sm font-bold text-[#374151] hover:text-[#1e2022]">Education</a>
+          <a href="#terminal" class="nav-link px-3 py-1 text-xs xl:text-sm font-bold text-[#374151] hover:text-[#1e2022]">Terminal</a>
+          <a href="#contact" class="nav-link px-3 py-1 text-xs xl:text-sm font-bold text-[#374151] hover:text-[#1e2022]">Contact</a>
         </nav>
 
         <!-- Right Side Quick Actions -->
-        <div class="hidden md:flex items-center gap-2.5">
+        <div class="hidden lg:flex items-center gap-2 xl:gap-2.5 shrink-0">
           <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary px-3 py-1.5 text-xs flex items-center gap-1.5" title="GitHub Profile">
             <svg class="w-4 h-4 text-[#1e2022]" fill="currentColor" viewBox="0 0 24 24">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
@@ -77,25 +79,16 @@
             </svg>
             <span>LinkedIn</span>
           </a>
-          <button id="resumeModalOpenBtn" class="btn-stamp-primary text-xs py-2 px-3 flex items-center gap-1.5" title="Open Interactive Resume Viewer & Download PDF">
+          <button id="resumeModalOpenBtn" class="btn-stamp-primary text-xs py-2 px-3 flex items-center gap-1.5 font-bold" title="Open Interactive Resume Viewer & Download Official PDF">
             <svg class="w-4 h-4 text-[#1e2022]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
             </svg>
-            <span>Resume</span>
+            <span>View &amp; Download Resume</span>
           </button>
-          <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-green text-xs py-2 px-3 flex items-center gap-1.5 font-bold" title="Download Official PDF Resume (75 KB)">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-            </svg>
-            <span>Download PDF</span>
-          </a>
-          <a href="#contact" class="btn-stamp-coral text-xs py-2 px-3.5 font-bold">
-            Drop a Line
-          </a>
         </div>
 
         <!-- Mobile Hamburger Button -->
-        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-[#1e2022] hover:bg-black/5 focus:outline-none" aria-label="Toggle navigation">
+        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-[#1e2022] hover:bg-black/5 focus:outline-none" aria-label="Toggle navigation">
           <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path id="hamburgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
             <path id="closeIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
@@ -105,25 +98,21 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-[#faf7f2] border-b-2 border-[#1e2022] shadow-[0_6px_0px_#1e2022] px-6 py-6 transition-all duration-300">
-      <div class="flex flex-col gap-4 font-display font-bold">
-        <a href="#about" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-lg">01 // About</a>
-        <a href="#projects" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-lg">02 // Projects & Software</a>
-        <a href="#leadership" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-lg">03 // Leadership & IEEE</a>
-        <a href="#skills" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-lg">04 // Software & Skills Stack</a>
-        <a href="#education" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-lg">05 // Education & Honors</a>
-        <a href="#contact" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-lg">06 // Contact</a>
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#faf7f2] border-b-2 border-[#1e2022] shadow-[0_6px_0px_#1e2022] px-6 py-6 transition-all duration-300">
+      <div class="flex flex-col gap-3 font-display font-bold">
+        <a href="#home" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-base">00 // Home</a>
+        <a href="#about" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-base">01 // About</a>
+        <a href="#projects" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-base">02 // Projects &amp; Software</a>
+        <a href="#leadership" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-base">03 // Leadership &amp; IEEE</a>
+        <a href="#skills" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-base">04 // Software &amp; Skills Stack</a>
+        <a href="#education" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-base">05 // Education &amp; Honors</a>
+        <a href="#terminal" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-base">06 // Spiral Logbook CLI</a>
+        <a href="#contact" class="mobile-nav-link text-[#1e2022] hover:text-[#2563eb] py-1 text-base">07 // Contact</a>
         <div class="pt-4 border-t-2 border-dashed border-[#1e2022] flex flex-col gap-2.5">
-          <div class="flex items-center justify-between gap-2.5">
-            <button id="mobileResumeBtn" class="btn-stamp-primary text-sm flex-1 text-center py-2.5 flex items-center justify-center gap-1.5">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-              <span>View Resume</span>
-            </button>
-            <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-green text-sm flex-1 text-center py-2.5 flex items-center justify-center gap-1.5 font-bold">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-              <span>Download PDF</span>
-            </a>
-          </div>
+          <button id="mobileResumeBtn" class="btn-stamp-primary text-sm w-full py-2.5 flex items-center justify-center gap-1.5 font-bold">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+            <span>View &amp; Download Resume</span>
+          </button>
           <div class="flex items-center justify-between gap-2.5">
             <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-sm flex-1 text-center py-2 flex items-center justify-center gap-1.5">
               <svg class="w-4 h-4 text-[#1e2022]" fill="currentColor" viewBox="0 0 24 24">
@@ -1197,7 +1186,7 @@
 
 
     <!-- INTERACTIVE SPIRAL LOGBOOK / CLI PLAYGROUND (06) -->
-    <section class="py-16 border-t-2 border-dashed border-[#1e2022] bg-[#f4f0e6]">
+    <section id="terminal" class="py-16 border-t-2 border-dashed border-[#1e2022] bg-[#f4f0e6]">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         
         <!-- Spiral Binder Rings On Top -->
@@ -1445,7 +1434,7 @@
   </footer>
 
   <!-- MODAL: RESUME VIEWER & PRINT GENERATOR -->
-  <div id="resumeModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4 lg:p-6 hidden">
+  <div id="resumeModal" class="fixed inset-0 z-[2000] bg-black/75 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4 lg:p-6 hidden">
     <div id="resumeModalContainer" class="bg-[#faf8f5] border-3 border-[#1e2022] rounded-2xl w-full max-w-4xl h-[92vh] max-h-[94vh] overflow-hidden flex flex-col shadow-[8px_8px_0px_#1e2022] relative transition-all duration-200">
       <div class="washi-tape"></div>
       
@@ -1596,7 +1585,7 @@
   </div>
 
   <!-- Toast Notification (Styled like a flying dispatch note) -->
-  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-[2100] transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
     <div class="bg-[#fef9c3] border-2 border-[#1e2022] text-[#1e2022] px-5 py-3 rounded-xl shadow-[4px_4px_0px_#1e2022] flex items-center gap-3 font-display font-bold text-sm">
       <span class="w-2.5 h-2.5 rounded-full bg-[#059669]"></span>
       <span id="toastMessage">Email copied to clipboard!</span>

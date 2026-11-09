@@ -441,7 +441,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (resumeModalOpenBtn) resumeModalOpenBtn.addEventListener('click', openResumeModal);
-  if (mobileResumeBtn) mobileResumeBtn.addEventListener('click', openResumeModal);
+  if (mobileResumeBtn) mobileResumeBtn.addEventListener('click', () => {
+    if (mobileMenu) {
+      mobileMenu.classList.add('hidden');
+      if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+      if (closeIcon) closeIcon.classList.add('hidden');
+    }
+    openResumeModal();
+  });
   if (heroResumeModalBtn) heroResumeModalBtn.addEventListener('click', openResumeModal);
   if (resumeModalCloseBtn) resumeModalCloseBtn.addEventListener('click', closeResumeModal);
   if (resumeModalExpandBtn) resumeModalExpandBtn.addEventListener('click', toggleModalMaximize);

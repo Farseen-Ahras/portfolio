@@ -330,28 +330,40 @@ body {
 
 /* --- Navigation Bar (Hand-drawn paper strip) --- */
 #navbar {
-  background: rgba(248, 245, 238, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #faf7f2;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 2px solid #1e2022;
+  box-shadow: 0 2px 8px rgba(30, 32, 34, 0.08);
   transition: all 0.25s ease;
+  z-index: 1000 !important;
 }
 
 #navbar.nav-scrolled {
-  box-shadow: 0 4px 10px rgba(30, 32, 34, 0.1);
-  background: #fdfcf9;
+  box-shadow: 0 4px 14px rgba(30, 32, 34, 0.12);
+  background: #ffffff;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
 }
 
 .nav-link {
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: var(--ink-secondary);
   text-decoration: none;
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
   transition: all 0.2s ease;
-  min-height: 44px;
+  min-height: 36px;
   display: inline-flex;
   align-items: center;
+  white-space: nowrap;
 }
 .nav-link:hover, .nav-link.active-nav {
   color: var(--ink-primary);
