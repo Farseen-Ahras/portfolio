@@ -444,21 +444,48 @@ document.addEventListener('DOMContentLoaded', () => {
   // 8. RESUME MODAL & TAB HANDLERS
   // ==========================================
   const resumeModal = document.getElementById('resumeModal');
+  const resumeModalContainer = document.getElementById('resumeModalContainer');
   const resumeModalOpenBtn = document.getElementById('resumeModalOpenBtn');
   const mobileResumeBtn = document.getElementById('mobileResumeBtn');
   const heroResumeModalBtn = document.getElementById('heroResumeModalBtn');
   const resumeModalCloseBtn = document.getElementById('resumeModalCloseBtn');
+  const resumeModalExpandBtn = document.getElementById('resumeModalExpandBtn');
+  const expandIcon = document.getElementById('expandIcon');
+  const collapseIcon = document.getElementById('collapseIcon');
+  const expandText = document.getElementById('expandText');
 
   const resumeTabPdfBtn = document.getElementById('resumeTabPdfBtn');
   const resumeTabHtmlBtn = document.getElementById('resumeTabHtmlBtn');
   const resumePdfView = document.getElementById('resumePdfView');
   const resumeHtmlView = document.getElementById('resumeHtmlView');
+  const resumePrintBtn = document.getElementById('resumePrintBtn');
 
   function openResumeModal() {
-    if (resumeModal) resumeModal.classList.remove('hidden');
+    if (resumeModal) {
+      resumeModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Locks body to prevent double-scroll glitch
+    }
   }
+
   function closeResumeModal() {
-    if (resumeModal) resumeModal.classList.add('hidden');
+    if (resumeModal) {
+      resumeModal.classList.add('hidden');
+      document.body.style.overflow = ''; // Restores body scrolling
+      if (resumeModalContainer && resumeModalContainer.classList.contains('is-maximized')) {
+        resumeModalContainer.classList.remove('is-maximized');
+        if (expandIcon) expandIcon.classList.remove('hidden');
+        if (collapseIcon) collapseIcon.classList.add('hidden');
+        if (expandText) expandText.textContent = 'Fullscreen';
+      }
+    }
+  }
+
+  function toggleModalMaximize() {
+    if (!resumeModalContainer) return;
+    const isMax = resumeModalContainer.classList.toggle('is-maximized');
+    if (expandIcon) expandIcon.classList.toggle('hidden', isMax);
+    if (collapseIcon) collapseIcon.classList.toggle('hidden', !isMax);
+    if (expandText) expandText.textContent = isMax ? 'Exit Fullscreen' : 'Fullscreen';
   }
 
   function setResumeTab(tab) {
@@ -495,12 +522,22 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mobileResumeBtn) mobileResumeBtn.addEventListener('click', openResumeModal);
   if (heroResumeModalBtn) heroResumeModalBtn.addEventListener('click', openResumeModal);
   if (resumeModalCloseBtn) resumeModalCloseBtn.addEventListener('click', closeResumeModal);
+  if (resumeModalExpandBtn) resumeModalExpandBtn.addEventListener('click', toggleModalMaximize);
 
   if (resumeTabPdfBtn) {
     resumeTabPdfBtn.addEventListener('click', () => setResumeTab('pdf'));
   }
   if (resumeTabHtmlBtn) {
     resumeTabHtmlBtn.addEventListener('click', () => setResumeTab('html'));
+  }
+
+  if (resumePrintBtn) {
+    resumePrintBtn.addEventListener('click', () => {
+      setResumeTab('html');
+      setTimeout(() => {
+        window.print();
+      }, 150);
+    });
   }
 
   if (resumeModal) {
@@ -511,6 +548,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
+      if (resumeModalContainer && resumeModalContainer.classList.contains('is-maximized')) {
+        toggleModalMaximize();
+        return;
+      }
       closeResumeModal();
       const projModal = document.getElementById('dynamicProjectModal');
       if (projModal) projModal.remove();
