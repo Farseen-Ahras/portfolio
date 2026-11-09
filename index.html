@@ -36,77 +36,62 @@
   <!-- Header / Navigation Bar (Hand-drawn Paper Strip) -->
   <header class="fixed top-0 left-0 right-0 w-full z-[1000] transition-all duration-300 bg-[#faf7f2] border-b-2 border-[#1e2022] shadow-[0_2px_8px_rgba(30,32,34,0.08)]" id="navbar">
     <div class="w-full px-3 sm:px-6 lg:px-8 xl:px-10">
-      
-      <!-- Primary Bar Row: Brand & Quick Action Buttons -->
-      <div class="flex items-center justify-between h-14 sm:h-16 lg:h-20 gap-3">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-3 sm:gap-4">
         
-        <!-- Logo / Software Engineer Stamp & Name Badge -->
-        <a href="#home" class="group flex items-center gap-2.5 sm:gap-3 shrink-0 focus-visible:outline-2 focus-visible:outline-[#2563eb]" aria-label="Farseen Ahras Portfolio Home">
+        <!-- Left: Name & Title (Software Engineer Stamp) -->
+        <a href="#home" class="group flex items-center gap-2 shrink-0 focus-visible:outline-2 focus-visible:outline-[#2563eb]" aria-label="Farseen Ahras Portfolio Home">
           <div class="flex flex-col">
-            <span class="font-display font-extrabold text-[#1e2022] text-lg sm:text-xl tracking-tight leading-tight group-hover:text-[#2563eb] transition-colors">
+            <span class="font-display font-extrabold text-[#1e2022] text-base sm:text-xl tracking-tight leading-tight group-hover:text-[#2563eb] transition-colors whitespace-nowrap">
               Farseen Ahras
             </span>
-            <div class="flex items-center gap-1 sm:gap-1.5 text-[11px] sm:text-xs font-mono text-[#4b5563] font-semibold">
+            <div class="flex items-center gap-1 text-[10px] sm:text-xs font-mono text-[#4b5563] font-semibold whitespace-nowrap">
               <span class="text-[#2563eb] font-bold">Software Engineer</span>
-              <span>•</span>
-              <span>Systems &amp; Backend</span>
+              <span class="hidden sm:inline">•</span>
+              <span class="hidden sm:inline">Systems &amp; Backend</span>
             </div>
           </div>
         </a>
 
-        <!-- Desktop Direct Options in the Bar (Screens >= 1024px) -->
-        <nav class="hidden lg:flex items-center gap-1.5 xl:gap-2">
-          <a href="#home" class="nav-link">Home</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#projects" class="nav-link">Projects</a>
-          <a href="#leadership" class="nav-link">Leadership</a>
-          <a href="#skills" class="nav-link">Skills</a>
-          <a href="#education" class="nav-link">Education</a>
-          <a href="#terminal" class="nav-link">Terminal</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </nav>
+        <!-- Right: Direct Buttons (Placed after the name on the right, on the same line) -->
+        <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-1">
+          <!-- Direct Section Buttons -->
+          <nav class="flex items-center gap-1 sm:gap-1.5 shrink-0">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#leadership" class="nav-link">Leadership</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#terminal" class="nav-link">Terminal</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </nav>
 
-        <!-- Right Side Direct Actions -->
-        <div class="flex items-center gap-1.5 sm:gap-2 xl:gap-2.5 shrink-0">
-          <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary px-2 sm:px-3 py-1.5 text-xs flex items-center gap-1.5" title="GitHub Profile">
-            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022]" fill="currentColor" viewBox="0 0 24 24">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-            </svg>
-            <span class="hidden sm:inline">GitHub</span>
-          </a>
-          <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary px-2 sm:px-3 py-1.5 text-xs flex items-center gap-1.5" title="LinkedIn Profile">
-            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#0a66c2]" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-            <span class="hidden sm:inline">LinkedIn</span>
-          </a>
-          <button id="resumeModalOpenBtn" class="resume-open-btn btn-stamp-primary text-xs py-1.5 sm:py-2 px-2.5 sm:px-3 flex items-center gap-1.5 font-bold" title="Open Interactive Resume Viewer & Download Official PDF">
-            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-            <span class="hidden md:inline">View &amp; Download Resume</span>
-            <span class="md:hidden">Resume</span>
-          </button>
+          <div class="h-5 w-[1.5px] bg-[#1e2022]/20 shrink-0 mx-0.5"></div>
+
+          <!-- Direct Action Buttons -->
+          <div class="flex items-center gap-1 sm:gap-1.5 shrink-0">
+            <button id="resumeModalOpenBtn" class="resume-open-btn btn-stamp-primary text-xs py-1.5 px-2.5 sm:px-3 flex items-center gap-1.5 font-bold shrink-0" title="Open Interactive Resume Viewer & Download Official PDF">
+              <svg class="w-3.5 h-3.5 text-[#1e2022]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <span class="hidden md:inline">View &amp; Download Resume</span>
+              <span class="md:hidden">Resume</span>
+            </button>
+            <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary px-2 sm:px-2.5 py-1.5 text-xs flex items-center gap-1.5 shrink-0" title="GitHub Profile">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022]" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+              <span class="hidden xl:inline">GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary px-2 sm:px-2.5 py-1.5 text-xs flex items-center gap-1.5 shrink-0" title="LinkedIn Profile">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#0a66c2]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span class="hidden xl:inline">LinkedIn</span>
+            </a>
+          </div>
         </div>
+
       </div>
-
-      <!-- Mobile & Tablet Direct Options Strip (Directly in the bar itself, not inside a menu/option) -->
-      <nav class="flex lg:hidden items-center gap-1.5 overflow-x-auto no-scrollbar py-2 border-t border-[#1e2022]/15 -mx-3 sm:-mx-6 px-3 sm:px-6">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#leadership" class="nav-link">Leadership</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#education" class="nav-link">Education</a>
-        <a href="#terminal" class="nav-link">Terminal</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-
     </div>
   </header>
 
   <!-- Main Content Container -->
-  <main id="main-content" class="relative z-10 pt-28 lg:pt-24">
+  <main id="main-content" class="relative z-10 pt-20 sm:pt-24">
 
     <!-- HERO SECTION (Workbench Intro) -->
     <section id="home" class="min-h-[calc(100vh-5rem)] flex items-center justify-center py-12 lg:py-20 relative">
