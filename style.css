@@ -335,18 +335,22 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  background: #faf7f2;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: #faf7f2 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   border-bottom: 2px solid #1e2022;
   box-shadow: 0 2px 8px rgba(30, 32, 34, 0.08);
   transition: all 0.25s ease;
   z-index: 1000 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 #navbar.nav-scrolled {
   box-shadow: 0 4px 14px rgba(30, 32, 34, 0.12);
-  background: #ffffff;
+  background-color: #ffffff !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
 section[id] {
