@@ -4,19 +4,17 @@ This file tracks pending information to be provided by Farseen Ahras to expand t
 
 ---
 
-## 📌 Active Reminder: IEEE Book of Abstracts (3rd Year)
-*Status: Added as an entry in the Leadership Timeline and Resume with a placeholder.*
+## ✅ Completed: 2025 IEEE DISCOVER Book of Abstracts
+*Status: Verified & fully integrated into the Leadership Timeline, Resume modal, and CLI terminal.*
 
-When you have the details ready, provide any of the following to update the site:
-1. **Title of the Book of Abstracts / Conference**: (e.g. *Book of Abstracts - IEEE Student Conference / Symposium*)
-2. **Your exact role or contribution**: (e.g. Editorial Committee Member, Co-Editor, Author of Abstract on ...)
-3. **Conference or Chapter**: (e.g. IEEE PACE SB / IEEE GRSS & SPS / IEEE Mangalore Subsection)
-4. **Date / Volume**: (e.g. 2025–2026 / 3rd Year)
-5. **Link / PDF**: (Link to download or view the book of abstracts)
+- **Conference**: 2025 IEEE International Conference on Distributed Computing, VLSI, Electrical Circuits and Robotics (IEEE DISCOVER 2025)
+- **Role**: Member of the Editors List / Editorial Committee
+- **Edition**: 2025 (3rd Year, B.E. CSE @ PACE)
+- **Scope**: Compilation of peer-reviewed technical abstracts spanning distributed computing, VLSI, circuits, and robotics.
 
 ---
 
-## 💡 Other Future Items You Can Add Anytime:
+## 💡 Future Enhancements You Can Add Anytime:
+- Direct PDF link / proceedings URL for the IEEE DISCOVER 2025 Book of Abstracts once published online.
 - Links to GitHub repositories for your ESP32 Drone or Hydroponics project.
-- Photos or video clips of the drone flight test or hydroponics rig.
-- A static `resume.pdf` file in this directory to allow direct 1-click download.
+- A static `farseen_ahras_resume.pdf` file in this directory to allow direct 1-click download.

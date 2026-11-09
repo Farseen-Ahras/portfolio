@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div><span class="text-amber-400 font-bold font-mono">drone</span> - ESP32 flight controller notes</div>
         <div><span class="text-amber-400 font-bold font-mono">hydro</span> - Hydroponic AgTech telemetry</div>
         <div><span class="text-amber-400 font-bold font-mono">ieee</span> - IEEE SB, GRSS & SPS leadership</div>
-        <div><span class="text-amber-400 font-bold font-mono">abstracts</span> - IEEE Book of Abstracts details</div>
+        <div><span class="text-amber-400 font-bold font-mono">abstracts</span> - IEEE DISCOVER 2025 Book of Abstracts</div>
         <div><span class="text-amber-400 font-bold font-mono">clubs</span> - EMBED Club & GLUB activities</div>
         <div><span class="text-amber-400 font-bold font-mono">edu</span> - Academic background & CGPA</div>
         <div><span class="text-amber-400 font-bold font-mono">contact</span> - Email, WhatsApp & LinkedIn</div>
@@ -283,12 +283,14 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="text-indigo-400 font-bold font-display text-sm">IEEE LEADERSHIP & PUBLICATIONS:</div>
       <div>• <span class="font-bold text-dark">Chair:</span> IEEE GRSS (Geoscience & Remote Sensing) & SPS (Signal Processing) Student Chapters (since 1st/2nd yr to current 3rd yr).</div>
       <div>• <span class="font-bold text-dark">Execom:</span> IEEE Student Branch @ PA College of Engineering.</div>
-      <div>• <span class="font-bold text-dark">Publication:</span> IEEE Book of Abstracts (3rd Year, 2025–2026) — Name included / Contributor.</div>
+      <div>• <span class="font-bold text-dark">Publication:</span> Editorial Committee Member, Book of Abstracts — 2025 IEEE DISCOVER (International Conference on Distributed Computing, VLSI, Electrical Circuits and Robotics).</div>
       <div>• <span class="font-bold text-dark">Head Volunteer:</span> IEEE & ComedKares RC Car Workshop.</div>
     `,
     abstracts: () => `
-      <div class="text-amber-400 font-bold font-display text-sm">IEEE BOOK OF ABSTRACTS (3rd Year):</div>
-      <div>Contributed to the editorial compilation and publishing of the official IEEE Book of Abstracts during 3rd year. Name is included in the publication. Detailed volume citation and links will be updated soon.</div>
+      <div class="text-amber-400 font-bold font-display text-sm">2025 IEEE DISCOVER — BOOK OF ABSTRACTS:</div>
+      <div>• <span class="font-bold text-dark">Conference:</span> 2025 IEEE International Conference on Distributed Computing, VLSI, Electrical Circuits and Robotics (IEEE DISCOVER).</div>
+      <div>• <span class="font-bold text-dark">Role:</span> Member of the Editors List / Editorial Committee for the official conference Book of Abstracts during 3rd year.</div>
+      <div>• <span class="font-bold text-dark">Scope:</span> Peer-reviewed technical research abstracts across distributed computing, VLSI, smart electrical circuits, and robotics.</div>
     `,
     clubs: () => `
       <div class="text-cyan-400 font-bold font-display text-sm">CAMPUS CLUBS:</div>
