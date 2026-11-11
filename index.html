@@ -160,29 +160,15 @@
       </span>
     </div>
 
-    <!-- MIDDLE LAYER (z-10): Central Cutout Portrait with Transparent Background Overlapping "PORTFOLIO" -->
-    <div id="heroPortrait" class="absolute z-10 inset-0 flex items-end justify-center pointer-events-none select-none pb-0 overflow-hidden" aria-hidden="true">
-      <div class="relative flex items-end justify-center h-full max-h-[88vh] w-full max-w-5xl">
-        <!-- Radial Crimson Ambient Aura behind Portrait -->
-        <div class="absolute bottom-6 w-[320px] sm:w-[480px] lg:w-[620px] h-[320px] sm:h-[480px] lg:h-[580px] rounded-full bg-gradient-to-t from-[#991b1b]/40 via-[#ef4444]/15 to-transparent filter blur-[100px] opacity-70"></div>
+    <!-- MIDDLE LAYER (z-10): Ambient Crimson Atmosphere & Visual Focus -->
+    <div id="heroPortrait" class="absolute z-10 inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden" aria-hidden="true">
+      <div class="relative flex items-center justify-center w-full max-w-4xl h-full">
+        <!-- Radial Crimson Ambient Aura -->
+        <div class="w-[380px] sm:w-[520px] lg:w-[680px] h-[380px] sm:h-[520px] lg:h-[680px] rounded-full bg-gradient-to-tr from-[#991b1b]/25 via-transparent to-[#dc2626]/15 filter blur-[120px] opacity-60"></div>
         
-        <!-- Subtle Architectural Coordinate Grid Line behind Portrait -->
-        <div class="absolute bottom-12 w-full max-w-xl h-px bg-gradient-to-r from-transparent via-[#991b1b]/50 to-transparent"></div>
-        <div class="absolute bottom-16 text-[10px] font-mono tracking-widest text-[#737373]/60 uppercase hidden sm:block">
-          FA // SYSTEM ARCHITECT // LAT 12.8702° N
-        </div>
-
-        <!-- Transparent Cutout Portrait of Farseen Ahras -->
-        <div class="relative z-10 flex items-end justify-center h-full max-h-[75vh] lg:max-h-[82vh]">
-          <img 
-            src="assets/profile.png" 
-            srcset="assets/profile.png 1x, assets/profile@2x.png 2x" 
-            alt="Farseen Ahras — Full-Stack &amp; Embedded Systems Engineer" 
-            class="hero-portrait-cutout h-full max-h-[58vh] sm:max-h-[68vh] lg:max-h-[78vh] w-auto object-contain object-bottom filter contrast-110 brightness-105 drop-shadow-[0_20px_40px_rgba(0,0,0,0.95)] drop-shadow-[0_0_30px_rgba(153,27,27,0.3)]"
-            loading="eager"
-            onerror="this.src='assets/profile.jpg'"
-          >
-        </div>
+        <!-- Architectural concentric halo rings -->
+        <div class="absolute w-[300px] sm:w-[420px] lg:w-[500px] h-[300px] sm:h-[420px] lg:h-[500px] rounded-full border border-white/5 border-dashed"></div>
+        <div class="absolute w-[220px] sm:w-[320px] lg:w-[380px] h-[220px] sm:h-[320px] lg:h-[380px] rounded-full border border-[#991b1b]/20"></div>
       </div>
     </div>
 
