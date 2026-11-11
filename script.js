@@ -9,6 +9,111 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
+    // ==============================================================
+    // 0. CINEMATIC EDITORIAL PRELOADER SEQUENCE
+    // ==============================================================
+    const preloader = document.getElementById('preloaderScreen');
+    const preloaderCount = document.getElementById('preloaderCount');
+    const preloaderBar = document.getElementById('preloaderBar');
+    const preloaderStatus = document.getElementById('preloaderStatus');
+
+    if (preloader) {
+      document.body.classList.add('overflow-hidden');
+
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const loadDuration = prefersReducedMotion ? 0.3 : 1.25;
+
+      // Telemetry status message cycling
+      const statuses = [
+        '[BOOT: CORE]',
+        '[INIT: HARDWARE_BUS]',
+        '[SYNC: SENSORS & RTOS]',
+        '[COMPILE: TELEMETRY]',
+        '[SYS: ONLINE]'
+      ];
+      let statusStep = 0;
+      const statusTimer = setInterval(() => {
+        if (preloaderStatus && statusStep < statuses.length) {
+          preloaderStatus.innerText = statuses[statusStep];
+          statusStep++;
+        }
+      }, (loadDuration * 1000) / (statuses.length + 1));
+
+      // Animated progress counter
+      const progressTracker = { val: 0 };
+
+      const preloaderTimeline = gsap.timeline({
+        onComplete: () => {
+          clearInterval(statusTimer);
+          document.body.classList.remove('overflow-hidden');
+          preloader.style.display = 'none';
+          preloader.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      // Step A: Count up from 0 to 100 & scale progress bar
+      preloaderTimeline.to(progressTracker, {
+        val: 100,
+        duration: loadDuration,
+        ease: 'power2.inOut',
+        onUpdate: () => {
+          if (preloaderCount) {
+            const current = Math.floor(progressTracker.val);
+            preloaderCount.innerText = current < 10 ? '0' + current : current;
+          }
+        }
+      }, 0);
+
+      if (preloaderBar) {
+        preloaderTimeline.to(preloaderBar, {
+          scaleX: 1,
+          duration: loadDuration,
+          ease: 'power2.inOut'
+        }, 0);
+      }
+
+      // Step B: Fade and lift inner contents
+      preloaderTimeline.to('#preloaderScreen > div', {
+        opacity: 0,
+        y: -20,
+        stagger: 0.05,
+        duration: 0.35,
+        ease: 'power2.in'
+      }, `+=${prefersReducedMotion ? 0.05 : 0.15}`);
+
+      // Step C: Shutter curtain wipe up
+      preloaderTimeline.to(preloader, {
+        yPercent: -100,
+        duration: prefersReducedMotion ? 0.3 : 0.85,
+        ease: 'power4.inOut'
+      }, '-=0.1');
+
+      // Step D: Graceful Hero Entrance once curtain lifts
+      preloaderTimeline.from('#home h1', {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+        ease: 'power3.out'
+      }, '-=0.5');
+
+      preloaderTimeline.from('.hero-stat-item', {
+        opacity: 0,
+        x: 30,
+        duration: 0.7,
+        stagger: 0.12,
+        ease: 'power2.out'
+      }, '-=0.6');
+
+      // Safety fallback timeout: unlock scroll after 2.5s maximum
+      setTimeout(() => {
+        clearInterval(statusTimer);
+        document.body.classList.remove('overflow-hidden');
+        if (preloader && preloader.style.display !== 'none') {
+          preloader.style.display = 'none';
+        }
+      }, 2500);
+    }
+
     // 1. Hero Parallax: Giant Background "PORTFOLIO" Text
     const heroBgText = document.getElementById('heroBgText');
     if (heroBgText) {
@@ -41,17 +146,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // 3. Staggered Entrance for Hero Stats
-    const statCards = document.querySelectorAll('.hero-stat-item');
-    if (statCards.length > 0) {
-      gsap.from(statCards, {
-        opacity: 0,
-        x: 30,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: 'power2.out',
-        delay: 0.4
-      });
+    // 3. Staggered Entrance for Hero Stats (Fallback if preloader element is absent)
+    if (!preloader) {
+      const statCards = document.querySelectorAll('.hero-stat-item');
+      if (statCards.length > 0) {
+        gsap.from(statCards, {
+          opacity: 0,
+          x: 30,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: 'power2.out',
+          delay: 0.4
+        });
+      }
     }
 
     // 4. Staggered Entrance for Project Cards

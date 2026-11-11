@@ -58,6 +58,62 @@
 </head>
 <body class="bg-obsidian text-white selection:bg-[#991b1b] selection:text-white relative">
 
+  <!-- ==============================================================
+       CINEMATIC EDITORIAL PRELOADER SCREEN
+       ============================================================== -->
+  <aside id="preloaderScreen" class="fixed inset-0 z-[9999] flex flex-col justify-between p-6 sm:p-10 md:p-14 bg-[#090909] text-white select-none overflow-hidden" aria-label="Loading portfolio experience">
+    <!-- Top Telemetry Row -->
+    <div class="flex items-center justify-between text-xs font-mono text-[#737373]">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#ef4444] animate-ping"></span>
+        <span class="text-white font-bold tracking-wider">FARSEEN AHRAS</span>
+        <span class="hidden sm:inline text-white/30">//</span>
+        <span class="hidden sm:inline text-[#a3a3a3]">SYSTEMS &amp; EMBEDDED</span>
+      </div>
+      <div id="preloaderStatus" class="text-right text-[#ef4444] font-semibold tracking-widest uppercase">
+        [INITIALIZING]
+      </div>
+    </div>
+
+    <!-- Center Monogram & Title -->
+    <div class="flex flex-col items-center justify-center text-center my-auto">
+      <div class="relative mb-5">
+        <!-- Monogram Badge -->
+        <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-[#111111] border border-white/10 flex items-center justify-center shadow-[0_0_50px_rgba(153,27,27,0.35)] relative overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-tr from-[#991b1b]/30 via-transparent to-transparent"></div>
+          <span class="font-display text-4xl sm:text-5xl font-black text-white tracking-wider">FA</span>
+          <div class="absolute bottom-1.5 right-1.5 w-2 h-2 rounded-full bg-[#ef4444] shadow-[0_0_6px_#ef4444]"></div>
+        </div>
+      </div>
+
+      <h2 class="font-display font-black text-4xl sm:text-6xl md:text-7xl text-white tracking-wider uppercase leading-none drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)]">
+        FARSEEN AHRAS
+      </h2>
+      <p class="font-mono text-xs sm:text-sm text-[#a3a3a3] uppercase tracking-widest mt-2.5 max-w-md">
+        Full-Stack &amp; Embedded Systems Architecture
+      </p>
+
+      <!-- Progress Bar Track -->
+      <div class="w-full max-w-xs sm:max-w-md h-1 bg-white/10 rounded-full mt-8 overflow-hidden relative">
+        <div id="preloaderBar" class="h-full w-full bg-gradient-to-r from-[#991b1b] via-[#ef4444] to-[#991b1b] origin-left transform scale-x-0 shadow-[0_0_12px_#ef4444]"></div>
+      </div>
+    </div>
+
+    <!-- Bottom Counter & System Details -->
+    <div class="flex items-end justify-between border-t border-white/10 pt-4 text-xs font-mono text-[#737373]">
+      <div class="space-y-0.5 hidden sm:block">
+        <div class="text-[11px] text-[#a3a3a3]">LAT: 12.8702° N // LONG: 74.8806° E // PACE VTU</div>
+        <div class="text-[10px] text-[#525252]">KERNEL: RTOS // BUS: CAN / I2C / SPI // TELEMETRY: READY</div>
+      </div>
+      
+      <!-- Giant Percentage Counter -->
+      <div class="flex items-baseline gap-1 ml-auto">
+        <span id="preloaderCount" class="font-display font-black text-6xl sm:text-7xl md:text-8xl text-white leading-none tracking-tight">00</span>
+        <span class="font-mono text-lg sm:text-xl font-bold text-[#ef4444]">%</span>
+      </div>
+    </div>
+  </aside>
+
   <!-- Editorial Carbon Grid Background Overlay -->
   <div class="editorial-grid-bg" aria-hidden="true"></div>
 

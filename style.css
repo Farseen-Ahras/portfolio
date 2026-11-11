@@ -339,7 +339,7 @@ html, body {
     color: #111111 !important;
     font-size: 10.5pt !important;
   }
-  .no-print, header, footer, .editorial-grid-bg, .ambient-glow, .laptop-chassis, #pdfViewContainer, .tab-bar {
+  .no-print, header, footer, .editorial-grid-bg, .ambient-glow, .laptop-chassis, #pdfViewContainer, .tab-bar, #preloaderScreen {
     display: none !important;
   }
   main {
