@@ -3,1611 +3,924 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farseen Ahras | Software Engineer & Systems Developer</title>
-  <meta name="description" content="Software Engineering portfolio of Farseen Ahras Raufali — Computer Science & Engineering Undergrad, Full-Stack & Systems Developer, Python, Java, C++, IoT Software Lead, and IEEE Student Leader.">
-  <meta name="keywords" content="Farseen Ahras, Software Engineering, Python, Java, C++, Systems Programming, Full-Stack, IoT Software, Linux, GLUB, IEEE Chair, PACE, Computer Science">
+  <title>Farseen Ahras | Full-Stack &amp; Embedded Systems Engineer</title>
+  <meta name="description" content="Editorial portfolio of Farseen Ahras Raufali — Computer Science &amp; Engineering Undergrad, Systems &amp; Embedded Software Developer, IEEE Student Leader, and IoT Architect.">
   <meta name="author" content="Farseen Ahras Raufali">
-  
-  <!-- Open Graph / Meta -->
-  <meta property="og:title" content="Farseen Ahras | Software Engineer & Systems Developer">
-  <meta property="og:description" content="Computer Science Undergrad & Software Developer. Full-stack development, Python, Java, C++, IoT software architectures, and IEEE Student Leader.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Farseen Ahras | Full-Stack &amp; Embedded Systems Engineer">
+  <meta property="og:description" content="I design and build systems that bridge the gap between hardware and software. Systems programming, Python, Java, C++, IoT, and IEEE Student Leader.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.linkedin.com/in/farseen-ahras/">
 
-  <!-- Favicon (Hand-drawn Ink Monogram Data URI) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23faf7f2' stroke='%231e2022' stroke-width='6'/><circle cx='50' cy='50' r='34' stroke='%232563eb' stroke-width='5' stroke-dasharray='6 4' fill='%23fef9c3'/><text x='50' y='60' font-family='sans-serif' font-weight='900' font-size='32' text-anchor='middle' fill='%231e2022'>FA</text></svg>">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23090909'/><circle cx='50' cy='50' r='36' stroke='%23991b1b' stroke-width='6' fill='%23171717'/><text x='50' y='62' font-family='sans-serif' font-weight='900' font-size='34' text-anchor='middle' fill='%23ffffff'>FA</text></svg>">
 
-  <!-- Google Fonts: Kalam, Caveat, Patrick Hand, Space Mono, Plus Jakarta Sans -->
+  <!-- Google Fonts: Bebas Neue, Inter, Montserrat, Caveat, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Kalam:wght@400;700&family=Patrick+Hand&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=3.3">
+  <!-- Tailwind CSS via CDN with customized dark crimson palette -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#090909',
+            surface: '#111111',
+            crimson: {
+              DEFAULT: '#991b1b',
+              dark: '#7f1d1d',
+              bright: '#dc2626',
+              light: '#ef4444'
+            }
+          },
+          fontFamily: {
+            display: ['Bebas Neue', 'sans-serif'],
+            sans: ['Inter', '-apple-system', 'sans-serif'],
+            editorial: ['Montserrat', 'sans-serif'],
+            hand: ['Caveat', 'cursive'],
+            mono: ['JetBrains Mono', 'Space Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- GSAP & ScrollTrigger via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Custom Editorial Design System Stylesheet -->
+  <link rel="stylesheet" href="style.css?v=4.0">
 </head>
-<body class="bg-paper text-dark selection-yellow">
+<body class="bg-obsidian text-white selection:bg-[#991b1b] selection:text-white relative">
 
-  <!-- STARTUP INTRO SPLASH OVERLAY -->
-  <div id="startupSplash" aria-hidden="true" title="Click to unveil immediately">
-    <div class="splash-card">
-      <div class="washi-tape"></div>
-      
-      <!-- System Badge -->
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#fef08a] border-2 border-[#1e2022] shadow-[2px_2px_0px_#1e2022] text-xs font-mono font-bold text-[#1e2022] uppercase tracking-wider mb-4">
-        <span class="w-2.5 h-2.5 rounded-full bg-[#059669] animate-ping"></span>
-        <span>Portfolio Workspace • Init</span>
-      </div>
+  <!-- Editorial Carbon Grid Background Overlay -->
+  <div class="editorial-grid-bg" aria-hidden="true"></div>
 
-      <!-- User Name -->
-      <h1 class="font-display font-extrabold text-3xl sm:text-5xl md:text-6xl text-[#1e2022] tracking-tight leading-none mb-2">
-        Farseen Ahras
-      </h1>
-      
-      <!-- Professional Title -->
-      <div class="flex items-center justify-center gap-2 text-xs sm:text-sm font-mono font-bold text-[#4b5563] mt-2">
-        <span class="text-[#1e2022]">Software Engineer</span>
-        <span>•</span>
-        <span>Systems &amp; Backend</span>
-      </div>
+  <!-- Ambient Crimson Spotlights -->
+  <div class="ambient-glow bg-[#991b1b] w-[450px] h-[450px] -top-32 -left-32" aria-hidden="true"></div>
+  <div class="ambient-glow bg-[#991b1b] w-[550px] h-[550px] top-[40%] -right-40" aria-hidden="true"></div>
 
-      <!-- Animated Progress Tracker -->
-      <div class="flex flex-col items-center mt-5">
-        <div class="splash-progress-track">
-          <div class="splash-progress-bar"></div>
-        </div>
-        <span class="text-[10px] font-mono text-[#6b7280] font-bold mt-2 tracking-widest uppercase">Unveiling Systems...</span>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Accessible Skip to Main Content Link -->
-  <a href="#main-content" class="skip-link">Skip to Notebook Content</a>
-
-  <!-- Engineering Graph Paper Background Grid & Red Margin Line -->
-  <div class="engineering-grid-bg"></div>
-  <div class="notebook-margin-line"></div>
-
-  <!-- Header / Navigation Bar (Hand-drawn Paper Strip) -->
-  <header class="fixed top-0 left-0 right-0 w-full z-[1000] transition-all duration-300 bg-[#faf7f2] border-b-2 border-[#1e2022] shadow-[0_2px_8px_rgba(30,32,34,0.08)]" id="navbar">
-    <div class="w-full px-3 sm:px-6 lg:px-8 xl:px-10">
-      <div class="flex items-center justify-between h-16 sm:h-20 gap-3 sm:gap-4">
+  <!-- ==============================================================
+       HEADER & NAVIGATION BAR
+       ============================================================== -->
+  <header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#090909]/85 backdrop-blur-md border-b border-white/10 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
         
-        <!-- Left: Name & Title (Software Engineer Stamp) -->
-        <a href="#home" class="nav-brand-link group flex items-center gap-2 shrink-0" style="color: #1e2022 !important; text-decoration: none !important;" aria-label="Farseen Ahras Portfolio Home">
+        <!-- Left: Brand Identity -->
+        <a href="#home" class="flex items-center gap-3 group shrink-0" aria-label="Farseen Ahras Portfolio Home">
+          <div class="w-2.5 h-2.5 rounded-full bg-[#dc2626] shadow-[0_0_8px_#ef4444] animate-pulse"></div>
           <div class="flex flex-col">
-            <span class="nav-brand-name font-display font-extrabold text-base sm:text-xl tracking-tight leading-tight whitespace-nowrap" style="color: #1e2022 !important;">
-              Farseen Ahras
+            <span class="font-display text-2xl sm:text-3xl tracking-wider text-white group-hover:text-[#ef4444] transition-colors leading-none">
+              FARSEEN AHRAS
             </span>
-            <div class="flex items-center gap-1 text-[10px] sm:text-xs font-mono font-semibold whitespace-nowrap" style="color: #1e2022 !important;">
-              <span class="nav-brand-title font-bold" style="color: #1e2022 !important;">Software Engineer</span>
-              <span class="hidden sm:inline" style="color: #4b5563 !important;">•</span>
-              <span class="hidden sm:inline" style="color: #4b5563 !important;">Systems &amp; Backend</span>
-            </div>
+            <span class="text-[10px] sm:text-xs font-mono text-[#a3a3a3] uppercase tracking-widest mt-0.5">
+              SYSTEMS &amp; EMBEDDED ENGINEER
+            </span>
           </div>
         </a>
 
-        <!-- Right: Direct Buttons (Placed after the name on the right, on the same line) -->
-        <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-1">
-          
-          <!-- Direct Action Buttons (Placed immediately after the name for 100% instant visibility) -->
-          <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-            
-            <!-- Biodata Page Button (Prominent 1st Button in Vivid Yellow) -->
-            <a href="biodata.html" class="btn-stamp-primary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0 shadow-[2px_2px_0px_#1e2022]" title="Open Official Biodata Sheet">
-              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-              <span class="hidden md:inline whitespace-nowrap">Biodata Sheet</span>
-              <span class="md:hidden whitespace-nowrap">Biodata</span>
-            </a>
-
-            <!-- Resume Webpage Button -->
-            <a href="resume.html" class="resume-open-btn btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="Open Official Resume Page & PDF">
-              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-              <span class="hidden md:inline whitespace-nowrap">Resume Page</span>
-              <span class="md:hidden whitespace-nowrap">Resume</span>
-            </a>
-
-            <!-- GitHub Button (Same size as PDF one) -->
-            <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="GitHub Profile">
-              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
-              <span class="hidden md:inline whitespace-nowrap">GitHub Profile</span>
-              <span class="md:hidden whitespace-nowrap">GitHub</span>
-            </a>
-
-            <!-- LinkedIn Button (Same size as PDF one) -->
-            <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="LinkedIn Profile">
-              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              <span class="hidden md:inline whitespace-nowrap">LinkedIn Profile</span>
-              <span class="md:hidden whitespace-nowrap">LinkedIn</span>
-            </a>
-
-          </div>
-
-          <div class="h-5 w-[1.5px] bg-[#1e2022]/20 shrink-0 mx-0.5"></div>
-
-          <!-- Direct Section Buttons -->
-          <nav class="flex items-center gap-1 sm:gap-1.5 shrink-0">
-            <a href="#home" class="nav-link">Home</a>
-            <!-- Direct Resume & Biodata Chips in Navigation -->
-            <a href="resume.html" class="nav-link font-bold text-[#1e2022]" style="background: #fef08a !important; border-color: #1e2022 !important;" title="Open Official Resume Page">Resume ↗</a>
-            <a href="biodata.html" class="nav-link font-bold text-[#1e2022]" style="background: #dbeafe !important; border-color: #1e2022 !important;" title="Open Official Biodata Sheet">Biodata ↗</a>
-            <a href="#about" class="nav-link">About</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#leadership" class="nav-link">Leadership</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#education" class="nav-link">Education</a>
-            <a href="#terminal" class="nav-link">Terminal</a>
-            <a href="#contact" class="nav-link">Contact</a>
+        <!-- Right: Direct Navigation & Action Stamp Buttons -->
+        <div class="hidden lg:flex items-center gap-6">
+          <nav class="flex items-center gap-5 text-xs font-editorial uppercase font-bold tracking-wider text-[#a3a3a3]">
+            <a href="#home" class="hover:text-white transition-colors">Home</a>
+            <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+            <a href="#architecture" class="hover:text-white transition-colors">Process</a>
+            <a href="#leadership" class="hover:text-white transition-colors">Leadership</a>
+            <a href="#contact" class="hover:text-white transition-colors">Contact</a>
           </nav>
 
+          <div class="h-5 w-[1px] bg-white/20"></div>
+
+          <!-- Direct Action Buttons -->
+          <div class="flex items-center gap-2.5">
+            <!-- Resume Webpage Button -->
+            <a href="resume.html" class="btn-crimson text-xs py-2 px-4 rounded-md flex items-center gap-1.5 font-bold" title="Open Official Resume Page">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+              <span>Resume Page</span>
+            </a>
+
+            <!-- Biodata Webpage Button -->
+            <a href="biodata.html" class="btn-ghost-dark text-xs py-2 px-4 rounded-md flex items-center gap-1.5 font-bold" title="Open Official Biodata Sheet">
+              <svg class="w-3.5 h-3.5 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+              <span>Biodata</span>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md bg-white/5 border border-white/10 hover:border-[#dc2626] text-white hover:text-[#ef4444] transition-colors" title="GitHub Profile" aria-label="GitHub">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md bg-white/5 border border-white/10 hover:border-[#dc2626] text-white hover:text-[#ef4444] transition-colors" title="LinkedIn Profile" aria-label="LinkedIn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
         </div>
 
+        <!-- Mobile Menu Trigger -->
+        <button id="mobileMenuToggle" class="lg:hidden p-2 rounded-md bg-white/5 border border-white/10 text-white" aria-label="Toggle Navigation">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileNavDrawer" class="hidden lg:hidden bg-[#0d0d0d] border-b border-white/10 px-4 py-5 space-y-3">
+      <div class="grid grid-cols-2 gap-2 text-xs font-editorial uppercase font-bold text-[#a3a3a3]">
+        <a href="#home" class="p-2 rounded bg-white/5 hover:text-white">Home</a>
+        <a href="#projects" class="p-2 rounded bg-white/5 hover:text-white">Projects</a>
+        <a href="#architecture" class="p-2 rounded bg-white/5 hover:text-white">Process</a>
+        <a href="#leadership" class="p-2 rounded bg-white/5 hover:text-white">Leadership</a>
+        <a href="#contact" class="p-2 rounded bg-white/5 hover:text-white">Contact</a>
+      </div>
+      <div class="pt-2 border-t border-white/10 flex items-center gap-2">
+        <a href="resume.html" class="btn-crimson flex-1 text-center py-2 text-xs rounded font-bold">Resume Page</a>
+        <a href="biodata.html" class="btn-ghost-dark flex-1 text-center py-2 text-xs rounded font-bold">Biodata</a>
       </div>
     </div>
   </header>
 
-  <!-- Main Content Container -->
-  <main id="main-content" class="relative z-10 pt-20 sm:pt-24">
 
-    <!-- HERO SECTION (Workbench Intro) -->
-    <section id="home" class="min-h-[calc(100vh-5rem)] flex items-center justify-center py-12 lg:py-20 relative">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div class="flex flex-col items-start">
-            
-            <!-- Lab Field Journal Dossier Header Stamp -->
-            <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-5">
-              <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#fef08a] border-2 border-[#1e2022] shadow-[2px_2px_0px_#1e2022] transform -rotate-1">
-                <span class="w-2.5 h-2.5 rounded-full bg-[#059669] animate-pulse"></span>
-                <span class="font-mono text-xs font-bold text-[#1e2022] tracking-wider uppercase">
-                  FIELD JOURNAL // VOL. 03
-                </span>
-              </div>
-              <span class="inline-flex items-center gap-1.5 text-xs font-mono text-[#374151] font-bold bg-white px-3 py-1.5 rounded-full border-2 border-[#1e2022] shadow-[2px_2px_0px_#1e2022]">
-                <svg class="w-3.5 h-3.5 text-[#1e2022]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                PACE • Kasaragod / Mangalore
-              </span>
-              <span class="inline-flex items-center text-xs font-mono font-bold bg-[#dbeafe] text-[#1e40af] px-3 py-1.5 rounded-full border-2 border-[#1e2022] shadow-[2px_2px_0px_#1e2022]">
-                B.E. CSE (2022–2026)
-              </span>
-            </div>
+  <!-- ==============================================================
+       HERO SECTION (CRITICAL Z-INDEX LAYERING: BACKGROUND / PORTRAIT / FOREGROUND)
+       ============================================================== -->
+  <section id="home" class="relative min-h-[95vh] flex items-center justify-center pt-24 pb-16 overflow-hidden">
+    
+    <!-- BACKGROUND LAYER (z-0): Giant full-width "PORTFOLIO" in accent crimson -->
+    <div id="heroBgText" class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none select-none overflow-hidden" aria-hidden="true">
+      <span class="font-display font-black text-[18vw] leading-none text-[#991b1b]/15 uppercase tracking-widest whitespace-nowrap transform -translate-y-6">
+        PORTFOLIO
+      </span>
+    </div>
 
-            <!-- Primary Name Headline with Hand-Drawn Ink Aesthetic -->
-            <div class="mb-4">
-              <div class="font-hand text-2xl sm:text-3xl text-[#1e2022] font-bold mb-1 transform -rotate-1 flex items-center gap-2">
-                <span>Hello! I'm</span>
-                <svg class="w-5 h-5 text-[#1e2022] inline-block animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 13l-5 5m0 0l-5-5m5 5V6"></path>
-                </svg>
-              </div>
-              <h1 class="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl text-[#1e2022] tracking-tight leading-[1.08]">
-                Farseen Ahras <span class="scribble-underline text-[#1e2022]">Raufali</span>
-              </h1>
-            </div>
+    <!-- MIDDLE LAYER (z-10): Central Portrait Halo & Silhouette Graphic -->
+    <div id="heroPortrait" class="absolute z-10 inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+      <div class="relative w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] lg:w-[580px] lg:h-[580px] rounded-full flex items-center justify-center">
+        <!-- Radial crimson spotlight aura -->
+        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#991b1b]/30 via-transparent to-[#dc2626]/20 filter blur-3xl"></div>
+        
+        <!-- Architectural framing rings -->
+        <div class="absolute inset-8 rounded-full border border-white/5 border-dashed"></div>
+        <div class="absolute inset-16 rounded-full border border-[#991b1b]/20"></div>
 
-            <!-- Professional Role Badges (Hand-Drawn Stamp Tags) -->
-            <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-6 text-sm sm:text-base font-display font-bold">
-              <span class="px-3.5 py-1.5 bg-[#dbeafe] text-[#1e40af] rounded-xl border-2 border-[#1e2022] shadow-[3px_3px_0px_#1e2022] transform -rotate-1 hover:rotate-0 transition-transform">
-                Software & Systems Engineer
-              </span>
-              <span class="px-3.5 py-1.5 bg-[#dcfce7] text-[#065f46] rounded-xl border-2 border-[#1e2022] shadow-[3px_3px_0px_#1e2022] transform rotate-1 hover:rotate-0 transition-transform">
-                Full-Stack & Backend Dev
-              </span>
-              <span class="px-3.5 py-1.5 bg-[#fef3c7] text-[#92400e] rounded-xl border-2 border-[#1e2022] shadow-[3px_3px_0px_#1e2022] transform -rotate-1 hover:rotate-0 transition-transform">
-                IEEE GRSS & SPS Chair
-              </span>
-            </div>
-
-            <!-- Bio Description with Highlighters -->
-            <p class="text-base sm:text-lg text-[#374151] max-w-3xl leading-relaxed mb-6 font-body">
-              Computer Science & Engineering undergraduate at <span class="highlighter-yellow font-bold text-[#1e2022]">P A College of Engineering</span> (CGPA 8.81). 
-              Passionate software engineer specializing in <strong class="text-[#1e2022]">Python, Java, C++, algorithms, and backend systems</strong>, bridging robust software architectures with connected IoT solutions. 
-              Active leadership across <span class="highlighter-blue font-bold text-[#1e2022]">IEEE Student Branch Execom</span>, open-source adoption at <strong class="text-[#1e2022]">GLUB</strong>, and software contributions in <strong class="text-[#1e2022]">EMBED Club</strong>.
-            </p>
-
-            <!-- Sticky Note Highlight Bulletin -->
-            <div class="postit-card p-4 sm:p-5 mb-8 max-w-2xl w-full">
-              <div class="pushpin"></div>
-              <div class="flex items-center justify-between gap-2 mb-1.5 font-display font-bold text-sm text-[#92400e]">
-                <span class="flex items-center gap-1.5">
-                  <svg class="w-4 h-4 text-[#e11d48]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-                  <span>LAB STATUS BULLETIN</span>
-                </span>
-                <span class="text-xs bg-[#fde047] px-2 py-0.5 rounded border border-[#ca8a04]">3rd Year (2022–2026)</span>
-              </div>
-              <p class="text-sm text-[#1e2022] font-body leading-relaxed">
-                Available for <strong class="text-[#92400e]">Summer 2026/2027 Internships</strong> in Software Engineering, Backend Development, Systems Programming, or Full-Stack Solutions. 
-                Passionate about clean code architectures, performant systems, and intelligent automated platforms!
-              </p>
-            </div>
-
-            <!-- Call To Actions (Stamp Buttons) -->
-            <div class="flex flex-wrap items-center gap-3.5 mb-8 w-full sm:w-auto">
-              <a href="resume.html" class="btn-stamp-primary text-sm font-bold px-5 py-3.5 flex items-center justify-center gap-2 w-full sm:w-auto shadow-[3px_3px_0px_#1e2022]" title="Open Official Resume Page">
-                <svg class="w-4 h-4 text-[#1e2022]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                </svg>
-                <span>View &amp; Download Resume</span>
-              </a>
-              <a href="biodata.html" class="btn-stamp-secondary text-sm font-bold px-4 py-3.5 flex items-center justify-center gap-2 w-full sm:w-auto" title="Open Official Biodata Sheet">
-                <svg class="w-4 h-4 text-[#1e2022]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
-                </svg>
-                <span>Official Biodata</span>
-              </a>
-              <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-sm font-bold px-4 py-3.5 flex items-center justify-center gap-2 w-full sm:w-auto" title="Explore GitHub Repositories">
-                <svg class="w-4 h-4 text-[#1e2022]" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-                </svg>
-                <span>GitHub</span>
-              </a>
-              <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="btn-stamp-blue text-sm font-bold px-4 py-3.5 flex items-center justify-center gap-2 w-full sm:w-auto">
-                <svg class="w-4 h-4 text-[#1e40af]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-                <span>LinkedIn</span>
-              </a>
-            </div>
-
-            <!-- Key Metric Strips (Sketched Cards) -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 w-full pt-4 border-t-2 border-dashed border-[#1e2022]">
-              <div class="stat-card-sketch bg-white">
-                <div class="font-display text-2xl font-bold text-[#1e2022] tracking-tight">8.81</div>
-                <div class="text-[11px] font-mono text-[#2563eb] font-bold uppercase">CGPA / 10</div>
-                <div class="text-[12px] text-[#4b5563]">B.E. CSE @ PACE</div>
-              </div>
-              <div class="stat-card-sketch bg-white">
-                <div class="font-display text-2xl font-bold text-[#1e2022] tracking-tight">Chair</div>
-                <div class="text-[11px] font-mono text-[#7c3aed] font-bold uppercase">IEEE GRSS & SPS</div>
-                <div class="text-[12px] text-[#4b5563]">Since 1st/2nd Yr</div>
-              </div>
-              <div class="stat-card-sketch bg-white">
-                <div class="font-display text-2xl font-bold text-[#1e2022] tracking-tight">Software</div>
-                <div class="text-[11px] font-mono text-[#059669] font-bold uppercase">Systems & Backend</div>
-                <div class="text-[12px] text-[#4b5563]">Python • Java • C++</div>
-              </div>
-              <div class="stat-card-sketch bg-white">
-                <div class="font-display text-2xl font-bold text-[#1e2022] tracking-tight">Member</div>
-                <div class="text-[11px] font-mono text-[#d97706] font-bold uppercase">GLUB & EMBED</div>
-                <div class="text-[12px] text-[#4b5563]">Linux & Tech Clubs</div>
-              </div>
-            </div>
-
+        <!-- Portrait Image (Integrated from assets with graceful editorial fallback) -->
+        <div class="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-[#991b1b] shadow-[0_0_40px_rgba(153,27,27,0.35)] opacity-85">
+          <img src="assets/profile.jpg" alt="Farseen Ahras" class="w-full h-full object-cover filter contrast-125 brightness-95" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%23111111\'><circle cx=\'50\' cy=\'40\' r=\'22\' fill=\'%23262626\'/><path d=\'M15 95 C 15 70, 85 70, 85 95 Z\' fill=\'%231f1f1f\'/></svg>'">
         </div>
       </div>
-    </section>
+    </div>
 
-
-    <!-- ABOUT SECTION (01 // The Lab Notebook) -->
-    <section id="about" class="py-20 border-t-2 border-dashed border-[#1e2022] relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- FOREGROUND LAYER (z-20): Editorial Content, Headline, Subtext & Stats -->
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-          <div>
-            <div class="font-display text-sm text-[#2563eb] font-bold tracking-wider uppercase mb-1">01 // Field Journal & Philosophy</div>
-            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-[#1e2022] tracking-tight">
-              Architecting Resilient Software & Connected Systems
-            </h2>
+        <!-- Left Side: Editorial Typography & Call To Action -->
+        <div class="lg:col-span-8 flex flex-col items-start text-left">
+          
+          <!-- Handwritten Greeting -->
+          <div class="flex items-center gap-2 mb-2">
+            <span class="font-hand text-3xl sm:text-4xl text-[#ef4444] font-bold">
+              Hello, I'm
+            </span>
           </div>
-          <p class="text-sm font-hand text-xl text-[#6b7280] mt-2 md:mt-0">
-            Kasaragod, Kerala • P A College of Engineering
+
+          <!-- Massive Bold White Header -->
+          <h1 class="font-display font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-white tracking-tight uppercase leading-none drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)]">
+            FARSEEN AHRAS
+          </h1>
+
+          <!-- Red Professional Subtitle -->
+          <div class="flex items-center gap-2 font-mono font-bold text-xs sm:text-sm text-[#dc2626] tracking-widest uppercase mt-3 mb-5">
+            <span class="w-2 h-2 rounded-full bg-[#dc2626]"></span>
+            <span>FULL-STACK &amp; EMBEDDED ENGINEER</span>
+          </div>
+
+          <!-- Editorial Paragraph -->
+          <p class="text-sm sm:text-base md:text-lg text-[#a3a3a3] max-w-xl leading-relaxed mb-8 font-sans">
+            I design and build systems that bridge the gap between hardware and software. Passionate about IoT, AI-driven automation, and creating robust full-stack applications.
           </p>
-        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          <!-- Narrative Column (Lined notebook feel) -->
-          <div class="lg:col-span-7 space-y-5 text-[#374151] text-lg leading-relaxed font-body">
-            <p>
-              I am a 3rd-year <strong class="text-[#1e2022] font-bold">Computer Science and Engineering</strong> student at 
-              <span class="highlighter-yellow font-bold text-[#1e2022]">P A College of Engineering (PACE)</span>, holding an academic CGPA of 
-              <strong class="text-[#1e2022] font-bold">8.81 / 10</strong>. My core passion is <strong class="text-[#1e2022]">software engineering and backend systems</strong>: 
-              writing clean, modular code in Python, Java, and modern C++, designing performant algorithms, and building intelligent software-driven platforms.
-            </p>
-            <p>
-              Across my project work, I approach engineering through a software lens: structuring real-time flight-control algorithms and state machines 
-              for an <strong class="text-[#1e2022]">ESP32 flight controller</strong> in C++, architecting automated telemetry streaming pipelines, 
-              sensor data processing, and MQTT messaging for a <strong class="text-[#1e2022]">Smart Hydroponic Farming System</strong>, and orchestrating 
-              home automation pipelines via Python and Linux.
-            </p>
-            <p>
-              Beyond coding, I am deeply invested in technical community leadership. I serve on the 
-              <strong class="text-[#1e2022]">IEEE Student Branch Executive Committee (Execom)</strong> at PACE, and have served as 
-              <strong class="text-[#1e2022]">Chair of the IEEE GRSS (Geoscience & Remote Sensing) & SPS (Signal Processing) Chapter</strong> 
-              continuously since the transition between my 1st and 2nd year. I am also an active member of both 
-              <strong class="text-[#2563eb]">GLUB</strong> (GNU/Linux Users' Branch, promoting open-source software and terminal fluency) and 
-              <strong class="text-[#2563eb]">EMBED Club</strong>, guiding students through microcontroller software and hands-on workshops.
-            </p>
+          <!-- Primary Action Stamp Buttons -->
+          <div class="flex flex-wrap items-center gap-3.5 w-full sm:w-auto">
+            <a href="resume.html" class="btn-crimson py-3.5 px-6 rounded-lg text-sm flex items-center gap-2 font-bold shadow-[0_4px_20px_rgba(153,27,27,0.4)]">
+              <span>View &amp; Download Resume</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
 
-            <!-- Highlights Checklist with Vector SVGs -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3">
-              <div class="flex items-center gap-2.5 text-base text-[#1e2022]">
-                <div class="w-6 h-6 rounded-full bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center text-[#2563eb] shrink-0 shadow-[1px_1px_0px_#1e2022]">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span>Python, Java & Modern C++ OOP</span>
-              </div>
-              <div class="flex items-center gap-2.5 text-base text-[#1e2022]">
-                <div class="w-6 h-6 rounded-full bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center text-[#2563eb] shrink-0 shadow-[1px_1px_0px_#1e2022]">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span>Backend Services, APIs & MQTT Brokers</span>
-              </div>
-              <div class="flex items-center gap-2.5 text-base text-[#1e2022]">
-                <div class="w-6 h-6 rounded-full bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center text-[#2563eb] shrink-0 shadow-[1px_1px_0px_#1e2022]">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span>Algorithms & Data Structure Design</span>
-              </div>
-              <div class="flex items-center gap-2.5 text-base text-[#1e2022]">
-                <div class="w-6 h-6 rounded-full bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center text-[#2563eb] shrink-0 shadow-[1px_1px_0px_#1e2022]">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span>GNU/Linux, Bash & Git Workflows (GLUB)</span>
-              </div>
-              <div class="flex items-center gap-2.5 text-base text-[#1e2022]">
-                <div class="w-6 h-6 rounded-full bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center text-[#2563eb] shrink-0 shadow-[1px_1px_0px_#1e2022]">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span>Real-time Control Logic & RTOS Scheduling</span>
-              </div>
-              <div class="flex items-center gap-2.5 text-base text-[#1e2022]">
-                <div class="w-6 h-6 rounded-full bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center text-[#2563eb] shrink-0 shadow-[1px_1px_0px_#1e2022]">
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                </div>
-                <span>Technical Leadership & Peer Mentoring</span>
-              </div>
-            </div>
+            <a href="biodata.html" class="btn-ghost-dark py-3.5 px-5 rounded-lg text-sm flex items-center gap-2 font-bold">
+              <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+              <span>Official Biodata</span>
+            </a>
+
+            <a href="#projects" class="btn-ghost-dark py-3.5 px-4 rounded-lg text-sm text-[#a3a3a3] hover:text-white font-mono text-xs">
+              Explore Projects ↓
+            </a>
           </div>
 
-          <!-- Cards Column: Campus Leadership & Affiliations (Post-it / Taped Cards) -->
-          <div class="lg:col-span-5 space-y-4">
-            
-            <div class="wobbly-box p-5 bg-white relative">
-              <div class="washi-tape-left"></div>
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded-xl bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center shrink-0 text-[#2563eb] shadow-[2px_2px_0px_#1e2022]">
-                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                  </svg>
-                </div>
-                <div>
-                  <div class="flex items-center gap-2 flex-wrap">
-                    <h3 class="font-display font-bold text-[#1e2022] text-lg">IEEE Student Branch PACE</h3>
-                    <span class="px-2 py-0.5 rounded text-xs font-mono bg-[#fef08a] text-[#1e2022] border border-[#1e2022] font-bold">Execom</span>
-                  </div>
-                  <p class="text-sm text-[#4b5563] mt-1 font-body">
-                    Executive Committee member driving technological initiatives, technical hackathons, and university-wide engineering events.
-                  </p>
-                </div>
-              </div>
-            </div>
+        </div>
 
-            <div class="wobbly-box-2 p-5 bg-white relative">
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded-xl bg-[#fef08a] border-2 border-[#1e2022] flex items-center justify-center shrink-0 text-[#92400e] shadow-[2px_2px_0px_#1e2022]">
-                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <div class="flex items-center gap-2 flex-wrap">
-                    <h3 class="font-display font-bold text-[#1e2022] text-lg">IEEE GRSS & SPS Chapters</h3>
-                    <span class="px-2 py-0.5 rounded text-xs font-mono bg-[#dbeafe] text-[#1e40af] border border-[#1e2022] font-bold">Chair</span>
-                  </div>
-                  <p class="text-sm text-[#4b5563] mt-1 font-body">
-                    Chair of Geoscience and Remote Sensing Society & Signal Processing Society joint chapters since 1st/2nd year, coordinating research talks and workshops.
-                  </p>
-                </div>
+        <!-- Right Side: Vertical Stack of Stats Cards with Giant Red Numbers -->
+        <div class="lg:col-span-4 flex flex-col gap-3.5 w-full lg:max-w-xs ml-auto">
+          
+          <!-- Stat 1: 8.81 CGPA -->
+          <div class="hero-stat-item p-4 rounded-xl bg-[#111111]/80 border border-white/10 backdrop-blur-sm hover:border-[#dc2626] transition-colors">
+            <div class="flex items-baseline justify-between">
+              <div class="font-display font-black text-4xl sm:text-5xl text-[#dc2626] leading-none" id="stat-cgpa">
+                8.81
               </div>
+              <span class="text-[10px] font-mono text-[#a3a3a3] uppercase tracking-wider font-bold">VTU PACE</span>
             </div>
+            <div class="text-xs font-editorial uppercase font-bold text-white mt-1">CGPA / 10</div>
+            <div class="text-[11px] text-[#737373]">B.E. Computer Science (2022–2026)</div>
+          </div>
 
-            <div class="grid grid-cols-2 gap-3">
-              <div class="postit-card-green p-4">
-                <div class="font-display text-sm text-[#059669] font-bold mb-1">EMBED CLUB</div>
-                <div class="text-sm text-[#1e2022] font-bold">Core Member</div>
-                <div class="text-xs text-[#374151] mt-1 font-body">Microcontroller architectures, robotics prototypes.</div>
-              </div>
-              <div class="postit-card p-4">
-                <div class="font-display text-sm text-[#d97706] font-bold mb-1">GLUB (PACE)</div>
-                <div class="text-sm text-[#1e2022] font-bold">GNU/Linux Branch</div>
-                <div class="text-xs text-[#374151] mt-1 font-body">FOSS advocate, shell scripting, Linux kernel tools.</div>
-              </div>
+          <!-- Stat 2: CS50x Certified -->
+          <div class="hero-stat-item p-4 rounded-xl bg-[#111111]/80 border border-white/10 backdrop-blur-sm hover:border-[#dc2626] transition-colors">
+            <div class="font-display font-black text-3xl sm:text-4xl text-[#dc2626] leading-none">
+              CS50x
             </div>
+            <div class="text-xs font-editorial uppercase font-bold text-white mt-1">Harvard Certified</div>
+            <div class="text-[11px] text-[#737373]">Rigorous CS &amp; Algorithmic Principles</div>
+          </div>
 
+          <!-- Stat 3: IEEE Leadership -->
+          <div class="hero-stat-item p-4 rounded-xl bg-[#111111]/80 border border-white/10 backdrop-blur-sm hover:border-[#dc2626] transition-colors">
+            <div class="font-display font-black text-3xl sm:text-4xl text-[#dc2626] leading-none">
+              CHAIR
+            </div>
+            <div class="text-xs font-editorial uppercase font-bold text-white mt-1">IEEE GRSS &amp; SPS</div>
+            <div class="text-[11px] text-[#737373]">Student Chapter Leader &amp; Execom Member</div>
+          </div>
+
+          <!-- Stat 4: Systems Lead -->
+          <div class="hero-stat-item p-4 rounded-xl bg-[#111111]/80 border border-white/10 backdrop-blur-sm hover:border-[#dc2626] transition-colors">
+            <div class="font-display font-black text-3xl sm:text-4xl text-[#dc2626] leading-none">
+              LEAD
+            </div>
+            <div class="text-xs font-editorial uppercase font-bold text-white mt-1">IoT &amp; Systems Developer</div>
+            <div class="text-[11px] text-[#737373]">ESP32, Hydroponics &amp; Flight Firmware</div>
           </div>
 
         </div>
 
       </div>
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- FEATURED PROJECTS SECTION (02 // Field Prototypes & Schematics) -->
-    <section id="projects" class="py-20 border-t-2 border-dashed border-[#1e2022] relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
-          <div>
-            <div class="font-display text-sm text-[#2563eb] font-bold tracking-wider uppercase mb-1">02 // Featured Projects & Software</div>
-            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-[#1e2022] tracking-tight">
-              Software Systems & Engineering Projects
-            </h2>
+  <!-- ==============================================================
+       SELECTED PROJECTS SECTION (3-COLUMN EDITORIAL GRID)
+       ============================================================== -->
+  <section id="projects" class="py-24 border-t border-white/10 relative z-20 bg-[#090909]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
+        <div>
+          <div class="flex items-center gap-2 text-xs font-mono text-[#dc2626] font-bold uppercase tracking-widest mb-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+            <span>ENGINEERED DELIVERABLES</span>
           </div>
-          <!-- Project Filter Index Tabs -->
-          <div class="flex flex-wrap items-center gap-2 mt-4 md:mt-0 font-display">
-            <button class="project-filter-btn active-filter" data-filter="all">All Projects</button>
-            <button class="project-filter-btn" data-filter="embedded">Software & Systems</button>
-            <button class="project-filter-btn" data-filter="iot">IoT & Connected Platforms</button>
-          </div>
-        </div>
-
-        <!-- Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="projectsContainer">
-          
-          <!-- PROJECT 1: ESP32 Drone Flight Controller -->
-          <div class="wobbly-box project-card p-6 flex flex-col justify-between relative bg-white" data-category="embedded">
-            <div class="washi-tape"></div>
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#fef08a] border border-[#1e2022] text-[#92400e] font-bold">
-                  2025 - 2026 // COMPLETED
-                </span>
-                <span class="font-mono text-xs text-[#4b5563] flex items-center gap-1.5 font-bold">
-                  <span class="w-2 h-2 rounded-full bg-[#2563eb]"></span>
-                  Role: Project Lead
-                </span>
-              </div>
-
-              <h3 class="font-display font-bold text-2xl text-[#1e2022] hover:text-[#2563eb] transition-colors mb-2">
-                ESP32 Drone Flight Controller & Control Algorithms
-              </h3>
-              <p class="text-base text-[#4b5563] leading-relaxed mb-4 font-body">
-                Architected real-time flight-control software and state estimation algorithms on ESP32 microcontrollers in C++. Integrated MPU6050 6-DOF IMU, 
-                implemented PPM receiver pulse decoding, generated multi-channel PWM signals for electronic speed controllers, 
-                and designed custom closed-loop PID stabilization mathematics.
-              </p>
-
-              <!-- Technical Challenges Solved -->
-              <div class="bg-[#faf8f5] rounded-xl p-3.5 border-2 border-[#1e2022] shadow-[2px_2px_0px_#1e2022] mb-5 space-y-2 text-xs font-mono">
-                <div class="text-[#2563eb] text-[11px] uppercase tracking-wider font-bold">
-                  Software Engineering & Algorithmic Highlights:
-                </div>
-                <div class="flex items-start gap-2 text-[#374151]">
-                  <span class="text-[#2563eb] font-bold">▸</span>
-                  <span>Eliminated gyro sensor drift & frame vibration through digital low-pass filtering and complementary filter integration.</span>
-                </div>
-                <div class="flex items-start gap-2 text-[#374151]">
-                  <span class="text-[#2563eb] font-bold">▸</span>
-                  <span>Iteratively tuned Pitch, Roll & Yaw PID coefficients on dynamic test rigs to resolve oscillation and overshoot.</span>
-                </div>
-                <div class="flex items-start gap-2 text-[#374151]">
-                  <span class="text-[#2563eb] font-bold">▸</span>
-                  <span>Achieved sub-millisecond control loop response using high-resolution hardware timers and interrupts.</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <!-- Tech Stack Tags -->
-              <div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
-                <span class="badge-tag">C++ / C</span>
-                <span class="badge-tag">ESP32</span>
-                <span class="badge-tag">Algorithms</span>
-                <span class="badge-tag">PID Control</span>
-                <span class="badge-tag">Digital Filtering</span>
-                <span class="badge-tag">State Estimation</span>
-                <span class="badge-tag">Software Architecture</span>
-              </div>
-
-              <div class="pt-4 border-t-2 border-dashed border-[#1e2022] flex items-center justify-between text-xs">
-                <button class="project-details-btn text-[#2563eb] hover:underline font-display font-bold flex items-center gap-1.5 text-sm" data-project="drone">
-                  <span>View Architecture & Code Dossier</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </button>
-                <span class="font-mono text-xs text-[#6b7280] font-bold">Software & Systems</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROJECT 2: Hydroponic Farming using IoT Devices -->
-          <div class="wobbly-box-2 project-card p-6 flex flex-col justify-between relative bg-white" data-category="iot">
-            <div class="washi-tape-left"></div>
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#dcfce7] border border-[#1e2022] text-[#047857] font-bold flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-[#059669] animate-pulse"></span>
-                  2026 - NOW // ACTIVE
-                </span>
-                <span class="font-mono text-xs text-[#4b5563] flex items-center gap-1.5 font-bold">
-                  <span class="w-2 h-2 rounded-full bg-[#059669]"></span>
-                  Role: Lead Developer
-                </span>
-              </div>
-
-              <h3 class="font-display font-bold text-2xl text-[#1e2022] hover:text-[#059669] transition-colors mb-2">
-                Hydroponic Farming with Smart IoT Devices
-              </h3>
-              <p class="text-base text-[#4b5563] leading-relaxed mb-4 font-body">
-                Leading an engineering team building an intelligent, automated indoor hydroponic cultivation station. 
-                Monitors plant health metrics (pH, electrical conductivity EC, water temperature, water levels) and 
-                automates nutrient dispensing pumps and light schedules via microcontrollers.
-              </p>
-
-              <!-- Technical Highlights -->
-              <div class="bg-[#faf8f5] rounded-xl p-3.5 border-2 border-[#1e2022] shadow-[2px_2px_0px_#1e2022] mb-5 space-y-2 text-xs font-mono">
-                <div class="text-[#059669] text-[11px] uppercase tracking-wider font-bold">
-                  System Features & AgTech Telemetry:
-                </div>
-                <div class="flex items-start gap-2 text-[#374151]">
-                  <span class="text-[#059669] font-bold">▸</span>
-                  <span>Autonomous closed-loop pH and EC correction with peristaltic pumps and chemical dosing algorithms.</span>
-                </div>
-                <div class="flex items-start gap-2 text-[#374151]">
-                  <span class="text-[#059669] font-bold">▸</span>
-                  <span>Coordinated team development workflow, sprint tasks, software architecture, and real-time telemetry testing.</span>
-                </div>
-                <div class="flex items-start gap-2 text-[#374151]">
-                  <span class="text-[#059669] font-bold">▸</span>
-                  <span>Real-time telemetry streaming over MQTT and Wi-Fi to a responsive dashboard with push alerts.</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <!-- Tech Stack Tags -->
-              <div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
-                <span class="badge-tag">IoT Architecture</span>
-                <span class="badge-tag">ESP32</span>
-                <span class="badge-tag">pH & EC Sensors</span>
-                <span class="badge-tag">MQTT Protocol</span>
-                <span class="badge-tag">Python & C++</span>
-                <span class="badge-tag">Mini-Project Lead</span>
-              </div>
-
-              <div class="pt-4 border-t-2 border-dashed border-[#1e2022] flex items-center justify-between text-xs">
-                <button class="project-details-btn text-[#059669] hover:underline font-display font-bold flex items-center gap-1.5 text-sm" data-project="hydroponics">
-                  <span>View Project Breakdown</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </button>
-                <span class="font-mono text-xs text-[#6b7280] font-bold">Connected IoT & Software Platforms</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROJECT 3: IoT Workshops & Home Automation System -->
-          <div class="wobbly-box-3 project-card p-6 flex flex-col justify-between relative bg-white" data-category="iot">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#dbeafe] border border-[#1e2022] text-[#1e40af] font-bold">
-                  2024 - 2025 // DELIVERED
-                </span>
-                <span class="font-mono text-xs text-[#4b5563] flex items-center gap-1.5 font-bold">
-                  <span class="w-2 h-2 rounded-full bg-[#2563eb]"></span>
-                  Role: Project Lead & Instructor
-                </span>
-              </div>
-
-              <h3 class="font-display font-bold text-2xl text-[#1e2022] hover:text-[#2563eb] transition-colors mb-2">
-                Home Assistant Automation Hub & Student IoT Workshops
-              </h3>
-              <p class="text-base text-[#4b5563] leading-relaxed mb-4 font-body">
-                Built an enterprise-grade local home automation setup using Home Assistant, ESP32 nodes, DHT22 temperature/humidity 
-                sensors, PIR motion sensors, IR transmitters, relay banks, and addressable WS2812B RGB indicators with Over-The-Air (OTA) flashing. 
-                Synthesized this architecture into an interactive workshop series for university peers.
-              </p>
-
-              <div class="bg-[#faf8f5] rounded-xl p-3.5 border-2 border-[#1e2022] shadow-[2px_2px_0px_#1e2022] mb-5 space-y-2 text-xs font-mono">
-                <div class="text-[#2563eb] text-[11px] uppercase tracking-wider font-bold">
-                  Key Accomplishments:
-                </div>
-                <div class="flex items-start gap-2 text-[#374151]">
-                  <span class="text-[#2563eb] font-bold">▸</span>
-                  <span>Designed fail-safe local relay controls that preserve manual wall switch operation during network outages.</span>
-                </div>
-                <div class="flex items-start gap-2 text-[#374151]">
-                  <span class="text-[#2563eb] font-bold">▸</span>
-                  <span>Led hands-on ESP32 workshops training dozens of engineering students on sensors, displays, and Wi-Fi IoT.</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
-                <span class="badge-tag">Home Assistant</span>
-                <span class="badge-tag">ESP32</span>
-                <span class="badge-tag">DHT22 / PIR</span>
-                <span class="badge-tag">OTA Updates</span>
-                <span class="badge-tag">Relay Logic</span>
-                <span class="badge-tag">Workshop Lead</span>
-              </div>
-
-              <div class="pt-4 border-t-2 border-dashed border-[#1e2022] flex items-center justify-between text-xs">
-                <button class="project-details-btn text-[#2563eb] hover:underline font-display font-bold flex items-center gap-1.5 text-sm" data-project="homeauto">
-                  <span>View System Architecture</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </button>
-                <span class="font-mono text-xs text-[#6b7280] font-bold">Smart Home & Mentorship</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- PROJECT 4: IEEE RC Car Workshop & Robotics Platform -->
-          <div class="wobbly-box project-card p-6 flex flex-col justify-between relative bg-white" data-category="embedded">
-            <div>
-              <div class="flex items-center justify-between mb-3">
-                <span class="font-mono text-xs px-2.5 py-0.5 rounded bg-[#fef08a] border border-[#1e2022] text-[#92400e] font-bold">
-                  2024 - 2025 // IEEE WORKSHOP
-                </span>
-                <span class="font-mono text-xs text-[#4b5563] flex items-center gap-1.5 font-bold">
-                  <span class="w-2 h-2 rounded-full bg-[#d97706]"></span>
-                  Role: Head Volunteer
-                </span>
-              </div>
-
-              <h3 class="font-display font-bold text-2xl text-[#1e2022] hover:text-[#d97706] transition-colors mb-2">
-                IEEE Robotics & Firmware Workshop Lead
-              </h3>
-              <p class="text-base text-[#4b5563] leading-relaxed mb-4 font-body">
-                Served as Head Volunteer leading the student volunteer team that organized, debugged, and executed the hands-on 
-                Robotics Workshop with IEEE Student Branch PACE and ComedKares. Mentored student teams in programming microcontrollers, 
-                interfacing motor drivers, configuring RF/Bluetooth transceivers, and debugging firmware control logic.
-              </p>
-
-              <div class="bg-[#faf8f5] rounded-xl p-3.5 border-2 border-[#1e2022] shadow-[2px_2px_0px_#1e2022] mb-5 space-y-2 text-xs font-mono">
-                <div class="text-[#d97706] text-[11px] uppercase tracking-wider font-bold">
-                  Key Accomplishments:
-                </div>
-                <div class="flex items-start gap-2 text-[#374151]">
-                  <span class="text-[#d97706] font-bold">▸</span>
-                  <span>Led firmware testing, participant debugging support, and technical coordination for 30+ attendee teams.</span>
-                </div>
-                <div class="flex items-start gap-2 text-[#374151]">
-                  <span class="text-[#d97706] font-bold">▸</span>
-                  <span>Conducted live debugging sessions resolving serial baud rate mismatches, control logic state bugs, and power routing.</span>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex flex-wrap gap-1.5 mb-5 font-mono text-[11px]">
-                <span class="badge-tag">Embedded Software</span>
-                <span class="badge-tag">Firmware Debugging</span>
-                <span class="badge-tag">IEEE Leadership</span>
-                <span class="badge-tag">ComedKares</span>
-                <span class="badge-tag">Technical Mentorship</span>
-              </div>
-
-              <div class="pt-4 border-t-2 border-dashed border-[#1e2022] flex items-center justify-between text-xs">
-                <button class="project-details-btn text-[#d97706] hover:underline font-display font-bold flex items-center gap-1.5 text-sm" data-project="rccar">
-                  <span>View Workshop Details</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                </button>
-                <span class="font-mono text-xs text-[#6b7280] font-bold">Firmware & Community</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- LEADERSHIP & IEEE ROLES TIMELINE SECTION (03 // Field Log & Societies) -->
-    <section id="leadership" class="py-20 border-t-2 border-dashed border-[#1e2022] relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="max-w-3xl mb-12">
-          <div class="font-display text-sm text-[#2563eb] font-bold tracking-wider uppercase mb-1">03 // Leadership Log & IEEE</div>
-          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-[#1e2022] tracking-tight">
-            Leadership & Campus Engagement
+          <h2 class="font-display font-black text-5xl sm:text-6xl lg:text-7xl text-white tracking-tight uppercase leading-none">
+            SELECTED PROJECTS
           </h2>
-          <p class="text-[#4b5563] text-base mt-2 font-body">
-            Active organizational leadership across international professional bodies and university engineering societies.
-          </p>
         </div>
 
-        <div class="relative notebook-timeline ml-4 md:ml-8 pl-6 md:pl-10 space-y-12">
-          
-          <!-- Timeline Item 1: IEEE GRSS & SPS Chair -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-7 h-7 rounded-full bg-[#fef08a] border-2 border-[#1e2022] flex items-center justify-center font-display font-bold text-xs shadow-[1px_1px_0px_#1e2022]">
-              1
-            </div>
-            
-            <div class="wobbly-box p-6 bg-white relative">
-              <div class="washi-tape-left"></div>
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                <h3 class="font-display font-bold text-xl text-[#1e2022]">
-                  Chair — IEEE GRSS & SPS Student Branch Chapters
-                </h3>
-                <span class="font-mono text-xs text-[#1e40af] px-2.5 py-1 rounded bg-[#dbeafe] border border-[#1e2022] font-bold w-fit">
-                  Between 1st & 2nd Year → Present (3rd Year)
-                </span>
-              </div>
-              <div class="font-mono text-xs text-[#4b5563] mb-3 font-bold">
-                Geoscience and Remote Sensing Society (GRSS) & Signal Processing Society (SPS) • PA College of Engineering
-              </div>
-              <p class="text-base text-[#374151] leading-relaxed mb-4 font-body">
-                Elected to chair both prestigious technical society chapters early in academic tenure. Spearhead technical talks, 
-                signal processing workshops, remote sensing technology discussions, and student competitions. Represent the student branch 
-                in regional IEEE congresses and maintain chapter vitality.
-              </p>
-              <div class="flex flex-wrap gap-3 text-xs font-mono">
-                <span class="inline-flex items-center gap-1.5 text-[#1e40af] bg-[#eff6ff] px-2 py-1 rounded border border-[#bfdbfe]">
-                  <svg class="w-3.5 h-3.5 text-[#2563eb] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Technical Symposia</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5 text-[#1e40af] bg-[#eff6ff] px-2 py-1 rounded border border-[#bfdbfe]">
-                  <svg class="w-3.5 h-3.5 text-[#2563eb] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Signal Processing Labs</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5 text-[#1e40af] bg-[#eff6ff] px-2 py-1 rounded border border-[#bfdbfe]">
-                  <svg class="w-3.5 h-3.5 text-[#2563eb] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Student Chapters Growth</span>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Timeline Item 2: IEEE Student Branch Execom Member -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-7 h-7 rounded-full bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center font-display font-bold text-xs shadow-[1px_1px_0px_#1e2022]">
-              2
-            </div>
-            
-            <div class="wobbly-box-2 p-6 bg-white relative">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                <h3 class="font-display font-bold text-xl text-[#1e2022]">
-                  Executive Committee (Execom) Member
-                </h3>
-                <span class="font-mono text-xs text-[#065f46] px-2.5 py-1 rounded bg-[#dcfce7] border border-[#1e2022] font-bold w-fit">
-                  IEEE Student Branch @ PACE
-                </span>
-              </div>
-              <div class="font-mono text-xs text-[#4b5563] mb-3 font-bold">
-                Core Governance & Program Strategy
-              </div>
-              <p class="text-base text-[#374151] leading-relaxed mb-4 font-body">
-                Collaborate with branch counselor and peer student leaders to organize college-level tech summits, membership drives, 
-                and industry outreach. Coordinate cross-chapter activities between Computer Society, Robotics & Automation, and GRSS/SPS.
-              </p>
-              <div class="flex flex-wrap gap-3 text-xs font-mono">
-                <span class="inline-flex items-center gap-1.5 text-[#065f46] bg-[#f0fdf4] px-2 py-1 rounded border border-[#bbf7d0]">
-                  <svg class="w-3.5 h-3.5 text-[#059669] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Event Operations</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5 text-[#065f46] bg-[#f0fdf4] px-2 py-1 rounded border border-[#bbf7d0]">
-                  <svg class="w-3.5 h-3.5 text-[#059669] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Inter-branch Coordination</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5 text-[#065f46] bg-[#f0fdf4] px-2 py-1 rounded border border-[#bbf7d0]">
-                  <svg class="w-3.5 h-3.5 text-[#059669] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Team Management</span>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Timeline Item 3: EMBED Club & GLUB Member -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-7 h-7 rounded-full bg-[#dcfce7] border-2 border-[#1e2022] flex items-center justify-center font-display font-bold text-xs shadow-[1px_1px_0px_#1e2022]">
-              3
-            </div>
-            
-            <div class="wobbly-box-3 p-6 bg-white relative">
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                <h3 class="font-display font-bold text-xl text-[#1e2022]">
-                  Active Member — GLUB & EMBED Club (PACE)
-                </h3>
-                <span class="font-mono text-xs text-[#92400e] px-2.5 py-1 rounded bg-[#fef08a] border border-[#1e2022] font-bold w-fit">
-                  2022 — Present
-                </span>
-              </div>
-              <div class="font-mono text-xs text-[#4b5563] mb-3 font-bold">
-                GNU/Linux Users' Branch & Embedded Systems Club
-              </div>
-              <p class="text-base text-[#374151] leading-relaxed mb-4 font-body">
-                <strong>GLUB (GNU/Linux Users' Branch):</strong> Championing Free and Open Source Software (FOSS), hosting terminal workshops, and assisting peers in mastering Git, Bash scripting, and Linux-based software workflows.<br>
-                <strong>EMBED Club:</strong> Contributing to microcontroller software design, telemetry ingestion routines, and firmware debugging clinics.
-              </p>
-              <div class="flex flex-wrap gap-3 text-xs font-mono">
-                <span class="inline-flex items-center gap-1.5 text-[#92400e] bg-[#fefce8] px-2 py-1 rounded border border-[#fef08a]">
-                  <svg class="w-3.5 h-3.5 text-[#d97706] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Open-Source & Linux</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5 text-[#92400e] bg-[#fefce8] px-2 py-1 rounded border border-[#fef08a]">
-                  <svg class="w-3.5 h-3.5 text-[#d97706] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Software Mentorship</span>
-                </span>
-                <span class="inline-flex items-center gap-1.5 text-[#92400e] bg-[#fefce8] px-2 py-1 rounded border border-[#fef08a]">
-                  <svg class="w-3.5 h-3.5 text-[#d97706] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Git & Linux Workflows</span>
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Timeline Item 4: IEEE Book of Abstracts (3rd Year) -->
-          <div class="relative group">
-            <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-7 h-7 rounded-full bg-[#fde047] border-2 border-[#1e2022] flex items-center justify-center font-display font-bold text-xs shadow-[1px_1px_0px_#1e2022]">
-              4
-            </div>
-            
-            <div class="postit-card p-6 relative">
-              <div class="pushpin"></div>
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                <div class="flex items-center gap-2 flex-wrap">
-                  <h3 class="font-display font-bold text-xl text-[#1e2022]">
-                    IEEE DISCOVER 2025 — Book of Abstracts
-                  </h3>
-                  <span class="font-mono text-[11px] text-[#065f46] px-2.5 py-0.5 rounded bg-[#dcfce7] border border-[#1e2022] font-bold flex items-center gap-1">
-                    <svg class="w-3 h-3 text-[#059669]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Member of Editors List</span>
-                  </span>
-                </div>
-                <span class="font-mono text-xs text-[#92400e] px-2.5 py-1 rounded bg-[#fef08a] border border-[#1e2022] font-bold w-fit">
-                  2025 // 3rd Year
-                </span>
-              </div>
-              <div class="font-mono text-xs text-[#2563eb] mb-3 font-bold">
-                IEEE International Conference on Distributed Computing, VLSI, Electrical Circuits and Robotics (IEEE DISCOVER 2025)
-              </div>
-              <p class="text-base text-[#374151] leading-relaxed mb-4 font-body">
-                Selected to the official <strong>Editors List</strong> for the Book of Abstracts at the prestigious <strong>2025 IEEE DISCOVER</strong> international conference. Collaborated on reviewing, organizing, and cataloging peer-reviewed technical research abstracts spanning distributed computing systems, VLSI architectures, smart electrical circuits, and autonomous robotics.
-              </p>
-              <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t-2 border-dashed border-[#1e2022] text-xs font-mono">
-                <div class="flex flex-wrap gap-2.5">
-                  <span class="inline-flex items-center gap-1.5 text-[#1e2022] bg-white px-2 py-0.5 rounded border border-[#1e2022]">
-                    <svg class="w-3.5 h-3.5 text-[#2563eb] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>IEEE DISCOVER 2025</span>
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 text-[#1e2022] bg-white px-2 py-0.5 rounded border border-[#1e2022]">
-                    <svg class="w-3.5 h-3.5 text-[#059669] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Editorial Committee</span>
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 text-[#1e2022] bg-white px-2 py-0.5 rounded border border-[#1e2022]">
-                    <svg class="w-3.5 h-3.5 text-[#d97706] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                    <span>Distributed Computing & Robotics</span>
-                  </span>
-                </div>
-                <span class="inline-flex items-center gap-1.5 text-[11px] text-[#065f46] bg-[#dcfce7] px-2.5 py-1 rounded border border-[#1e2022] font-bold">
-                  <svg class="w-3.5 h-3.5 text-[#059669] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
-                  <span>Official Conference Proceedings</span>
-                </span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
+        <a href="#projects" class="text-xs font-editorial uppercase font-bold text-[#a3a3a3] hover:text-[#ef4444] transition-colors flex items-center gap-1">
+          <span>Explore All Repositories</span>
+          <span>→</span>
+        </a>
       </div>
-    </section>
 
+      <!-- 3-Column Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    <!-- SKILLS MATRIX & TOOLKIT (04 // Software Arsenal & Developer Toolkit) -->
-    <section id="skills" class="py-20 border-t-2 border-dashed border-[#1e2022] relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <!-- PROJECT 01: LifeLane AI -->
+        <article class="project-card p-6 flex flex-col justify-between">
           <div>
-            <div class="font-display text-sm text-[#2563eb] font-bold tracking-wider uppercase mb-1">04 // Software Arsenal & Developer Toolkit</div>
-            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-[#1e2022] tracking-tight">
-              Software Stack & Technical Arsenal
-            </h2>
+            <!-- Header Row: Number + Arrow -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+              <span class="font-display font-black text-4xl sm:text-5xl text-[#991b1b] leading-none">01</span>
+              <svg class="project-arrow w-5 h-5 text-[#a3a3a3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+
+            <!-- Thumbnail Visual -->
+            <div class="w-full h-44 rounded-lg bg-gradient-to-tr from-[#141414] to-[#1f1f1f] border border-white/10 overflow-hidden mb-5 relative flex items-center justify-center">
+              <div class="absolute inset-0 bg-[radial-gradient(#991b1b_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+              <div class="text-center p-4">
+                <span class="inline-block px-2.5 py-0.5 rounded bg-[#991b1b]/20 border border-[#991b1b] text-[10px] font-mono font-bold text-[#ef4444] uppercase mb-2">Edge CNN Inference</span>
+                <div class="font-display font-bold text-xl text-white tracking-wider">EMERGENCY CORRIDOR DISPATCH</div>
+              </div>
+            </div>
+
+            <!-- Title & Subtext -->
+            <h3 class="font-display font-bold text-2xl text-white uppercase tracking-tight mb-1">
+              LifeLane AI
+            </h3>
+            <p class="text-xs font-mono font-semibold text-[#dc2626] mb-3">
+              Edge-Computing Emergency Response using CNNs &amp; Raspberry Pi
+            </p>
+            <p class="text-xs sm:text-sm text-[#a3a3a3] leading-relaxed mb-6 font-sans">
+              Real-time computer vision system deployed on edge Raspberry Pi processors to dynamically identify approaching ambulances and preempt traffic signal cycles, slashing critical transit delays.
+            </p>
           </div>
-          <p class="text-sm font-hand text-xl text-[#6b7280] mt-2 md:mt-0">
-            Core Languages • Software Architecture • DevOps & Tools • Connected Systems
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+            <span class="skill-pill">Raspberry Pi</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">OpenCV</span>
+            <span class="skill-pill">CNN</span>
+          </div>
+        </article>
+
+        <!-- PROJECT 02: NEXSTOCK -->
+        <article class="project-card p-6 flex flex-col justify-between">
+          <div>
+            <!-- Header Row: Number + Arrow -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+              <span class="font-display font-black text-4xl sm:text-5xl text-[#991b1b] leading-none">02</span>
+              <svg class="project-arrow w-5 h-5 text-[#a3a3a3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+
+            <!-- Thumbnail Visual -->
+            <div class="w-full h-44 rounded-lg bg-gradient-to-tr from-[#141414] to-[#1f1f1f] border border-white/10 overflow-hidden mb-5 relative flex items-center justify-center">
+              <div class="absolute inset-0 bg-[radial-gradient(#991b1b_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+              <div class="text-center p-4">
+                <span class="inline-block px-2.5 py-0.5 rounded bg-[#991b1b]/20 border border-[#991b1b] text-[10px] font-mono font-bold text-[#ef4444] uppercase mb-2">Hackathon Project</span>
+                <div class="font-display font-bold text-xl text-white tracking-wider">A* ROUTING &amp; PREDICTION</div>
+              </div>
+            </div>
+
+            <!-- Title & Subtext -->
+            <h3 class="font-display font-bold text-2xl text-white uppercase tracking-tight mb-1">
+              NEXSTOCK
+            </h3>
+            <p class="text-xs font-mono font-semibold text-[#dc2626] mb-3">
+              AI Inventory Management &amp; Pathfinding
+            </p>
+            <p class="text-xs sm:text-sm text-[#a3a3a3] leading-relaxed mb-6 font-sans">
+              Autonomous enterprise warehouse management platform combining graph shortest-path routing for fulfillment picking with algorithmic stock velocity predictions.
+            </p>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+            <span class="skill-pill">Full-Stack</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Pathfinding</span>
+            <span class="skill-pill">Tailwind CSS</span>
+          </div>
+        </article>
+
+        <!-- PROJECT 03: IoT Hydroponics -->
+        <article class="project-card p-6 flex flex-col justify-between">
+          <div>
+            <!-- Header Row: Number + Arrow -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+              <span class="font-display font-black text-4xl sm:text-5xl text-[#991b1b] leading-none">03</span>
+              <svg class="project-arrow w-5 h-5 text-[#a3a3a3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+
+            <!-- Thumbnail Visual -->
+            <div class="w-full h-44 rounded-lg bg-gradient-to-tr from-[#141414] to-[#1f1f1f] border border-white/10 overflow-hidden mb-5 relative flex items-center justify-center">
+              <div class="absolute inset-0 bg-[radial-gradient(#991b1b_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+              <div class="text-center p-4">
+                <span class="inline-block px-2.5 py-0.5 rounded bg-[#991b1b]/20 border border-[#991b1b] text-[10px] font-mono font-bold text-[#ef4444] uppercase mb-2">Undergrad Lead • 2026</span>
+                <div class="font-display font-bold text-xl text-white tracking-wider">SMART AGTECH TELEMETRY</div>
+              </div>
+            </div>
+
+            <!-- Title & Subtext -->
+            <h3 class="font-display font-bold text-2xl text-white uppercase tracking-tight mb-1">
+              IoT Hydroponics
+            </h3>
+            <p class="text-xs font-mono font-semibold text-[#dc2626] mb-3">
+              Automated Precision Farming with ESP32 &amp; Sensors
+            </p>
+            <p class="text-xs sm:text-sm text-[#a3a3a3] leading-relaxed mb-6 font-sans">
+              Lead Developer for a closed-loop urban agriculture system integrating multi-probe telemetry (pH, EC, water temperature) with automated pump dosing and remote dashboard monitoring.
+            </p>
+          </div>
+
+          <!-- Tags -->
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+            <span class="skill-pill">ESP32</span>
+            <span class="skill-pill">C/C++</span>
+            <span class="skill-pill">Telemetry</span>
+            <span class="skill-pill">MQTT</span>
+          </div>
+        </article>
+
+        <!-- PROJECT 04: Drone Flight Controller -->
+        <article class="project-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+              <span class="font-display font-black text-4xl sm:text-5xl text-[#991b1b] leading-none">04</span>
+              <svg class="project-arrow w-5 h-5 text-[#a3a3a3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white uppercase tracking-tight mb-1">
+              Quadcopter Flight Controller
+            </h3>
+            <p class="text-xs font-mono font-semibold text-[#dc2626] mb-3">
+              ESP32 Custom Flight Firmware &amp; PID Tuning
+            </p>
+            <p class="text-xs sm:text-sm text-[#a3a3a3] leading-relaxed mb-6 font-sans">
+              Custom real-time stabilization firmware on ESP32 SoC with MPU6050 6-axis sensor fusion, 6-channel PPM receiver decoding, and tuned rate/angle PID control driving PWM ESCs.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+            <span class="skill-pill">ESP32</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">PID Loop</span>
+            <span class="skill-pill">PlatformIO</span>
+          </div>
+        </article>
+
+        <!-- PROJECT 05: Home Assistant -->
+        <article class="project-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+              <span class="font-display font-black text-4xl sm:text-5xl text-[#991b1b] leading-none">05</span>
+              <svg class="project-arrow w-5 h-5 text-[#a3a3a3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white uppercase tracking-tight mb-1">
+              Home Automation Ecosystem
+            </h3>
+            <p class="text-xs font-mono font-semibold text-[#dc2626] mb-3">
+              Distributed Sensor Mesh &amp; Private IoT Hub
+            </p>
+            <p class="text-xs sm:text-sm text-[#a3a3a3] leading-relaxed mb-6 font-sans">
+              Decentralized home sensor network with distributed ESP32 nodes, DHT22 sensors, PIR motion detectors, relay switching, and OTA firmware deployment over private local Wi-Fi.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+            <span class="skill-pill">Home Assistant</span>
+            <span class="skill-pill">ESP32</span>
+            <span class="skill-pill">OTA</span>
+            <span class="skill-pill">Relays</span>
+          </div>
+        </article>
+
+        <!-- PROJECT 06: RC Car Robotics Platform -->
+        <article class="project-card p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+              <span class="font-display font-black text-4xl sm:text-5xl text-[#991b1b] leading-none">06</span>
+              <svg class="project-arrow w-5 h-5 text-[#a3a3a3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-white uppercase tracking-tight mb-1">
+              Embedded Robotics Platform
+            </h3>
+            <p class="text-xs font-mono font-semibold text-[#dc2626] mb-3">
+              Dual-Drive RC Chassis &amp; IEEE Workshops
+            </p>
+            <p class="text-xs sm:text-sm text-[#a3a3a3] leading-relaxed mb-6 font-sans">
+              Fabricated dual-motor remote platform using L298N drivers and RF transceivers. Organized and led hands-on training for campus engineering cohorts in partnership with ComedKares and IEEE.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+            <span class="skill-pill">Arduino</span>
+            <span class="skill-pill">L298N</span>
+            <span class="skill-pill">RF Remote</span>
+            <span class="skill-pill">IEEE PACE</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================================================
+       THREE-COLUMN SPLIT SECTION (EDUCATION/SKILLS, WORK PROCESS, PHILOSOPHY/QUOTE)
+       ============================================================== -->
+  <section id="architecture" class="py-24 border-t border-white/10 relative z-20 bg-[#0d0d0d]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+        <!-- COLUMN 1: EDUCATION & SKILLS -->
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#dc2626]"></span>
+            <h3 class="font-display font-black text-3xl sm:text-4xl text-white uppercase tracking-wider">
+              EDUCATION &amp; SKILLS
+            </h3>
+          </div>
+
+          <!-- Academic Cards -->
+          <div class="space-y-4 mb-8">
+            <div class="p-4 rounded-xl bg-[#171717] border border-white/10">
+              <div class="flex items-center justify-between text-xs font-mono text-[#dc2626] font-bold mb-1">
+                <span>2022 – 2026</span>
+                <span class="bg-[#991b1b]/20 px-2 py-0.5 rounded border border-[#991b1b]">CGPA: 8.81 / 10</span>
+              </div>
+              <h4 class="font-editorial font-bold text-base text-white">B.E. Computer Science &amp; Engineering</h4>
+              <p class="text-xs text-[#a3a3a3] mt-0.5">P A College of Engineering, Mangaluru (VTU)</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#171717] border border-white/10">
+              <div class="flex items-center justify-between text-xs font-mono text-[#a3a3a3] font-bold mb-1">
+                <span>2020 – 2022</span>
+                <span class="text-white">Percentage: 90%</span>
+              </div>
+              <h4 class="font-editorial font-bold text-base text-white">High School (PCMC)</h4>
+              <p class="text-xs text-[#a3a3a3] mt-0.5">Dhakeerath EMHSS, Kerala Board</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#171717] border border-white/10">
+              <div class="text-xs font-mono text-[#ef4444] font-bold mb-1">HARVARD UNIVERSITY</div>
+              <h4 class="font-editorial font-bold text-base text-white">CS50x: Computer Science Certificate</h4>
+              <p class="text-xs text-[#a3a3a3] mt-0.5">C, Data Structures, Memory, Python, SQL &amp; Algorithms</p>
+            </div>
+          </div>
+
+          <!-- Skills Pill Cloud -->
+          <div>
+            <div class="text-xs font-mono text-[#a3a3a3] uppercase font-bold tracking-wider mb-3">
+              TECHNICAL ARSENAL:
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-pill">Node.js</span>
+              <span class="skill-pill">Express</span>
+              <span class="skill-pill">SQLite</span>
+              <span class="skill-pill">Tailwind CSS</span>
+              <span class="skill-pill">C++</span>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">Java</span>
+              <span class="skill-pill">Raspberry Pi</span>
+              <span class="skill-pill">ESP32</span>
+              <span class="skill-pill">FreeRTOS</span>
+              <span class="skill-pill">Linux / Bash</span>
+              <span class="skill-pill">Git / GitHub</span>
+              <span class="skill-pill">PlatformIO</span>
+              <span class="skill-pill">SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 2: WORK PROCESS / ARCHITECTURAL TIMELINE -->
+        <div id="process-column" class="flex flex-col">
+          <div class="flex items-center gap-2 mb-6">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#dc2626]"></span>
+            <h3 class="font-display font-black text-3xl sm:text-4xl text-white uppercase tracking-wider">
+              WORK PROCESS
+            </h3>
+          </div>
+
+          <!-- Vertical Timeline with Red Connected Icons -->
+          <div class="relative pl-10 space-y-7">
+            
+            <!-- Continuous Connecting Line -->
+            <div class="timeline-stem" aria-hidden="true"></div>
+
+            <!-- Step 1: Architect -->
+            <div class="process-step-item relative flex items-start gap-4">
+              <div class="timeline-node absolute -left-10">
+                <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+              </div>
+              <div class="pl-2">
+                <div class="text-[10px] font-mono text-[#dc2626] font-bold uppercase">Phase 01</div>
+                <h4 class="font-editorial font-bold text-base text-white">Architect</h4>
+                <p class="text-xs text-[#a3a3a3] mt-1 leading-relaxed">
+                  Systems topology definition, state machine diagrams, hardware constraints evaluation, and data schema modeling.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2: Hardware Interfacing -->
+            <div class="process-step-item relative flex items-start gap-4">
+              <div class="timeline-node absolute -left-10">
+                <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+              </div>
+              <div class="pl-2">
+                <div class="text-[10px] font-mono text-[#dc2626] font-bold uppercase">Phase 02</div>
+                <h4 class="font-editorial font-bold text-base text-white">Hardware Interfacing</h4>
+                <p class="text-xs text-[#a3a3a3] mt-1 leading-relaxed">
+                  I2C/SPI bus testing, ADC signal filtering, complementary drift elimination, and sensor telemetry calibration.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3: Full-Stack Dev -->
+            <div class="process-step-item relative flex items-start gap-4">
+              <div class="timeline-node absolute -left-10">
+                <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+              </div>
+              <div class="pl-2">
+                <div class="text-[10px] font-mono text-[#dc2626] font-bold uppercase">Phase 03</div>
+                <h4 class="font-editorial font-bold text-base text-white">Full-Stack Dev</h4>
+                <p class="text-xs text-[#a3a3a3] mt-1 leading-relaxed">
+                  Low-latency REST/MQTT endpoints, asynchronous event dispatchers, responsive clients, and interactive dashboards.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4: Optimize -->
+            <div class="process-step-item relative flex items-start gap-4">
+              <div class="timeline-node absolute -left-10">
+                <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              </div>
+              <div class="pl-2">
+                <div class="text-[10px] font-mono text-[#dc2626] font-bold uppercase">Phase 04</div>
+                <h4 class="font-editorial font-bold text-base text-white">Optimize</h4>
+                <p class="text-xs text-[#a3a3a3] mt-1 leading-relaxed">
+                  PID closed-loop tuning, FreeRTOS thread scheduling, memory leak elimination, and database query optimization.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 5: Deploy -->
+            <div class="process-step-item relative flex items-start gap-4">
+              <div class="timeline-node absolute -left-10">
+                <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              </div>
+              <div class="pl-2">
+                <div class="text-[10px] font-mono text-[#dc2626] font-bold uppercase">Phase 05</div>
+                <h4 class="font-editorial font-bold text-base text-white">Deploy &amp; Verify</h4>
+                <p class="text-xs text-[#a3a3a3] mt-1 leading-relaxed">
+                  Linux production provisioning, OTA microcontroller updates, automated build tests, and continuous monitoring.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- COLUMN 3: PHILOSOPHY / QUOTE -->
+        <div class="flex flex-col justify-between p-8 rounded-2xl bg-[#111111] border border-white/10 relative overflow-hidden">
+          
+          <!-- Background Crimson Quote Silhouette -->
+          <div class="absolute -top-10 -left-6 font-serif font-black text-9xl text-[#991b1b]/15 pointer-events-none select-none">
+            “
+          </div>
+
+          <div>
+            <div class="flex items-center gap-2 mb-6">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#dc2626]"></span>
+              <h3 class="font-display font-black text-3xl sm:text-4xl text-white uppercase tracking-wider">
+                PHILOSOPHY
+              </h3>
+            </div>
+
+            <!-- Giant Crimson Quotation Mark -->
+            <div class="font-serif font-black text-6xl text-[#dc2626] leading-none mb-3">
+              “
+            </div>
+
+            <!-- Blockquote -->
+            <blockquote class="font-editorial text-lg sm:text-xl text-white font-medium leading-relaxed mb-6">
+              Engineering isn't just about writing code; it's about meticulous, analytical problem-solving across mechanical and digital systems.
+            </blockquote>
+          </div>
+
+          <!-- Bottom Attribution & Handwritten Signature -->
+          <div class="border-t border-white/10 pt-6 mt-6">
+            <div class="text-xs font-mono uppercase text-[#dc2626] font-bold">
+              FARSEEN AHRAS RAUFALI
+            </div>
+            <div class="text-xs text-[#737373] mt-0.5">
+              Software Engineer &amp; Systems Developer
+            </div>
+
+            <!-- Handwritten Signature in White -->
+            <div class="font-hand text-4xl sm:text-5xl text-white font-bold tracking-wide mt-3 -rotate-2 select-none">
+              Farseen
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================================================
+       INSTITUTIONAL LEADERSHIP & SCIENTIFIC PUBLICATIONS
+       ============================================================== -->
+  <section id="leadership" class="py-20 border-t border-white/10 bg-[#090909] relative z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex items-center gap-2 text-xs font-mono text-[#dc2626] font-bold uppercase tracking-widest mb-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+        <span>ACADEMIC LEADERSHIP &amp; EDITORIAL SERVICE</span>
+      </div>
+      <h2 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight uppercase leading-none mb-10">
+        INSTITUTIONAL CONTRIBUTIONS
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="p-5 rounded-xl bg-[#111111] border border-white/10 hover:border-[#dc2626] transition-colors">
+          <span class="inline-block px-2 py-0.5 rounded bg-[#991b1b]/20 border border-[#991b1b] text-[10px] font-mono font-bold text-[#ef4444] uppercase mb-2">Since 1st/2nd Yr</span>
+          <h4 class="font-editorial font-bold text-base text-white">Chair — IEEE GRSS &amp; SPS</h4>
+          <p class="text-xs text-[#a3a3a3] mt-1.5 leading-relaxed">
+            Leading the Geoscience &amp; Remote Sensing and Signal Processing joint student chapters under IEEE PACE Student Branch.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-5 rounded-xl bg-[#111111] border border-white/10 hover:border-[#dc2626] transition-colors">
+          <span class="inline-block px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-mono font-bold text-white uppercase mb-2">Execom Member</span>
+          <h4 class="font-editorial font-bold text-base text-white">IEEE Student Branch</h4>
+          <p class="text-xs text-[#a3a3a3] mt-1.5 leading-relaxed">
+            Executive leadership member coordinating technical workshops, student membership growth, and inter-collegiate events.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-[#111111] border border-white/10 hover:border-[#dc2626] transition-colors">
+          <span class="inline-block px-2 py-0.5 rounded bg-[#991b1b]/20 border border-[#991b1b] text-[10px] font-mono font-bold text-[#ef4444] uppercase mb-2">2025 Edition</span>
+          <h4 class="font-editorial font-bold text-base text-white">IEEE DISCOVER 2025</h4>
+          <p class="text-xs text-[#a3a3a3] mt-1.5 leading-relaxed">
+            Editorial Committee Member for the official Book of Abstracts of the IEEE International Conference on Distributed Computing, VLSI &amp; Robotics.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-[#111111] border border-white/10 hover:border-[#dc2626] transition-colors">
+          <span class="inline-block px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-mono font-bold text-white uppercase mb-2">Campus Tech Clubs</span>
+          <h4 class="font-editorial font-bold text-base text-white">GLUB &amp; EMBED</h4>
+          <p class="text-xs text-[#a3a3a3] mt-1.5 leading-relaxed">
+            Active advocate in GNU/Linux Users' Branch (GLUB) and EMBED club for embedded systems prototyping and open-source software.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================================================
+       FOOTER & CONTACT SECTION ("LET'S WORK TOGETHER")
+       ============================================================== -->
+  <footer id="contact" class="py-24 border-t border-white/10 bg-[#070707] relative z-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Grid: Left Editorial Header / Middle Contact / Right Laptop Mockup -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-16">
+        
+        <!-- Left Side: Large Header "LET'S WORK TOGETHER" -->
+        <div class="lg:col-span-4 flex flex-col items-start text-left">
+          <div class="flex items-center gap-2 text-xs font-mono text-[#dc2626] font-bold uppercase tracking-widest mb-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#dc2626]"></span>
+            <span>GET IN TOUCH</span>
+          </div>
+          <h2 class="font-display font-black text-5xl sm:text-6xl lg:text-7xl text-white tracking-tight uppercase leading-none mb-4">
+            LET'S WORK TOGETHER
+          </h2>
+          <p class="text-sm text-[#a3a3a3] leading-relaxed mb-6 font-sans">
+            Available for Summer 2026/2027 software engineering internships, backend architecture, and connected embedded systems collaborations. Open for high-impact engineering projects.
+          </p>
+          <a href="mailto:farseenahrasraufali@gmail.com" class="btn-crimson py-3 px-6 rounded-lg text-xs font-bold flex items-center gap-2">
+            <span>Send Direct Message</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- Middle Side: Vertical Contact Details with Small Crimson Circular Icons -->
+        <div class="lg:col-span-3 flex flex-col gap-4 border-l border-white/10 pl-6 sm:pl-8">
           
-          <!-- Category 1: Programming Languages -->
-          <div class="wobbly-box p-6 bg-white relative">
-            <div class="flex items-center gap-3 mb-5">
-              <div class="w-10 h-10 rounded-xl bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center text-[#2563eb] shadow-[2px_2px_0px_#1e2022]">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                </svg>
-              </div>
-              <h3 class="font-display font-bold text-[#1e2022] text-xl">Programming Languages</h3>
+          <!-- Email -->
+          <a href="mailto:farseenahrasraufali@gmail.com" class="flex items-center gap-3.5 group">
+            <div class="w-9 h-9 rounded-full bg-[#171717] border border-white/10 group-hover:border-[#dc2626] flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
             </div>
-            
-            <div class="space-y-3 font-mono text-xs">
-              <div>
-                <div class="flex justify-between text-[#1e2022] mb-1 font-bold">
-                  <span>Python</span>
-                  <span class="text-[#2563eb]">Advanced / Backend 88%</span>
-                </div>
-                <div class="h-2 w-full bg-[#f1f5f9] rounded-full overflow-hidden border border-[#1e2022]">
-                  <div class="h-full bg-[#2563eb] rounded-full" style="width: 88%"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-[#1e2022] mb-1 font-bold">
-                  <span>Java</span>
-                  <span class="text-[#2563eb]">OOP & Backend 85%</span>
-                </div>
-                <div class="h-2 w-full bg-[#f1f5f9] rounded-full overflow-hidden border border-[#1e2022]">
-                  <div class="h-full bg-[#2563eb] rounded-full" style="width: 85%"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-[#1e2022] mb-1 font-bold">
-                  <span>C++ / C</span>
-                  <span class="text-[#2563eb]">Systems & Algorithms 90%</span>
-                </div>
-                <div class="h-2 w-full bg-[#f1f5f9] rounded-full overflow-hidden border border-[#1e2022]">
-                  <div class="h-full bg-[#2563eb] rounded-full" style="width: 90%"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-[#1e2022] mb-1 font-bold">
-                  <span>JavaScript & HTML/CSS</span>
-                  <span class="text-[#6b7280]">Web UI / Dashboards 80%</span>
-                </div>
-                <div class="h-2 w-full bg-[#f1f5f9] rounded-full overflow-hidden border border-[#1e2022]">
-                  <div class="h-full bg-[#94a3b8] rounded-full" style="width: 80%"></div>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between text-[#1e2022] mb-1 font-bold">
-                  <span>SQL & Relational DBs</span>
-                  <span class="text-[#6b7280]">Queries & Schemas 78%</span>
-                </div>
-                <div class="h-2 w-full bg-[#f1f5f9] rounded-full overflow-hidden border border-[#1e2022]">
-                  <div class="h-full bg-[#94a3b8] rounded-full" style="width: 78%"></div>
-                </div>
-              </div>
+            <div>
+              <div class="text-[10px] font-mono text-[#737373] uppercase font-bold">Email</div>
+              <div class="text-xs sm:text-sm font-editorial text-white group-hover:text-[#ef4444] transition-colors truncate">farseenahrasraufali@gmail.com</div>
             </div>
-          </div>
+          </a>
 
-          <!-- Category 2: Software Systems & Architecture -->
-          <div class="wobbly-box-2 p-6 bg-white relative">
-            <div class="flex items-center gap-3 mb-5">
-              <div class="w-10 h-10 rounded-xl bg-[#dcfce7] border-2 border-[#1e2022] flex items-center justify-center text-[#059669] shadow-[2px_2px_0px_#1e2022]">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                </svg>
-              </div>
-              <h3 class="font-display font-bold text-[#1e2022] text-xl">Software & Systems</h3>
+          <!-- Phone -->
+          <a href="tel:+917012653215" class="flex items-center gap-3.5 group">
+            <div class="w-9 h-9 rounded-full bg-[#171717] border border-white/10 group-hover:border-[#dc2626] flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
             </div>
-            
-            <div class="space-y-2.5 text-xs text-[#1e2022] font-mono">
-              <div class="flex items-center justify-between p-2 rounded-lg bg-[#faf8f5] border border-[#1e2022]">
-                <span>Object-Oriented Design & Clean Code</span>
-                <span class="text-[#059669] font-bold">Architecture</span>
-              </div>
-              <div class="flex items-center justify-between p-2 rounded-lg bg-[#faf8f5] border border-[#1e2022]">
-                <span>RESTful APIs & Network Sockets</span>
-                <span class="text-[#059669] font-bold">Integration</span>
-              </div>
-              <div class="flex items-center justify-between p-2 rounded-lg bg-[#faf8f5] border border-[#1e2022]">
-                <span>MQTT Broker & Async Streaming</span>
-                <span class="text-[#059669] font-bold">Telemetry</span>
-              </div>
-              <div class="flex items-center justify-between p-2 rounded-lg bg-[#faf8f5] border border-[#1e2022]">
-                <span>Real-Time FreeRTOS Multithreading</span>
-                <span class="text-[#059669] font-bold">Task Scheduling</span>
-              </div>
-              <div class="flex items-center justify-between p-2 rounded-lg bg-[#faf8f5] border border-[#1e2022]">
-                <span>PID Mathematics & State Estimation</span>
-                <span class="text-[#059669] font-bold">Algorithms</span>
-              </div>
+            <div>
+              <div class="text-[10px] font-mono text-[#737373] uppercase font-bold">Phone / WhatsApp</div>
+              <div class="text-xs sm:text-sm font-editorial text-white group-hover:text-[#ef4444] transition-colors">+91 7012653215</div>
             </div>
-          </div>
+          </a>
 
-          <!-- Category 3: Developer Tools, DevOps & Linux -->
-          <div class="wobbly-box-3 p-6 bg-white relative">
-            <div class="flex items-center gap-3 mb-5">
-              <div class="w-10 h-10 rounded-xl bg-[#fef08a] border-2 border-[#1e2022] flex items-center justify-center text-[#92400e] shadow-[2px_2px_0px_#1e2022]">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-              </div>
-              <h3 class="font-display font-bold text-[#1e2022] text-xl">Developer Tools & Linux</h3>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 group">
+            <div class="w-9 h-9 rounded-full bg-[#171717] border border-white/10 group-hover:border-[#dc2626] flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-4 h-4 text-[#ef4444]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </div>
-            
-            <div class="flex flex-wrap gap-2 text-xs font-mono">
-              <span class="tool-chip">
-                <svg class="w-3.5 h-3.5 text-[#059669] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>
-                <span>Linux / Bash (GLUB)</span>
-              </span>
-              <span class="tool-chip">
-                <svg class="w-3.5 h-3.5 text-[#e11d48] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3" stroke-width="2"/><circle cx="6" cy="18" r="3" stroke-width="2"/><circle cx="18" cy="9" r="3" stroke-width="2"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 9v6M9 9a9 9 0 0 1 9 0"/></svg>
-                <span>Git & GitHub</span>
-              </span>
-              <span class="tool-chip">
-                <svg class="w-3.5 h-3.5 text-[#2563eb] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-                <span>VS Code</span>
-              </span>
-              <span class="tool-chip">
-                <svg class="w-3.5 h-3.5 text-[#059669] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/></svg>
-                <span>Node.js</span>
-              </span>
-              <span class="tool-chip">
-                <svg class="w-3.5 h-3.5 text-[#2563eb] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                <span>Home Assistant Hub</span>
-              </span>
-              <span class="tool-chip">
-                <svg class="w-3.5 h-3.5 text-[#4f46e5] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 0 1 7.778 0M12 20h.01M5.293 13.586a9.5 9.5 0 0 1 13.414 0M2.475 10.768a13.5 13.5 0 0 1 19.05 0"/></svg>
-                <span>MQTT & Telemetry</span>
-              </span>
-              <span class="tool-chip">
-                <svg class="w-3.5 h-3.5 text-[#d97706] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" stroke-width="2"/><path stroke-linecap="round" stroke-width="2" d="M9 9h6v6H9zM9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
-                <span>PlatformIO & C++ Toolchains</span>
-              </span>
-              <span class="tool-chip">
-                <svg class="w-3.5 h-3.5 text-[#2563eb] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"/></svg>
-                <span>OTA Updates</span>
-              </span>
-              <span class="tool-chip">
-                <svg class="w-3.5 h-3.5 text-[#d97706] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                <span>Oscilloscope & Logic</span>
-              </span>
+            <div>
+              <div class="text-[10px] font-mono text-[#737373] uppercase font-bold">LinkedIn</div>
+              <div class="text-xs sm:text-sm font-editorial text-white group-hover:text-[#ef4444] transition-colors">in/farseen-ahras</div>
             </div>
+          </a>
 
-            <!-- Soft Skills & Leadership -->
-            <div class="mt-6 pt-5 border-t-2 border-dashed border-[#1e2022]">
-              <div class="text-xs font-display uppercase tracking-wider text-[#6b7280] mb-2 font-bold">
-                Professional Strengths
-              </div>
-              <div class="flex flex-wrap gap-1.5 text-xs font-display font-bold">
-                <span class="px-2.5 py-1 rounded bg-[#f1f5f9] border border-[#1e2022] text-[#1e2022]">Team Leadership</span>
-                <span class="px-2.5 py-1 rounded bg-[#f1f5f9] border border-[#1e2022] text-[#1e2022]">Technical Mentorship</span>
-                <span class="px-2.5 py-1 rounded bg-[#f1f5f9] border border-[#1e2022] text-[#1e2022]">System Debugging</span>
-                <span class="px-2.5 py-1 rounded bg-[#f1f5f9] border border-[#1e2022] text-[#1e2022]">Fast Tool Adoption</span>
-              </div>
+          <!-- GitHub -->
+          <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 group">
+            <div class="w-9 h-9 rounded-full bg-[#171717] border border-white/10 group-hover:border-[#dc2626] flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-4 h-4 text-[#ef4444]" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+            </div>
+            <div>
+              <div class="text-[10px] font-mono text-[#737373] uppercase font-bold">GitHub</div>
+              <div class="text-xs sm:text-sm font-editorial text-white group-hover:text-[#ef4444] transition-colors">@Farseen-Ahras</div>
+            </div>
+          </a>
+
+          <!-- Location -->
+          <div class="flex items-center gap-3.5">
+            <div class="w-9 h-9 rounded-full bg-[#171717] border border-white/10 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </div>
+            <div>
+              <div class="text-[10px] font-mono text-[#737373] uppercase font-bold">Location</div>
+              <div class="text-xs text-white">Mogral Puthur, Kasaragod, Kerala</div>
+              <div class="text-[10px] text-[#737373]">College: Mangaluru, Karnataka</div>
             </div>
           </div>
 
         </div>
 
-      </div>
-    </section>
-
-
-    <!-- EDUCATION & CERTIFICATIONS (05 // Credentials & Honors) -->
-    <section id="education" class="py-20 border-t-2 border-dashed border-[#1e2022] relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
-          <!-- Education Column -->
-          <div class="lg:col-span-6 space-y-6">
-            <div>
-              <div class="font-display text-sm text-[#2563eb] font-bold tracking-wider uppercase mb-1">05 // Academics & Honors</div>
-              <h2 class="font-display font-extrabold text-3xl text-[#1e2022] tracking-tight">
-                Education
-              </h2>
-            </div>
-
-            <!-- College Degree -->
-            <div class="wobbly-box p-6 bg-white relative">
-              <div class="washi-tape-corner"></div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="font-mono text-xs text-[#1e40af] font-bold px-2.5 py-0.5 rounded bg-[#dbeafe] border border-[#1e2022]">
-                  2022 - 2026 (CURRENT 3rd YEAR)
-                </span>
-                <span class="font-mono text-xs font-bold text-[#1e2022] bg-[#fef08a] px-2.5 py-0.5 rounded border border-[#1e2022]">
-                  CGPA: 8.81 / 10
-                </span>
-              </div>
-              <h3 class="font-display font-bold text-2xl text-[#1e2022]">
-                B.E. in Computer Science and Engineering
-              </h3>
-              <p class="text-base font-body text-[#374151] mt-1 font-bold">
-                P A College of Engineering (PACE), Mangalore / Kasaragod region
-              </p>
-
-
-              <p class="text-sm text-[#4b5563] mt-3 leading-relaxed font-body">
-                Core Coursework: Data Structures & Algorithms, Object-Oriented Programming (Java), Computer Networks, Operating Systems, Database Management, Microcontrollers & Embedded Architecture.
-              </p>
-            </div>
-
-            <!-- High School -->
-            <div class="wobbly-box-2 p-6 bg-white relative">
-              <div class="flex items-center justify-between mb-2">
-                <span class="font-mono text-xs text-[#6b7280] font-bold px-2.5 py-0.5 rounded bg-[#f1f5f9] border border-[#1e2022]">
-                  2020 - 2022
-                </span>
-                <span class="font-mono text-xs font-bold text-[#065f46] bg-[#dcfce7] px-2.5 py-0.5 rounded border border-[#1e2022]">
-                  90.0%
-                </span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-[#1e2022]">
-                High School — PCMC Stream
-              </h3>
-              <p class="text-sm font-body text-[#374151] mt-1 font-bold">
-                Dhakeerath EMHSS
-              </p>
-              <p class="text-sm text-[#6b7280] mt-2 font-body">
-                Physics, Chemistry, Mathematics, and Computer Science foundations.
-              </p>
-            </div>
-          </div>
-
-          <!-- Certifications Column -->
-          <div class="lg:col-span-6 space-y-6">
-            <div>
-              <div class="font-display text-sm text-[#d97706] font-bold tracking-wider uppercase mb-1">06 // Credentials</div>
-              <h2 class="font-display font-extrabold text-3xl text-[#1e2022] tracking-tight">
-                Certifications & Workshops
-              </h2>
-            </div>
-
-            <div class="space-y-4">
-              <!-- Cert 1: CS50x -->
-              <div class="wobbly-box p-5 bg-white flex items-start gap-4">
-                <div class="w-11 h-11 rounded-lg bg-[#ffe4e6] border-2 border-[#1e2022] flex items-center justify-center shrink-0 font-display font-bold text-[#9f1239] text-base shadow-[2px_2px_0px_#1e2022]">
-                  CS
-                </div>
-                <div>
-                  <h3 class="font-display font-bold text-[#1e2022] text-lg">
-                    CS50x: Introduction to Computer Science
-                  </h3>
-                  <div class="font-mono text-xs text-[#6b7280] font-bold">Harvard University (edX)</div>
-                  <p class="text-sm text-[#4b5563] mt-1.5 font-body">
-                    Rigorous exploration of algorithms, data structures, memory management, C, Python, SQL, and computer science principles.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Cert 2: ComedKares RC Car Workshop -->
-              <div class="wobbly-box-2 p-5 bg-white flex items-start gap-4">
-                <div class="w-11 h-11 rounded-lg bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center shrink-0 font-display font-bold text-[#1e40af] text-base shadow-[2px_2px_0px_#1e2022]">
-                  RC
-                </div>
-                <div>
-                  <h3 class="font-display font-bold text-[#1e2022] text-lg">
-                    RC Car Workshop & Prototyping
-                  </h3>
-                  <div class="font-mono text-xs text-[#6b7280] font-bold">ComedKares Innovation Hub</div>
-                  <p class="text-sm text-[#4b5563] mt-1.5 font-body">
-                    Hardware mechanics, motor driver interfacing, radio communication, and autonomous/remote vehicle design.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Cert 3: BE10X AI Tools -->
-              <div class="wobbly-box-3 p-5 bg-white flex items-start gap-4">
-                <div class="w-11 h-11 rounded-lg bg-[#dcfce7] border-2 border-[#1e2022] flex items-center justify-center shrink-0 font-display font-bold text-[#065f46] text-base shadow-[2px_2px_0px_#1e2022]">
-                  AI
-                </div>
-                <div>
-                  <h3 class="font-display font-bold text-[#1e2022] text-lg">
-                    AI Tools & Accelerated Engineering Workshop
-                  </h3>
-                  <div class="font-mono text-xs text-[#6b7280] font-bold">BE10X</div>
-                  <p class="text-sm text-[#4b5563] mt-1.5 font-body">
-                    Modern AI workflows, productivity acceleration, and LLM-assisted software development.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- INTERACTIVE SPIRAL LOGBOOK / CLI PLAYGROUND (06) -->
-    <section id="terminal" class="py-16 border-t-2 border-dashed border-[#1e2022] bg-[#f4f0e6]">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
-        
-        <!-- Spiral Binder Rings On Top -->
-        <div class="spiral-logbook p-2 sm:p-4">
-          <div class="spiral-holes">
-            <span class="spiral-ring"></span>
-            <span class="spiral-ring"></span>
-            <span class="spiral-ring"></span>
-            <span class="spiral-ring"></span>
-            <span class="spiral-ring"></span>
-            <span class="spiral-ring"></span>
-            <span class="spiral-ring"></span>
-            <span class="spiral-ring"></span>
-          </div>
-
-          <!-- Logbook Titlebar -->
-          <div class="flex items-center justify-between px-4 py-3 bg-[#faf8f5] border-b-2 border-[#1e2022] rounded-t mt-3">
-            <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-[#e11d48] border border-[#1e2022]"></span>
-              <span class="w-3 h-3 rounded-full bg-[#facc15] border border-[#1e2022]"></span>
-              <span class="w-3 h-3 rounded-full bg-[#059669] border border-[#1e2022]"></span>
-              <span class="font-mono text-xs font-bold text-[#1e2022] ml-2">farseen@field-logbook:~$</span>
-            </div>
-            <div class="text-xs font-display font-bold text-[#6b7280]">Spiral Field Terminal • Type `help`</div>
-          </div>
-
-          <!-- Logbook Output Area -->
-          <div id="terminalBody" class="p-4 sm:p-6 space-y-2 h-64 overflow-y-auto text-[#1e2022] font-mono bg-white">
-            <div class="text-[#2563eb] font-bold font-display text-sm">Farseen Ahras Raufali — Field Engineer's Spiral Terminal [v2.1.0]</div>
-            <div class="text-[#6b7280] text-xs">Type <span class="text-[#d97706] font-bold font-mono">'help'</span> or click any of the stamp shortcuts below:</div>
-            
-            <div class="flex flex-wrap gap-2 pt-2">
-              <button class="cli-quick-btn px-3 py-1 rounded bg-[#fef9c3] border-2 border-[#1e2022] hover:bg-[#fde047] text-[#1e2022] font-display font-bold text-xs shadow-[1px_1px_0px_#1e2022]" data-cmd="skills">skills</button>
-              <button class="cli-quick-btn px-3 py-1 rounded bg-[#fef9c3] border-2 border-[#1e2022] hover:bg-[#fde047] text-[#1e2022] font-display font-bold text-xs shadow-[1px_1px_0px_#1e2022]" data-cmd="drone">drone</button>
-              <button class="cli-quick-btn px-3 py-1 rounded bg-[#fef9c3] border-2 border-[#1e2022] hover:bg-[#fde047] text-[#1e2022] font-display font-bold text-xs shadow-[1px_1px_0px_#1e2022]" data-cmd="ieee">ieee</button>
-              <button class="cli-quick-btn px-3 py-1 rounded bg-[#fef9c3] border-2 border-[#1e2022] hover:bg-[#fde047] text-[#1e2022] font-display font-bold text-xs shadow-[1px_1px_0px_#1e2022]" data-cmd="abstracts">abstracts</button>
-              <button class="cli-quick-btn px-3 py-1 rounded bg-[#fef9c3] border-2 border-[#1e2022] hover:bg-[#fde047] text-[#1e2022] font-display font-bold text-xs shadow-[1px_1px_0px_#1e2022]" data-cmd="contact">contact</button>
-              <button class="cli-quick-btn px-3 py-1 rounded bg-[#ffffff] border-2 border-[#1e2022] hover:bg-[#f1f5f9] text-[#1e2022] font-display font-bold text-xs shadow-[1px_1px_0px_#1e2022]" data-cmd="clear">clear</button>
-            </div>
-
-            <div id="terminalOutput" class="space-y-2 pt-2"></div>
-          </div>
-
-          <!-- Prompt Input Line -->
-          <div class="flex items-center px-4 py-3 bg-[#faf8f5] border-t-2 border-[#1e2022] rounded-b">
-            <span class="text-[#2563eb] font-bold mr-2 font-mono text-xs">guest@farseen:~$</span>
-            <input id="terminalInput" type="text" class="flex-1 bg-transparent border-none text-[#1e2022] focus:outline-none font-mono text-xs" placeholder="type a command (e.g. skills, drone, ieee, contact)..." autocomplete="off" spellcheck="false">
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- CONTACT SECTION (07 // Postbox & Direct Dispatch) -->
-    <section id="contact" class="py-20 border-t-2 border-dashed border-[#1e2022] relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
-          <!-- Contact Left: Postbox Details -->
-          <div class="lg:col-span-5 space-y-6">
-            <div>
-              <div class="font-display text-sm text-[#2563eb] font-bold tracking-wider uppercase mb-1">07 // Postbox & Dispatch</div>
-              <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-[#1e2022] tracking-tight">
-                Let's Build Something Great
-              </h2>
-              <p class="text-[#4b5563] text-base mt-3 leading-relaxed font-body">
-                Whether you have an embedded systems opening, an IoT robotics challenge, an IEEE technical collaboration, 
-                or just want to discuss flight controllers and Linux tooling — my inbox is always open.
-              </p>
-            </div>
-
-            <!-- Direct Contact Cards (Postcard Style) -->
-            <div class="space-y-3 font-body">
+        <!-- Right Side: Dark Laptop Mockup with Live Digital Telemetry Experience -->
+        <div class="lg:col-span-5">
+          <div class="laptop-chassis p-2.5 sm:p-3">
+            <div class="laptop-screen p-3.5 sm:p-4">
               
-              <!-- Email Card -->
-              <div class="wobbly-box p-4 bg-white flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-lg bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center text-[#2563eb] shadow-[1px_1px_0px_#1e2022]">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="text-[11px] font-mono text-[#6b7280] font-bold">DIRECT DISPATCH EMAIL</div>
-                    <a href="mailto:farseenahrasraufali@gmail.com" class="text-sm sm:text-base font-bold text-[#1e2022] hover:text-[#2563eb] transition-colors break-all">
-                      farseenahrasraufali@gmail.com
-                    </a>
-                  </div>
+              <!-- Screen Top Bar with Terminal Dots -->
+              <div class="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#ef4444]"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#f59e0b]"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#10b981]"></span>
                 </div>
-                <a href="mailto:farseenahrasraufali@gmail.com" class="btn-stamp-secondary text-xs px-3 py-1 font-display font-bold">
-                  Email
-                </a>
+                <div class="text-[10px] font-mono text-[#737373]">esp32@farseen-terminal-v4.0</div>
+                <span class="text-[9px] font-mono bg-[#991b1b]/20 text-[#ef4444] px-1.5 py-0.5 rounded border border-[#991b1b]">LIVE</span>
               </div>
 
-              <!-- Phone Card -->
-              <div class="wobbly-box-2 p-4 bg-white flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-lg bg-[#dcfce7] border-2 border-[#1e2022] flex items-center justify-center text-[#059669] shadow-[1px_1px_0px_#1e2022]">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="text-[11px] font-mono text-[#6b7280] font-bold">PHONE / WHATSAPP</div>
-                    <a href="tel:+917012653215" class="text-base font-bold text-[#1e2022] hover:text-[#059669] transition-colors">
-                      +91 7012653215
-                    </a>
-                  </div>
-                </div>
-                <a href="https://wa.me/917012653215" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-xs px-3 py-1 font-display font-bold">
-                  WhatsApp
-                </a>
+              <!-- Terminal Body with Interactive Playground -->
+              <div id="mockupTerminalBody" class="h-44 sm:h-52 overflow-y-auto text-xs font-mono text-[#d4d4d4] space-y-1.5 scrollbar-thin">
+                <div class="text-[#737373] text-[11px] font-mono">[SYS_INIT]: Farseen Ahras Digital Telemetry Console v4.0.0</div>
+                <div class="text-[#a3a3a3] text-[11px] font-mono">Type <span class="text-white font-bold">help</span> or click command chips below:</div>
+                
+                <div id="mockupTerminalOutput"></div>
               </div>
 
-              <!-- LinkedIn Card -->
-              <div class="wobbly-box-3 p-4 bg-white flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-lg bg-[#dbeafe] border-2 border-[#1e2022] flex items-center justify-center text-[#1e40af] shadow-[1px_1px_0px_#1e2022]">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="text-[11px] font-mono text-[#6b7280] font-bold">LINKEDIN PROFILE</div>
-                    <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-bold text-[#1e2022] hover:text-[#2563eb] transition-colors break-all">
-                      linkedin.com/in/farseen-ahras
-                    </a>
-                  </div>
-                </div>
-                <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-xs px-3 py-1 font-display font-bold">
-                  Visit
-                </a>
+              <!-- Terminal Input Field -->
+              <div class="flex items-center gap-2 border-t border-white/10 pt-2.5 mt-2">
+                <span class="text-[#ef4444] font-mono font-bold text-xs">&gt;</span>
+                <input id="mockupTerminalInput" type="text" placeholder="Type a command (e.g. lifelane, hydro, skills, resume)..." class="w-full bg-transparent text-xs font-mono text-white placeholder-[#525252] focus:outline-none">
               </div>
 
-              <!-- GitHub Card -->
-              <div class="wobbly-box-1 p-4 bg-white flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-lg bg-[#f3f4f6] border-2 border-[#1e2022] flex items-center justify-center text-[#1e2022] shadow-[1px_1px_0px_#1e2022]">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <div class="text-[11px] font-mono text-[#6b7280] font-bold">SOURCE REPOSITORIES</div>
-                    <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-bold text-[#1e2022] hover:text-[#2563eb] transition-colors break-all">
-                      github.com/Farseen-Ahras
-                    </a>
-                  </div>
-                </div>
-                <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-xs px-3 py-1 font-display font-bold">
-                  GitHub
-                </a>
+              <!-- Quick Command Chips -->
+              <div class="flex flex-wrap gap-1.5 mt-3 pt-2 border-t border-white/5">
+                <button type="button" data-cmd="lifelane" class="mockup-cli-quick-btn text-[10px] font-mono text-[#a3a3a3] hover:text-white bg-white/5 hover:bg-white/10 px-2 py-0.5 rounded transition-colors">lifelane</button>
+                <button type="button" data-cmd="nexstock" class="mockup-cli-quick-btn text-[10px] font-mono text-[#a3a3a3] hover:text-white bg-white/5 hover:bg-white/10 px-2 py-0.5 rounded transition-colors">nexstock</button>
+                <button type="button" data-cmd="hydro" class="mockup-cli-quick-btn text-[10px] font-mono text-[#a3a3a3] hover:text-white bg-white/5 hover:bg-white/10 px-2 py-0.5 rounded transition-colors">hydro</button>
+                <button type="button" data-cmd="drone" class="mockup-cli-quick-btn text-[10px] font-mono text-[#a3a3a3] hover:text-white bg-white/5 hover:bg-white/10 px-2 py-0.5 rounded transition-colors">drone</button>
+                <button type="button" data-cmd="resume" class="mockup-cli-quick-btn text-[10px] font-mono text-[#ef4444] bg-[#991b1b]/20 px-2 py-0.5 rounded border border-[#991b1b] transition-colors">resume ↗</button>
+                <button type="button" data-cmd="biodata" class="mockup-cli-quick-btn text-[10px] font-mono text-[#ef4444] bg-[#991b1b]/20 px-2 py-0.5 rounded border border-[#991b1b] transition-colors">biodata ↗</button>
               </div>
 
-              <!-- Location Pin -->
-              <div class="p-3.5 rounded-xl bg-white border-2 border-[#1e2022] shadow-[2px_2px_0px_#1e2022] text-xs font-mono text-[#4b5563] flex items-center gap-2">
-                <svg class="w-4 h-4 text-[#e11d48] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                <span class="font-bold text-[#1e2022]">Mogral Puthur, Kasaragod, Kerala, India</span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Contact Right: Sketched Dispatch Memo Form -->
-          <div class="lg:col-span-7">
-            <div class="wobbly-box p-6 sm:p-8 bg-white relative">
-              <div class="washi-tape"></div>
-              <h3 class="font-display font-bold text-2xl text-[#1e2022] mb-1">Dispatch a Memorandum</h3>
-              <p class="text-sm text-[#6b7280] mb-6 font-body">
-                Draft a message directly to <span class="font-bold text-[#1e2022] underline decoration-[#facc15] decoration-2">farseenahrasraufali@gmail.com</span>.
-              </p>
-
-              <form id="contactForm" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label for="senderName" class="block font-display text-sm text-[#1e2022] font-bold mb-1">Your Name *</label>
-                    <input type="text" id="senderName" required placeholder="e.g. Alex Mercer" class="sketch-input">
-                  </div>
-                  <div>
-                    <label for="senderEmail" class="block font-display text-sm text-[#1e2022] font-bold mb-1">Your Email *</label>
-                    <input type="email" id="senderEmail" required placeholder="alex@example.com" class="sketch-input">
-                  </div>
-                </div>
-
-                <div>
-                  <label for="messageSubject" class="block font-display text-sm text-[#1e2022] font-bold mb-1">Subject</label>
-                  <input type="text" id="messageSubject" placeholder="e.g. Internship Opportunity / Drone Project Collaboration" class="sketch-input">
-                </div>
-
-                <div>
-                  <label for="messageText" class="block font-display text-sm text-[#1e2022] font-bold mb-1">Message *</label>
-                  <textarea id="messageText" required rows="4" placeholder="Hello Farseen, I came across your engineering notebook and..." class="sketch-input resize-none"></textarea>
-                </div>
-
-                <div class="flex items-center justify-between pt-2">
-                  <span id="formFeedback" class="text-xs font-mono text-[#059669] font-bold"></span>
-                  <button type="submit" class="btn-stamp-primary text-base font-bold px-7 py-3 flex items-center gap-2">
-                    <span>Dispatch Message</span>
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                  </button>
-                </div>
-              </form>
             </div>
           </div>
-
+          <!-- Laptop Aluminum Base with Opening Notch -->
+          <div class="laptop-base">
+            <div class="laptop-notch"></div>
+          </div>
         </div>
 
       </div>
-    </section>
 
-  </main>
+      <!-- Bottom Bar Credits & Standalone Page Links -->
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#737373]">
+        <div>
+          © 2026 <strong class="text-white">Farseen Ahras Raufali</strong> • Full-Stack &amp; Embedded Engineer.
+        </div>
+        <div class="flex items-center gap-4 text-[#a3a3a3]">
+          <a href="#home" class="hover:text-white transition-colors">Top</a>
+          <span>•</span>
+          <a href="resume.html" class="hover:text-[#ef4444] font-bold text-white transition-colors">Resume Webpage</a>
+          <span>•</span>
+          <a href="biodata.html" class="hover:text-[#ef4444] font-bold text-white transition-colors">Biodata Webpage</a>
+          <span>•</span>
+          <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
+          <span>•</span>
+          <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LinkedIn</a>
+        </div>
+      </div>
 
-  <!-- FOOTER (Notebook Binding Bottom) -->
-  <footer class="border-t-2 border-[#1e2022] bg-[#f4f0e6] py-10 relative z-10 text-xs text-[#4b5563] font-mono">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <span class="text-[#1e2022] font-bold font-display text-sm">FARSEEN AHRAS RAUFALI</span>
-        <span>•</span>
-        <span>B.E. Computer Science @ PACE (2022–2026)</span>
-      </div>
-      <div class="flex flex-wrap items-center justify-center gap-3 text-[#1e2022] font-bold font-display text-xs">
-        <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="hover:text-[#2563eb] underline decoration-1">GitHub</a>
-        <span>•</span>
-        <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="hover:text-[#2563eb] underline decoration-1">LinkedIn</a>
-        <span>•</span>
-        <span>IEEE SB PACE</span>
-        <span>•</span>
-        <span>IEEE GRSS & SPS</span>
-        <span>•</span>
-        <span>EMBED Club</span>
-        <span>•</span>
-        <span>GLUB</span>
-      </div>
-      <div class="text-[11px] text-[#6b7280]">
-        Sketched & engineered with care • Kasaragod, Kerala
-      </div>
     </div>
   </footer>
 
-  <!-- MODAL: RESUME VIEWER & PRINT GENERATOR -->
-  <div id="resumeModal" class="fixed inset-0 z-[2000] bg-black/75 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4 lg:p-6 hidden">
-    <div id="resumeModalContainer" class="bg-[#faf8f5] border-3 border-[#1e2022] rounded-2xl w-full max-w-4xl h-[92vh] max-h-[94vh] overflow-hidden flex flex-col shadow-[8px_8px_0px_#1e2022] relative transition-all duration-200">
-      <div class="washi-tape"></div>
-      
-      <!-- Modal Header -->
-      <div class="flex items-center justify-between px-4 sm:px-6 py-2.5 sm:py-3 bg-[#f4f0e6] border-b-2 border-[#1e2022] shrink-0">
-        <div class="flex items-center gap-3">
-          <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-[#fef08a] border-2 border-[#1e2022] flex items-center justify-center text-[#1e2022] font-display font-bold text-sm shadow-[1px_1px_0px_#1e2022]">
-            CV
-          </div>
-          <div>
-            <h3 class="font-display font-bold text-[#1e2022] text-base sm:text-lg leading-tight">Farseen Ahras Raufali — Curriculum Vitae</h3>
-            <p class="text-[11px] font-mono text-[#6b7280] font-bold">B.E. CSE • P A College of Engineering • Kasaragod, Kerala</p>
-          </div>
-        </div>
-        <div class="flex items-center gap-1.5 sm:gap-2">
-          <!-- Download PDF Button in Header for fast access -->
-          <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-green text-xs px-3 py-1.5 hidden sm:inline-flex items-center gap-1.5 font-bold" title="Download Official PDF Resume (75 KB)">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-            <span>Download PDF</span>
-          </a>
-          <!-- Fullscreen / Expand Button -->
-          <button id="resumeModalExpandBtn" type="button" class="text-slate-700 hover:text-black p-1.5 rounded-lg hover:bg-black/5 flex items-center gap-1 text-xs font-mono font-bold" title="Toggle Fullscreen" aria-label="Toggle Fullscreen">
-            <svg id="expandIcon" class="w-5 h-5 text-[#1e2022]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
-            <svg id="collapseIcon" class="w-5 h-5 text-[#1e2022] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 14h6m0 0v6m0-6L3 21m17-7h-6m0 0v6m0-6l7 7M4 10h6m0 0V4m0 6L3 3m17 7h-6m0 0V4m0 6l7-7"></path></svg>
-            <span class="hidden md:inline" id="expandText">Fullscreen</span>
-          </button>
-          <!-- Close Button -->
-          <button id="resumeModalCloseBtn" type="button" class="text-slate-600 hover:text-black p-1.5 rounded-lg hover:bg-black/5" aria-label="Close modal">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Main Content: Responsive Text Sheet Body -->
-      <div id="resumeHtmlView" class="flex-1 min-h-0 overflow-y-auto p-5 sm:p-8 md:p-10 text-[#1e2022] bg-white">
-        <div class="max-w-3xl mx-auto space-y-6 leading-relaxed">
-          <!-- Header details -->
-          <div class="border-b-2 border-[#1e2022] pb-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-            <div>
-              <h2 class="text-2xl sm:text-3xl font-bold text-[#1e2022] font-display tracking-tight">FARSEEN AHRAS RAUFALI</h2>
-              <div class="text-[#2563eb] font-mono text-xs sm:text-sm font-bold mt-1">Mogral Puthur, Kasaragod • +91 7012653215 • farseenahrasraufali@gmail.com</div>
-            </div>
-            <div class="flex flex-col sm:items-end gap-1 font-mono text-xs sm:text-sm font-bold">
-              <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="text-[#1e2022] hover:text-[#2563eb] hover:underline flex items-center gap-1">github.com/Farseen-Ahras</a>
-              <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="text-[#2563eb] hover:underline">linkedin.com/in/farseen-ahras</a>
-            </div>
-          </div>
-
-          <!-- Summary -->
-          <div>
-            <h4 class="font-display text-sm sm:text-base text-[#2563eb] uppercase font-bold tracking-wider mb-2 border-b border-[#e5e7eb] pb-1">Professional Summary</h4>
-            <p class="text-sm sm:text-base text-[#374151]">Computer Science and Engineering student focusing on software engineering, backend architectures, and systems programming. Strong hands-on proficiency in Python, Java, C++, and Linux, with experience designing real-time algorithms, state machines, and connected IoT platforms. Collaborative problem-solver passionate about clean, scalable software.</p>
-          </div>
-
-          <!-- Education -->
-          <div>
-            <h4 class="font-display text-sm sm:text-base text-[#2563eb] uppercase font-bold tracking-wider mb-2 border-b border-[#e5e7eb] pb-1">Education</h4>
-            <div class="space-y-3">
-              <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1">
-                <div>
-                  <strong class="text-[#1e2022] font-bold text-sm sm:text-base">B.E. Computer Science and Engineering</strong> — P A College of Engineering
-                </div>
-                <span class="font-mono text-xs sm:text-sm font-bold text-[#2563eb] bg-[#eff6ff] px-2 py-0.5 rounded border border-[#bfdbfe]">2022 - 2026 | CGPA: 8.81/10</span>
-              </div>
-              <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1">
-                <div>
-                  <strong class="text-[#1e2022] font-bold text-sm sm:text-base">High School (PCMC)</strong> — Dhakeerath EMHSS
-                </div>
-                <span class="font-mono text-xs sm:text-sm font-bold text-[#4b5563]">2020 - 2022 | Percentage: 90%</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Projects -->
-          <div>
-            <h4 class="font-display text-sm sm:text-base text-[#2563eb] uppercase font-bold tracking-wider mb-2 border-b border-[#e5e7eb] pb-1">Projects & Leadership</h4>
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between items-baseline font-bold text-[#1e2022] text-sm sm:text-base">
-                  <span>Hydroponic Farming using IoT Devices</span>
-                  <span class="font-mono text-xs text-[#6b7280]">2026 - Present</span>
-                </div>
-                <p class="text-[#4b5563] text-xs sm:text-sm mt-0.5">Lead Developer — Mini project building a hydroponic farming system using IoT devices. Leading the team in building the IoT system and coordinating development.</p>
-              </div>
-              <div>
-                <div class="flex justify-between items-baseline font-bold text-[#1e2022] text-sm sm:text-base">
-                  <span>Drone Flight Controller & Embedded Systems</span>
-                  <span class="font-mono text-xs text-[#6b7280]">2025 - 2026</span>
-                </div>
-                <p class="text-[#4b5563] text-xs sm:text-sm mt-0.5">Project Lead — ESP32 flight-control firmware with MPU6050 IMU, PWM ESCs, PPM receiver input and PID tuning. Debugged sensor orientation, drift and oscillation through iterative hardware and firmware testing.</p>
-              </div>
-              <div>
-                <div class="flex justify-between items-baseline font-bold text-[#1e2022] text-sm sm:text-base">
-                  <span>IoT Workshops & Home Automation</span>
-                  <span class="font-mono text-xs text-[#6b7280]">2024 - 2025</span>
-                </div>
-                <p class="text-[#4b5563] text-xs sm:text-sm mt-0.5">Project Lead — Led ESP32/IoT workshops covering sensors, displays, buzzers and Wi-Fi projects; built a Home Assistant-based automation system using ESP32, DHT22, PIR/IR sensors, relays, RGB status lighting and OTA updates.</p>
-              </div>
-              <div>
-                <div class="flex justify-between items-baseline font-bold text-[#1e2022] text-sm sm:text-base">
-                  <span>Head Volunteer, RC Car Workshop with IEEE</span>
-                  <span class="font-mono text-xs text-[#6b7280]">2024 - 2025</span>
-                </div>
-                <p class="text-[#4b5563] text-xs sm:text-sm mt-0.5">Led the volunteer team that organized and ran the workshop with IEEE Student Branch and ComedKares.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Roles & Publications -->
-          <div>
-            <h4 class="font-display text-sm sm:text-base text-[#2563eb] uppercase font-bold tracking-wider mb-2 border-b border-[#e5e7eb] pb-1">Institutional Roles & Publications</h4>
-            <ul class="list-disc list-inside space-y-1.5 text-[#374151] text-xs sm:text-sm font-body">
-              <li>Chair, IEEE Geoscience and Remote Sensing Society (GRSS) & Signal Processing Society (SPS) Student Chapter (1st/2nd yr to 3rd yr)</li>
-              <li>Executive Committee (Execom) Member, IEEE Student Branch @ PACE</li>
-              <li>Editorial Committee Member, Book of Abstracts — 2025 IEEE International Conference on Distributed Computing, VLSI, Electrical Circuits and Robotics (IEEE DISCOVER 2025)</li>
-              <li>Member, GLUB (GNU/Linux Users' Branch) @ PACE</li>
-              <li>Member, EMBED Club (Embedded Systems & IoT) @ PACE</li>
-            </ul>
-          </div>
-
-          <!-- Skills -->
-          <div>
-            <h4 class="font-display text-sm sm:text-base text-[#2563eb] uppercase font-bold tracking-wider mb-2 border-b border-[#e5e7eb] pb-1">Technical Skills & Certifications</h4>
-            <p class="text-xs sm:text-sm"><strong>Languages:</strong> Python, Java, C++, C, Lua, JavaScript, HTML/CSS, SQL</p>
-            <p class="text-xs sm:text-sm mt-1"><strong>Tools:</strong> Git, GitHub, VS Code, Node.js, Arduino IDE, Linux, Home Assistant, PlatformIO</p>
-            <p class="text-xs sm:text-sm mt-1"><strong>Certifications:</strong> CS50x (Harvard University), AI Tools Workshop (BE10X), RC Car Workshop (ComedKares)</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Modal Footer -->
-      <div class="resume-modal-footer px-4 sm:px-6 py-2.5 sm:py-3 bg-[#f4f0e6] border-t-2 border-[#1e2022] flex flex-col sm:flex-row items-center justify-between gap-2.5 shrink-0">
-        <span class="text-xs font-mono text-[#6b7280] font-bold text-center sm:text-left">
-          Official Verified Dossier • Kasaragod, Kerala
-        </span>
-        <div class="flex flex-wrap items-center justify-center gap-2 w-full sm:w-auto">
-          <button id="resumePrintBtn" type="button" class="btn-stamp-secondary text-xs sm:text-sm px-3.5 py-1.5 sm:py-2 flex items-center gap-1.5 font-display font-bold" title="Print document">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
-            <span>Print Sheet</span>
-          </button>
-          <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-green text-xs sm:text-sm px-4 py-1.5 sm:py-2 flex items-center gap-1.5 font-display font-bold shadow-[2px_2px_0px_#1e2022]" title="Download official PDF file">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-            <span>Download PDF (75 KB)</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast Notification (Styled like a flying dispatch note) -->
-  <div id="toastNotification" class="fixed bottom-6 right-6 z-[2100] transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
-    <div class="bg-[#fef9c3] border-2 border-[#1e2022] text-[#1e2022] px-5 py-3 rounded-xl shadow-[4px_4px_0px_#1e2022] flex items-center gap-3 font-display font-bold text-sm">
-      <span class="w-2.5 h-2.5 rounded-full bg-[#059669]"></span>
-      <span id="toastMessage">Email copied to clipboard!</span>
-    </div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="script.js?v=3.3"></script>
+  <!-- Application Logic -->
+  <script src="script.js?v=4.0"></script>
 </body>
 </html>
