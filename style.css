@@ -279,13 +279,103 @@ html, body {
   margin: 0 auto;
 }
 
+/* --- Editorial Document & Dossier Styling (Resume & Biodata) --- */
+.editorial-document-card {
+  background-color: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 50px rgba(153, 27, 27, 0.15);
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.editorial-document-card:hover {
+  border-color: rgba(153, 27, 27, 0.4);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9), 0 0 60px rgba(153, 27, 27, 0.22);
+}
+
+.editorial-section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(153, 27, 27, 0.15);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: 6px;
+  color: #ef4444;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.editorial-table th {
+  background-color: #171717;
+  color: #ffffff;
+  font-family: var(--font-editorial);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.editorial-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #d4d4d4;
+  font-size: 0.875rem;
+}
+
+.editorial-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.02);
+  color: #ffffff;
+}
+
 /* --- Print Styles --- */
 @media print {
   body {
     background: #ffffff !important;
-    color: #000000 !important;
+    color: #111111 !important;
+    font-size: 10.5pt !important;
   }
-  .editorial-grid-bg, header, footer, .ambient-glow, .laptop-chassis {
+  .no-print, header, footer, .editorial-grid-bg, .ambient-glow, .laptop-chassis, #pdfViewContainer, .tab-bar {
     display: none !important;
+  }
+  main {
+    padding-top: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+  .editorial-document-card {
+    background: #ffffff !important;
+    color: #111111 !important;
+    border: 1px solid #111111 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .editorial-table th {
+    background-color: #f3f4f6 !important;
+    color: #111111 !important;
+    border-bottom: 2px solid #111111 !important;
+  }
+  .editorial-table td {
+    color: #111111 !important;
+    border-bottom: 1px solid #e5e7eb !important;
+  }
+  h1, h2, h3, h4, strong {
+    color: #111111 !important;
+  }
+  p, span, div {
+    color: #222222 !important;
+  }
+  .text-\[\#ef4444\], .text-\[\#dc2626\], .text-\[\#991b1b\] {
+    color: #991b1b !important;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 12mm 14mm;
   }
 }

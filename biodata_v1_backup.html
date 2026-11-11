@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farseen Ahras | Official Biodata • Computer Science & Engineering</title>
+  <meta name="description" content="Comprehensive Personal & Academic Biodata of Farseen Ahras Raufali — Computer Science & Engineering Undergrad, Software Engineer, IEEE Student Leader, and Embedded Systems Developer.">
+  <meta name="author" content="Farseen Ahras Raufali">
+
+  <!-- Favicon (Hand-drawn Ink Monogram Data URI) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23faf7f2' stroke='%231e2022' stroke-width='6'/><circle cx='50' cy='50' r='34' stroke='%232563eb' stroke-width='5' stroke-dasharray='6 4' fill='%23fef9c3'/><text x='50' y='60' font-family='sans-serif' font-weight='900' font-size='32' text-anchor='middle' fill='%231e2022'>FA</text></svg>">
+
+  <!-- Google Fonts: Kalam, Caveat, Patrick Hand, Space Mono, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Kalam:wght@400;700&family=Patrick+Hand&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="document.css?v=3.3">
+
+  <style>
+    /* Custom Print Specific Rules for Biodata Page */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #1e2022 !important;
+        font-size: 11pt !important;
+      }
+      .no-print, header, footer, .notebook-margin-line, .engineering-grid-bg, .washi-tape, .floating-actions {
+        display: none !important;
+      }
+      main {
+        padding-top: 0 !important;
+        margin: 0 !important;
+      }
+      .wobbly-box {
+        border: 1px solid #1e2022 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .biodata-sheet {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      @page {
+        size: A4 portrait;
+        margin: 14mm 16mm;
+      }
+    }
+  </style>
+</head>
+<body class="bg-paper text-dark selection-yellow">
+
+  <!-- Engineering Graph Paper Grid Background -->
+  <div class="engineering-grid-bg" aria-hidden="true"></div>
+
+  <!-- Left Notebook Red Margin Ruled Line -->
+  <div class="notebook-margin-line" aria-hidden="true"></div>
+
+  <!-- Header / Navigation Bar (Hand-drawn Paper Strip) -->
+  <header class="fixed top-0 left-0 right-0 w-full z-[1000] transition-all duration-300 bg-[#faf7f2] border-b-2 border-[#1e2022] shadow-[0_2px_8px_rgba(30,32,34,0.08)]" id="navbar">
+    <div class="w-full px-3 sm:px-6 lg:px-8 xl:px-10">
+      <div class="flex items-center justify-between h-16 sm:h-20 gap-3 sm:gap-4">
+        
+        <!-- Left: Name & Title Stamp (Linking back to index.html) -->
+        <a href="index.html" class="nav-brand-link group flex items-center gap-2 shrink-0" style="color: #1e2022 !important; text-decoration: none !important;" aria-label="Return to Farseen Ahras Portfolio Home">
+          <div class="flex flex-col">
+            <span class="nav-brand-name font-display font-extrabold text-base sm:text-xl tracking-tight leading-tight whitespace-nowrap" style="color: #1e2022 !important;">
+              Farseen Ahras
+            </span>
+            <div class="flex items-center gap-1 text-[10px] sm:text-xs font-mono font-semibold whitespace-nowrap" style="color: #1e2022 !important;">
+              <span class="nav-brand-title font-bold" style="color: #1e2022 !important;">Software Engineer</span>
+              <span class="hidden sm:inline" style="color: #4b5563 !important;">•</span>
+              <span class="hidden sm:inline" style="color: #2563eb !important; font-weight: 700;">Official Biodata</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Right: Direct Navigation & Action Buttons -->
+        <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-1">
+          
+          <!-- Back to Portfolio Home Button -->
+          <a href="index.html" class="btn-stamp-primary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="Return to Main Interactive Portfolio">
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            <span class="hidden md:inline whitespace-nowrap">Portfolio Home</span>
+            <span class="md:hidden whitespace-nowrap">Home</span>
+          </a>
+
+          <!-- Print / Save PDF Button -->
+          <button onclick="window.print()" type="button" class="btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="Print this Biodata Sheet or Save as PDF">
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            <span class="hidden md:inline whitespace-nowrap">Print / Save PDF</span>
+            <span class="md:hidden whitespace-nowrap">Print</span>
+          </button>
+
+          <!-- Official Resume Webpage -->
+          <a href="resume.html" class="btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="Open Official Resume Page">
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <span class="hidden md:inline whitespace-nowrap">Resume Page</span>
+            <span class="md:hidden whitespace-nowrap">Resume</span>
+          </a>
+
+          <!-- GitHub Profile -->
+          <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="GitHub Profile">
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
+            <span class="hidden md:inline whitespace-nowrap">GitHub</span>
+            <span class="md:hidden whitespace-nowrap">GitHub</span>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="relative z-10 pt-20 sm:pt-28 pb-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+
+      <!-- Breadcrumbs & Quick Header Stamp (Non-Print) -->
+      <div class="no-print flex flex-wrap items-center justify-between gap-3 mb-6">
+        <div class="flex items-center gap-2 text-xs sm:text-sm font-mono font-bold text-[#4b5563]">
+          <a href="index.html" class="hover:text-[#2563eb] underline">Portfolio Home</a>
+          <span>/</span>
+          <span class="text-[#1e2022] font-extrabold">Official Biodata Dossier</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#dcfce7] border border-[#86efac] text-[#059669] text-xs font-mono font-bold">
+            <span class="w-2 h-2 rounded-full bg-[#059669] animate-pulse"></span>
+            Verified Document • 2026 Edition
+          </span>
+          <button onclick="window.print()" class="btn-stamp-primary text-xs py-1 px-3 flex items-center gap-1 font-bold">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            Print Sheet
+          </button>
+        </div>
+      </div>
+
+      <!-- MASTER BIODATA DOSSIER SHEET -->
+      <article class="biodata-sheet wobbly-box bg-white p-6 sm:p-10 md:p-12 relative shadow-[6px_6px_0px_#1e2022] border-2 border-[#1e2022]">
+        
+        <!-- Washi Tape Pin at Top -->
+        <div class="washi-tape" aria-hidden="true"></div>
+
+        <!-- ==============================================================
+             BIODATA HEADER / CANDIDATE IDENTITY
+             ============================================================== -->
+        <header class="border-b-2 border-[#1e2022] pb-6 mb-8">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            
+            <div class="flex-1">
+              <div class="inline-block px-2.5 py-0.5 rounded bg-[#fef08a] border border-[#1e2022] text-[11px] font-mono font-bold text-[#1e2022] uppercase tracking-wider mb-2">
+                Curriculum Vitae / Personal Biodata
+              </div>
+              <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#1e2022] tracking-tight leading-none">
+                FARSEEN AHRAS RAUFALI
+              </h1>
+              <p class="text-sm sm:text-base font-mono font-bold text-[#2563eb] mt-1.5">
+                Computer Science &amp; Engineering Undergraduate • Systems &amp; Software Developer
+              </p>
+            </div>
+
+            <!-- Candidate Stamp Badge -->
+            <div class="shrink-0 flex sm:flex-col items-center sm:items-end justify-between sm:justify-start gap-2 border-2 border-dashed border-[#1e2022] p-3 rounded-lg bg-[#faf7f2]">
+              <span class="text-[10px] font-mono font-extrabold uppercase tracking-widest text-[#6b7280]">Official Dossier</span>
+              <div class="font-display font-bold text-base sm:text-lg text-[#1e2022]">VTU / PACE</div>
+              <span class="text-xs font-mono font-bold text-[#059669] bg-[#dcfce7] px-2 py-0.5 rounded border border-[#86efac]">CGPA 8.81</span>
+            </div>
+
+          </div>
+
+          <!-- Contact Ribbon / Demographics Line -->
+          <div class="mt-5 pt-4 border-t border-[#e5e7eb] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xs sm:text-sm font-mono text-[#374151]">
+            <div class="flex items-center gap-1.5">
+              <span class="font-bold text-[#1e2022]">📍 Location:</span>
+              <span>Mogral Puthur, Kasaragod, Kerala</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-bold text-[#1e2022]">📞 Phone:</span>
+              <a href="tel:+917012653215" class="hover:text-[#2563eb] underline font-bold">+91 7012653215</a>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-bold text-[#1e2022]">✉️ Email:</span>
+              <a href="mailto:farseenahrasraufali@gmail.com" class="hover:text-[#2563eb] underline truncate font-bold">farseenahrasraufali@gmail.com</a>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-bold text-[#1e2022]">🌐 GitHub:</span>
+              <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="text-[#2563eb] hover:underline font-bold">github.com/Farseen-Ahras</a>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-bold text-[#1e2022]">🔗 LinkedIn:</span>
+              <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="text-[#2563eb] hover:underline font-bold">linkedin.com/in/farseen-ahras</a>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-bold text-[#1e2022]">🏛️ College:</span>
+              <span>P A College of Engineering, Mangaluru</span>
+            </div>
+          </div>
+        </header>
+
+
+        <!-- ==============================================================
+             SECTION 1: PERSONAL PARTICULARS / DEMOGRAPHICS TABLE
+             ============================================================== -->
+        <section class="mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-3 h-3 bg-[#e11d48] rounded-full border border-[#1e2022]"></span>
+            <h2 class="font-display text-lg sm:text-xl font-bold text-[#1e2022] tracking-tight uppercase">
+              1. Personal Particulars &amp; Demographics
+            </h2>
+          </div>
+
+          <div class="border-2 border-[#1e2022] rounded-lg overflow-hidden bg-[#fffefb]">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+              <tbody>
+                <tr class="border-b border-[#1e2022]/20">
+                  <th class="py-2.5 px-3 sm:px-4 font-mono font-bold text-[#1e2022] bg-[#f8f5ee] w-1/3 border-r border-[#1e2022]/20">Full Name</th>
+                  <td class="py-2.5 px-3 sm:px-4 font-bold text-[#1e2022]">Farseen Ahras Raufali</td>
+                </tr>
+                <tr class="border-b border-[#1e2022]/20">
+                  <th class="py-2.5 px-3 sm:px-4 font-mono font-bold text-[#1e2022] bg-[#f8f5ee] border-r border-[#1e2022]/20">Gender</th>
+                  <td class="py-2.5 px-3 sm:px-4 text-[#374151]">Male</td>
+                </tr>
+                <tr class="border-b border-[#1e2022]/20">
+                  <th class="py-2.5 px-3 sm:px-4 font-mono font-bold text-[#1e2022] bg-[#f8f5ee] border-r border-[#1e2022]/20">Nationality &amp; Domicile</th>
+                  <td class="py-2.5 px-3 sm:px-4 text-[#374151]">Indian • Kerala Domicile</td>
+                </tr>
+                <tr class="border-b border-[#1e2022]/20">
+                  <th class="py-2.5 px-3 sm:px-4 font-mono font-bold text-[#1e2022] bg-[#f8f5ee] border-r border-[#1e2022]/20">Languages Known</th>
+                  <td class="py-2.5 px-3 sm:px-4 text-[#374151]">English (Professional / Fluent), Malayalam (Native), Hindi (Working Proficiency), Kannada (Conversational), German (Beginner), Polish (Beginner)</td>
+                </tr>
+                <tr class="border-b border-[#1e2022]/20">
+                  <th class="py-2.5 px-3 sm:px-4 font-mono font-bold text-[#1e2022] bg-[#f8f5ee] border-r border-[#1e2022]/20">Permanent Address</th>
+                  <td class="py-2.5 px-3 sm:px-4 text-[#374151]">Mogral Puthur, Kasaragod District, Kerala, India — PIN 671124</td>
+                </tr>
+                <tr>
+                  <th class="py-2.5 px-3 sm:px-4 font-mono font-bold text-[#1e2022] bg-[#f8f5ee] border-r border-[#1e2022]/20">Marital Status</th>
+                  <td class="py-2.5 px-3 sm:px-4 text-[#374151]">Single</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <!-- ==============================================================
+             SECTION 2: CAREER OBJECTIVE & PROFESSIONAL SUMMARY
+             ============================================================== -->
+        <section class="mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-3 h-3 bg-[#2563eb] rounded-full border border-[#1e2022]"></span>
+            <h2 class="font-display text-lg sm:text-xl font-bold text-[#1e2022] tracking-tight uppercase">
+              2. Career Objective &amp; Professional Summary
+            </h2>
+          </div>
+          <div class="p-4 sm:p-5 rounded-lg border-2 border-[#1e2022] bg-[#f0fdf4] text-xs sm:text-sm leading-relaxed text-[#1e2022]">
+            <p>
+              Undergraduate Computer Science and Engineering scholar with strong hands-on expertise in backend systems development, systems-level programming (C++, Python, Java), and connected IoT hardware architectures. Experienced in implementing real-time sensor loops, PID stabilization algorithms, and distributed telemetry. Proven leadership track record as IEEE Student Chapter Chair and editorial committee contributor for IEEE DISCOVER 2025. Seeking to apply analytical problem solving and technical leadership to design robust, scalable, production-grade software solutions.
+            </p>
+          </div>
+        </section>
+
+
+        <!-- ==============================================================
+             SECTION 3: EDUCATIONAL QUALIFICATIONS (COMPREHENSIVE TABLE)
+             ============================================================== -->
+        <section class="mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-3 h-3 bg-[#f59e0b] rounded-full border border-[#1e2022]"></span>
+            <h2 class="font-display text-lg sm:text-xl font-bold text-[#1e2022] tracking-tight uppercase">
+              3. Educational Qualifications
+            </h2>
+          </div>
+
+          <div class="border-2 border-[#1e2022] rounded-lg overflow-x-auto bg-white">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm min-w-[550px]">
+              <thead>
+                <tr class="bg-[#fef9c3] border-b-2 border-[#1e2022] text-[#1e2022] font-mono font-bold">
+                  <th class="py-2.5 px-3 sm:px-4 border-r border-[#1e2022]">Examination / Degree</th>
+                  <th class="py-2.5 px-3 sm:px-4 border-r border-[#1e2022]">Institution / School</th>
+                  <th class="py-2.5 px-3 sm:px-4 border-r border-[#1e2022]">Board / University</th>
+                  <th class="py-2.5 px-3 sm:px-4 border-r border-[#1e2022]">Year</th>
+                  <th class="py-2.5 px-3 sm:px-4 text-center">Score / CGPA</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[#1e2022]/20">
+                <tr class="hover:bg-[#fafaf9]">
+                  <td class="py-3 px-3 sm:px-4 font-bold text-[#1e2022] border-r border-[#1e2022]/20">
+                    B.E. Computer Science &amp; Engineering
+                    <div class="text-[11px] font-mono text-[#2563eb] font-normal">Undergraduate Program (3rd Year)</div>
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 text-[#374151] border-r border-[#1e2022]/20">
+                    P A College of Engineering (PACE), Mangaluru
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 text-[#374151] border-r border-[#1e2022]/20">
+                    Visvesvaraya Technological University (VTU)
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 font-mono font-bold text-[#1e2022] border-r border-[#1e2022]/20">
+                    2022 – 2026
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 text-center">
+                    <span class="inline-block font-mono font-bold text-[#059669] bg-[#dcfce7] px-2 py-0.5 rounded border border-[#86efac]">
+                      8.81 / 10 CGPA
+                    </span>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-[#fafaf9]">
+                  <td class="py-3 px-3 sm:px-4 font-bold text-[#1e2022] border-r border-[#1e2022]/20">
+                    Higher Secondary / High School (12th)
+                    <div class="text-[11px] font-mono text-[#4b5563] font-normal">Physics, Chemistry, Math &amp; Computer Science (PCMC)</div>
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 text-[#374151] border-r border-[#1e2022]/20">
+                    Dhakeerath English Medium HSS
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 text-[#374151] border-r border-[#1e2022]/20">
+                    Directorate of Higher Secondary Education, Kerala
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 font-mono font-bold text-[#1e2022] border-r border-[#1e2022]/20">
+                    2020 – 2022
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 text-center">
+                    <span class="inline-block font-mono font-bold text-[#1e2022] bg-[#f3f4f6] px-2 py-0.5 rounded border border-[#d1d5db]">
+                      90.00%
+                    </span>
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-[#fafaf9]">
+                  <td class="py-3 px-3 sm:px-4 font-bold text-[#1e2022] border-r border-[#1e2022]/20">
+                    Secondary School Leaving Certificate (10th)
+                    <div class="text-[11px] font-mono text-[#4b5563] font-normal">General Science &amp; Mathematics</div>
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 text-[#374151] border-r border-[#1e2022]/20">
+                    Dhakeerath English Medium HSS
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 text-[#374151] border-r border-[#1e2022]/20">
+                    Board of Public Examination, Kerala
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 font-mono font-bold text-[#1e2022] border-r border-[#1e2022]/20">
+                    2019 – 2020
+                  </td>
+                  <td class="py-3 px-3 sm:px-4 text-center">
+                    <span class="inline-block font-mono font-bold text-[#1e2022] bg-[#f3f4f6] px-2 py-0.5 rounded border border-[#d1d5db]">
+                      Distinction (90%+)
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+
+        <!-- ==============================================================
+             SECTION 4: TECHNICAL ARSENAL & SKILL MATRIX
+             ============================================================== -->
+        <section class="mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-3 h-3 bg-[#7c3aed] rounded-full border border-[#1e2022]"></span>
+            <h2 class="font-display text-lg sm:text-xl font-bold text-[#1e2022] tracking-tight uppercase">
+              4. Technical Expertise &amp; Core Competencies
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+            
+            <div class="p-4 rounded-lg border-2 border-[#1e2022] bg-[#fffefb]">
+              <div class="font-mono font-bold text-[#2563eb] text-xs uppercase mb-1">Programming Languages</div>
+              <div class="font-bold text-[#1e2022] text-sm mb-1.5">Python, Java, C++, C, JavaScript, SQL, HTML5 / CSS3, Lua</div>
+              <p class="text-[#4b5563] text-xs leading-relaxed">Object-Oriented Design, Algorithm Design, Memory Management, Concurrency &amp; Async I/O.</p>
+            </div>
+
+            <div class="p-4 rounded-lg border-2 border-[#1e2022] bg-[#fffefb]">
+              <div class="font-mono font-bold text-[#059669] text-xs uppercase mb-1">Embedded Systems &amp; IoT</div>
+              <div class="font-bold text-[#1e2022] text-sm mb-1.5">ESP32 SoC, Arduino IDE, PlatformIO, FreeRTOS, MicroPython</div>
+              <p class="text-[#4b5563] text-xs leading-relaxed">MPU6050 6-Axis IMUs, PWM ESCs, PPM Radios, DHT22 &amp; Analog Sensors, Relays, MQTT Telemetry.</p>
+            </div>
+
+            <div class="p-4 rounded-lg border-2 border-[#1e2022] bg-[#fffefb]">
+              <div class="font-mono font-bold text-[#d97706] text-xs uppercase mb-1">Development Tools &amp; Operating Systems</div>
+              <div class="font-bold text-[#1e2022] text-sm mb-1.5">GNU / Linux (Debian, Ubuntu), Git &amp; GitHub, VS Code, Home Assistant</div>
+              <p class="text-[#4b5563] text-xs leading-relaxed">Active member of GNU/Linux Users' Branch (GLUB); proficient in Shell Scripting, Git branching, and local automation.</p>
+            </div>
+
+            <div class="p-4 rounded-lg border-2 border-[#1e2022] bg-[#fffefb]">
+              <div class="font-mono font-bold text-[#7c3aed] text-xs uppercase mb-1">Software Methodologies &amp; Systems</div>
+              <div class="font-bold text-[#1e2022] text-sm mb-1.5">RESTful APIs, Relational DBs, PID Controllers, State Machines</div>
+              <p class="text-[#4b5563] text-xs leading-relaxed">System architecture analysis, closed-loop feedback tuning, over-the-air (OTA) updates, and hardware debugging.</p>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- ==============================================================
+             SECTION 5: KEY ENGINEERING PROJECTS & TECHNICAL DELIVERABLES
+             ============================================================== -->
+        <section class="mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-3 h-3 bg-[#059669] rounded-full border border-[#1e2022]"></span>
+            <h2 class="font-display text-lg sm:text-xl font-bold text-[#1e2022] tracking-tight uppercase">
+              5. Key Engineering Projects
+            </h2>
+          </div>
+
+          <div class="space-y-3.5">
+            
+            <!-- Project 1: Hydroponic Farming -->
+            <div class="p-4 rounded-lg border-2 border-[#1e2022] bg-white">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+                <h3 class="font-display font-bold text-base text-[#1e2022]">
+                  Smart Hydroponic Farming System using IoT Devices
+                </h3>
+                <span class="font-mono text-xs font-bold text-[#059669] bg-[#dcfce7] px-2 py-0.5 rounded border border-[#86efac] self-start sm:self-auto">
+                  2026 – Present • Lead Developer
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
+                Leading the engineering team in designing and constructing an autonomous hydroponics cultivation setup. Implementing ESP32-driven telemetry for real-time monitoring of pH levels, nutrient electrical conductivity (EC), water temperature, and automated pump dosing with closed-loop threshold management.
+              </p>
+              <div class="mt-2 text-[11px] font-mono text-[#1e2022] font-semibold">
+                Tech: ESP32 • C/C++ • IoT Sensors • Automated Actuators • MQTT • Systems Architecture
+              </div>
+            </div>
+
+            <!-- Project 2: Drone Flight Controller -->
+            <div class="p-4 rounded-lg border-2 border-[#1e2022] bg-white">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+                <h3 class="font-display font-bold text-base text-[#1e2022]">
+                  ESP32 Quadcopter Flight Controller Firmware
+                </h3>
+                <span class="font-mono text-xs font-bold text-[#2563eb] bg-[#dbeafe] px-2 py-0.5 rounded border border-[#93c5fd] self-start sm:self-auto">
+                  2025 – 2026 • Project Lead
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
+                Architected high-speed flight-control firmware on ESP32 microcontroller. Configured MPU6050 6-axis IMU over I2C, designed digital complementary filters to eliminate gyro drift, decoded 6-channel PPM radio receiver signals, and tuned multi-axis PID rate/angle stabilization loops controlling four electronic speed controllers (ESCs).
+              </p>
+              <div class="mt-2 text-[11px] font-mono text-[#1e2022] font-semibold">
+                Tech: ESP32 • C++ • MPU6050 IMU • PID Control • PWM / ESCs • PPM Decoding • PlatformIO
+              </div>
+            </div>
+
+            <!-- Project 3: Home Assistant & IoT Workshops -->
+            <div class="p-4 rounded-lg border-2 border-[#1e2022] bg-white">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+                <h3 class="font-display font-bold text-base text-[#1e2022]">
+                  Home Assistant Automation Network &amp; IoT Workshops
+                </h3>
+                <span class="font-mono text-xs font-bold text-[#6b7280] bg-[#f3f4f6] px-2 py-0.5 rounded border border-[#d1d5db] self-start sm:self-auto">
+                  2024 – 2025 • Lead Developer
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
+                Constructed a secure smart home network utilizing Home Assistant integrated with distributed ESP32 nodes, DHT22 temperature/humidity sensors, PIR motion detectors, relays, and RGB status lighting. Supported over-the-air (OTA) updates and conducted campus hands-on workshops for students exploring IoT fundamentals.
+              </p>
+              <div class="mt-2 text-[11px] font-mono text-[#1e2022] font-semibold">
+                Tech: Home Assistant • ESP32 • DHT22 • Relays • PIR • Wi-Fi • OTA Firmware
+              </div>
+            </div>
+
+            <!-- Project 4: RC Car Embedded Platform -->
+            <div class="p-4 rounded-lg border-2 border-[#1e2022] bg-white">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
+                <h3 class="font-display font-bold text-base text-[#1e2022]">
+                  RC Car Embedded Robotics Platform (IEEE &amp; ComedKares)
+                </h3>
+                <span class="font-mono text-xs font-bold text-[#6b7280] bg-[#f3f4f6] px-2 py-0.5 rounded border border-[#d1d5db] self-start sm:self-auto">
+                  2024 – 2025 • Hardware &amp; Volunteer Lead
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm text-[#4b5563] leading-relaxed">
+                Led the volunteer engineering cohort in organizing the RC Car Embedded Robotics Workshop with ComedKares and IEEE PACE Student Branch. Fabricated dual-drive chassis with L298N motor drivers, RF transceivers, and obstacle avoidance logic.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- ==============================================================
+             SECTION 6: INSTITUTIONAL ROLES & LEADERSHIP RESPONSIBILITIES
+             ============================================================== -->
+        <section class="mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-3 h-3 bg-[#e11d48] rounded-full border border-[#1e2022]"></span>
+            <h2 class="font-display text-lg sm:text-xl font-bold text-[#1e2022] tracking-tight uppercase">
+              6. Institutional Roles &amp; Leadership Positions
+            </h2>
+          </div>
+
+          <div class="border-2 border-[#1e2022] rounded-lg p-4 sm:p-5 bg-[#fffefb]">
+            <ul class="space-y-3 text-xs sm:text-sm text-[#374151]">
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#2563eb] font-bold mt-0.5">✦</span>
+                <div>
+                  <strong class="text-[#1e2022] font-bold">Chair — IEEE Geoscience &amp; Remote Sensing Society (GRSS) &amp; Signal Processing Society (SPS) Student Chapter:</strong>
+                  <span class="text-[#4b5563] block mt-0.5">Elected during early undergrad (1st/2nd year) through 3rd year. Heading workshops, technical seminars, member mentoring, and technical initiatives under IEEE Student Branch @ PACE.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#2563eb] font-bold mt-0.5">✦</span>
+                <div>
+                  <strong class="text-[#1e2022] font-bold">Executive Committee (Execom) Member — IEEE Student Branch @ PACE:</strong>
+                  <span class="text-[#4b5563] block mt-0.5">Active member of the branch executive leadership coordinating inter-collegiate technical conferences, workshops, and IEEE membership drives.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#2563eb] font-bold mt-0.5">✦</span>
+                <div>
+                  <strong class="text-[#1e2022] font-bold">Editorial Committee Member — Book of Abstracts (IEEE DISCOVER 2025):</strong>
+                  <span class="text-[#4b5563] block mt-0.5">Official member of the Editors List for the 2025 IEEE International Conference on Distributed Computing, VLSI, Electrical Circuits and Robotics. Curating and validating peer-reviewed technical research abstracts.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#2563eb] font-bold mt-0.5">✦</span>
+                <div>
+                  <strong class="text-[#1e2022] font-bold">Member — GNU/Linux Users' Branch (GLUB) @ PACE:</strong>
+                  <span class="text-[#4b5563] block mt-0.5">Advocating Free and Open-Source Software (FOSS), hosting terminal mastery sessions, and promoting Linux kernel adoption across campus.</span>
+                </div>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-[#2563eb] font-bold mt-0.5">✦</span>
+                <div>
+                  <strong class="text-[#1e2022] font-bold">Member — EMBED Club (Embedded Systems &amp; IoT):</strong>
+                  <span class="text-[#4b5563] block mt-0.5">Collaborating on embedded electronics prototyping, sensor integration, and firmware programming.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+
+        <!-- ==============================================================
+             SECTION 7: CERTIFICATIONS & PROFESSIONAL WORKSHOPS
+             ============================================================== -->
+        <section class="mb-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-3 h-3 bg-[#0284c7] rounded-full border border-[#1e2022]"></span>
+            <h2 class="font-display text-lg sm:text-xl font-bold text-[#1e2022] tracking-tight uppercase">
+              7. Certifications &amp; Professional Workshops
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+            <div class="p-3.5 rounded-lg border-2 border-[#1e2022] bg-white">
+              <span class="font-mono text-[10px] font-bold text-[#e11d48] uppercase tracking-wider block mb-1">Harvard University</span>
+              <strong class="text-[#1e2022] block font-bold text-sm">CS50x: Introduction to Computer Science</strong>
+              <p class="text-[#4b5563] text-xs mt-1">Rigorous algorithmic foundations, memory pointers, data structures, and multi-language development.</p>
+            </div>
+
+            <div class="p-3.5 rounded-lg border-2 border-[#1e2022] bg-white">
+              <span class="font-mono text-[10px] font-bold text-[#2563eb] uppercase tracking-wider block mb-1">BE10X Executive</span>
+              <strong class="text-[#1e2022] block font-bold text-sm">AI Tools &amp; Productivity Workshop</strong>
+              <p class="text-[#4b5563] text-xs mt-1">Hands-on application of generative AI workflows, automated analysis, and developer tooling.</p>
+            </div>
+
+            <div class="p-3.5 rounded-lg border-2 border-[#1e2022] bg-white">
+              <span class="font-mono text-[10px] font-bold text-[#059669] uppercase tracking-wider block mb-1">ComedKares &amp; IEEE</span>
+              <strong class="text-[#1e2022] block font-bold text-sm">RC Car Embedded Robotics Workshop</strong>
+              <p class="text-[#4b5563] text-xs mt-1">Hardware assembly, circuit fabrication, motor driver pulse-width control, and RF integration.</p>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ==============================================================
+             SECTION 8: FORMAL DECLARATION & SIGNATURE BLOCK
+             ============================================================== -->
+        <section class="border-t-2 border-[#1e2022] pt-6 mt-8">
+          
+          <div class="p-4 rounded-lg bg-[#faf7f2] border border-[#1e2022]/40 text-xs sm:text-sm text-[#374151] italic mb-6">
+            "I hereby declare that all the statements and particulars furnished in this Biodata are true, correct, and complete to the best of my knowledge, information, and belief."
+          </div>
+
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 pt-2">
+            
+            <!-- Left: Place & Date -->
+            <div class="font-mono text-xs sm:text-sm text-[#1e2022] space-y-1">
+              <div><strong class="text-[#1e2022]">Place:</strong> Kasaragod, Kerala, India</div>
+              <div><strong class="text-[#1e2022]">Date:</strong> 09 November 2026</div>
+              <div><strong class="text-[#1e2022]">Status:</strong> Active Engineering Scholar (VTU)</div>
+            </div>
+
+            <!-- Right: Candidate Signature Stamp -->
+            <div class="flex flex-col items-center sm:items-end">
+              <!-- Digital Hand-drawn Ink Script -->
+              <div class="font-hand text-2xl sm:text-3xl text-[#1e2022] font-bold tracking-wide -rotate-2 select-none">
+                Farseen Ahras R.
+              </div>
+              <div class="w-48 border-b-2 border-[#1e2022] mt-1 mb-1"></div>
+              <div class="font-display font-extrabold text-xs sm:text-sm text-[#1e2022] tracking-wider uppercase">
+                (FARSEEN AHRAS RAUFALI)
+              </div>
+              <div class="text-[10px] font-mono text-[#6b7280]">Candidate Signature &amp; Stamp</div>
+            </div>
+
+          </div>
+
+        </section>
+
+      </article>
+
+      <!-- Bottom Quick Navigation (Non-Print) -->
+      <div class="no-print mt-8 flex flex-wrap items-center justify-between gap-4">
+        <a href="index.html" class="btn-stamp-primary text-sm font-bold px-5 py-2.5 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+          <span>Return to Interactive Portfolio</span>
+        </a>
+
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="btn-stamp-secondary text-sm font-bold px-4 py-2.5 flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            <span>Print Sheet</span>
+          </button>
+          <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-secondary text-sm font-bold px-4 py-2.5 flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            <span>Download Resume PDF</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer (Paper Stamp Credits) -->
+  <footer class="no-print border-t-2 border-[#1e2022] bg-[#faf7f2] py-8 text-center text-xs font-mono text-[#6b7280]">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        © 2026 <strong class="text-[#1e2022]">Farseen Ahras Raufali</strong> • All Rights Reserved.
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="hover:text-[#2563eb] underline font-bold">Main Portfolio</a>
+        <span>•</span>
+        <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="hover:text-[#2563eb] underline font-bold">GitHub</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="hover:text-[#2563eb] underline font-bold">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

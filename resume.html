@@ -4,107 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Farseen Ahras | Official Resume &amp; Curriculum Vitae</title>
-  <meta name="description" content="Official Resume and Curriculum Vitae of Farseen Ahras Raufali — Computer Science &amp; Engineering Undergrad, Systems &amp; Software Developer, IEEE Student Leader.">
+  <meta name="description" content="Official Resume and Curriculum Vitae of Farseen Ahras Raufali — Computer Science &amp; Engineering Undergrad, Systems &amp; Embedded Developer, IEEE Student Leader.">
   <meta name="author" content="Farseen Ahras Raufali">
 
-  <!-- Favicon (Hand-drawn Ink Monogram Data URI) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23faf7f2' stroke='%231e2022' stroke-width='6'/><circle cx='50' cy='50' r='34' stroke='%232563eb' stroke-width='5' stroke-dasharray='6 4' fill='%23fef9c3'/><text x='50' y='60' font-family='sans-serif' font-weight='900' font-size='32' text-anchor='middle' fill='%231e2022'>FA</text></svg>">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23090909'/><circle cx='50' cy='50' r='36' stroke='%23991b1b' stroke-width='6' fill='%23171717'/><text x='50' y='62' font-family='sans-serif' font-weight='900' font-size='34' text-anchor='middle' fill='%23ffffff'>FA</text></svg>">
 
-  <!-- Google Fonts: Kalam, Caveat, Patrick Hand, Space Mono, Plus Jakarta Sans -->
+  <!-- Google Fonts: Bebas Neue, Inter, Montserrat, Caveat, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Kalam:wght@400;700&family=Patrick+Hand&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="document.css?v=3.3">
-
-  <style>
-    /* Custom Print Specific Rules for Resume Page */
-    @media print {
-      body {
-        background: #ffffff !important;
-        color: #1e2022 !important;
-        font-size: 11pt !important;
-      }
-      .no-print, header, footer, .notebook-margin-line, .engineering-grid-bg, .washi-tape, #pdfViewContainer, .tab-bar {
-        display: none !important;
-      }
-      #textViewContainer {
-        display: block !important;
-      }
-      main {
-        padding-top: 0 !important;
-        margin: 0 !important;
-      }
-      .wobbly-box {
-        border: 1px solid #1e2022 !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-      }
-      @page {
-        size: A4 portrait;
-        margin: 12mm 15mm;
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#090909',
+            crimson: {
+              DEFAULT: '#991b1b',
+              hover: '#b91c1c',
+              bright: '#ef4444'
+            }
+          },
+          fontFamily: {
+            display: ['Bebas Neue', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+            editorial: ['Montserrat', 'sans-serif'],
+            hand: ['Caveat', 'cursive'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
       }
     }
-  </style>
+  </script>
+
+  <link rel="stylesheet" href="style.css?v=4.1">
 </head>
-<body class="bg-paper text-dark selection-yellow">
+<body class="bg-[#090909] text-white selection:bg-[#991b1b] selection:text-white font-sans antialiased">
 
-  <!-- Engineering Graph Paper Grid Background -->
-  <div class="engineering-grid-bg" aria-hidden="true"></div>
+  <!-- Subtle Editorial Grid Background -->
+  <div class="editorial-grid-bg" aria-hidden="true"></div>
 
-  <!-- Left Notebook Red Margin Ruled Line -->
-  <div class="notebook-margin-line" aria-hidden="true"></div>
+  <!-- Ambient Crimson Spotlight -->
+  <div class="ambient-glow w-[500px] h-[500px] -top-32 -left-32 bg-[#991b1b]/20" aria-hidden="true"></div>
+  <div class="ambient-glow w-[500px] h-[500px] top-1/2 -right-32 bg-[#ef4444]/15" aria-hidden="true"></div>
 
-  <!-- Header / Navigation Bar (Hand-drawn Paper Strip) -->
-  <header class="fixed top-0 left-0 right-0 w-full z-[1000] transition-all duration-300 bg-[#faf7f2] border-b-2 border-[#1e2022] shadow-[0_2px_8px_rgba(30,32,34,0.08)]" id="navbar">
-    <div class="w-full px-3 sm:px-6 lg:px-8 xl:px-10">
-      <div class="flex items-center justify-between h-16 sm:h-20 gap-3 sm:gap-4">
+  <!-- ==============================================================
+       HEADER / NAVIGATION BAR (STICKY DARK GLASS)
+       ============================================================== -->
+  <header class="no-print fixed top-0 left-0 right-0 w-full z-50 bg-[#090909]/85 backdrop-blur-md border-b border-white/10 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
         
-        <!-- Left: Name & Title Stamp (Linking back to index.html) -->
-        <a href="index.html" class="nav-brand-link group flex items-center gap-2 shrink-0" style="color: #1e2022 !important; text-decoration: none !important;" aria-label="Return to Farseen Ahras Portfolio Home">
+        <!-- Left: Brand Identity -->
+        <a href="index.html" class="flex items-center gap-3 group shrink-0" aria-label="Return to Farseen Ahras Portfolio Home">
+          <div class="w-2.5 h-2.5 rounded-full bg-[#dc2626] shadow-[0_0_8px_#ef4444] animate-pulse"></div>
           <div class="flex flex-col">
-            <span class="nav-brand-name font-display font-extrabold text-base sm:text-xl tracking-tight leading-tight whitespace-nowrap" style="color: #1e2022 !important;">
-              Farseen Ahras
+            <span class="font-display text-2xl sm:text-3xl tracking-wider text-white group-hover:text-[#ef4444] transition-colors leading-none">
+              FARSEEN AHRAS
             </span>
-            <div class="flex items-center gap-1 text-[10px] sm:text-xs font-mono font-semibold whitespace-nowrap" style="color: #1e2022 !important;">
-              <span class="nav-brand-title font-bold" style="color: #1e2022 !important;">Software Engineer</span>
-              <span class="hidden sm:inline" style="color: #4b5563 !important;">•</span>
-              <span class="hidden sm:inline" style="color: #2563eb !important; font-weight: 700;">Official Resume</span>
+            <div class="flex items-center gap-1.5 text-[10px] sm:text-xs font-mono text-[#a3a3a3] uppercase tracking-widest mt-0.5">
+              <span>SOFTWARE ENGINEER</span>
+              <span class="text-[#dc2626]">•</span>
+              <span class="text-white font-semibold">OFFICIAL RESUME</span>
             </div>
           </div>
         </a>
 
         <!-- Right: Direct Navigation & Action Buttons -->
-        <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-1">
+        <div class="flex items-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar py-1">
           
           <!-- Back to Portfolio Home Button -->
-          <a href="index.html" class="btn-stamp-primary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="Return to Main Interactive Portfolio">
-            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+          <a href="index.html" class="btn-ghost-dark text-xs py-2 px-3 sm:px-4 rounded-md flex items-center gap-1.5 font-bold shrink-0" title="Return to Main Interactive Portfolio">
+            <svg class="w-3.5 h-3.5 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
             <span class="hidden md:inline whitespace-nowrap">Portfolio Home</span>
             <span class="md:hidden whitespace-nowrap">Home</span>
           </a>
 
           <!-- Biodata Button -->
-          <a href="biodata.html" class="btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="Open Official Biodata Sheet">
-            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+          <a href="biodata.html" class="btn-ghost-dark text-xs py-2 px-3 sm:px-4 rounded-md flex items-center gap-1.5 font-bold shrink-0" title="Open Official Biodata Sheet">
+            <svg class="w-3.5 h-3.5 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
             <span class="hidden md:inline whitespace-nowrap">Official Biodata</span>
             <span class="md:hidden whitespace-nowrap">Biodata</span>
           </a>
 
           <!-- Download Official PDF Button -->
-          <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="Download Official PDF Resume">
-            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-crimson text-xs py-2 px-3 sm:px-4 rounded-md flex items-center gap-1.5 font-bold shrink-0" title="Download Official PDF Resume">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
             <span class="hidden md:inline whitespace-nowrap">Download PDF</span>
             <span class="md:hidden whitespace-nowrap">PDF</span>
           </a>
 
           <!-- GitHub Profile -->
-          <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-xs py-1.5 sm:py-2 px-3 sm:px-4 min-w-[95px] sm:min-w-[130px] xl:min-w-[160px] flex items-center justify-center gap-1.5 font-bold shrink-0" title="GitHub Profile">
-            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1e2022] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
-            <span class="hidden md:inline whitespace-nowrap">GitHub</span>
-            <span class="md:hidden whitespace-nowrap">GitHub</span>
+          <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="p-2 rounded-md bg-white/5 border border-white/10 hover:border-[#dc2626] text-white hover:text-[#ef4444] transition-colors shrink-0" title="GitHub Profile" aria-label="GitHub">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
           </a>
 
         </div>
@@ -113,248 +109,279 @@
     </div>
   </header>
 
-  <!-- Main Content Container -->
-  <main class="relative z-10 pt-20 sm:pt-28 pb-16 px-4 sm:px-6 lg:px-8">
+  <!-- ==============================================================
+       MAIN CONTENT CONTAINER
+       ============================================================== -->
+  <main class="relative z-10 pt-28 sm:pt-32 pb-20 px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto">
 
-      <!-- Breadcrumbs & Quick Header Stamp (Non-Print) -->
+      <!-- Breadcrumbs & Document Badges (Non-Print) -->
       <div class="no-print flex flex-wrap items-center justify-between gap-3 mb-6">
-        <div class="flex items-center gap-2 text-xs sm:text-sm font-mono font-bold text-[#4b5563]">
-          <a href="index.html" class="hover:text-[#2563eb] underline">Portfolio Home</a>
-          <span>/</span>
-          <span class="text-[#1e2022] font-extrabold">Official Curriculum Vitae</span>
+        <div class="flex items-center gap-2 text-xs sm:text-sm font-mono text-[#a3a3a3]">
+          <a href="index.html" class="hover:text-white transition-colors underline">Portfolio Home</a>
+          <span class="text-[#dc2626]">/</span>
+          <span class="text-white font-bold">Official Curriculum Vitae</span>
         </div>
         <div class="flex items-center gap-2">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#dcfce7] border border-[#86efac] text-[#059669] text-xs font-mono font-bold">
-            <span class="w-2 h-2 rounded-full bg-[#059669] animate-pulse"></span>
-            Verified CV • 2026 Edition
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#991b1b]/15 border border-[#ef4444]/30 text-[#ef4444] text-xs font-mono font-bold">
+            <span class="w-2 h-2 rounded-full bg-[#ef4444] animate-pulse"></span>
+            Verified Dossier • 2026 Edition
           </span>
-          <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-primary text-xs py-1 px-3 flex items-center gap-1 font-bold">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-            Download PDF
-          </a>
+          <button onclick="window.print()" class="btn-ghost-dark text-xs py-1.5 px-3 rounded-md flex items-center gap-1 font-bold">
+            <svg class="w-3.5 h-3.5 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+            <span>Print Sheet</span>
+          </button>
         </div>
       </div>
 
-      <!-- VIEW SELECTOR TABS (Dual Mode: Text Sheet vs Official PDF Document) -->
-      <div class="no-print tab-bar flex items-center justify-between bg-[#f4f0e6] border-2 border-[#1e2022] rounded-xl p-1.5 mb-6 shadow-[3px_3px_0px_#1e2022]">
+      <!-- VIEW SELECTOR TABS (Dual Mode: Editorial Sheet vs PDF Embed) -->
+      <div class="no-print tab-bar flex items-center justify-between bg-[#111111] border border-white/10 rounded-xl p-1.5 mb-8 shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
         <div class="flex items-center gap-2">
-          <button id="tabTextBtn" onclick="switchResumeView('text')" class="px-4 py-2 rounded-lg font-display font-bold text-xs sm:text-sm transition-all bg-[#fef08a] text-[#1e2022] border-2 border-[#1e2022] shadow-[2px_2px_0px_#1e2022] flex items-center gap-2">
-            <svg class="w-4 h-4 text-[#1e2022]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-            <span>Curriculum Vitae (Text Sheet)</span>
+          <button id="tabTextBtn" onclick="switchResumeView('text')" class="px-4 py-2 rounded-lg font-editorial font-bold text-xs sm:text-sm transition-all bg-[#991b1b] text-white shadow-[0_2px_12px_rgba(153,27,27,0.4)] flex items-center gap-2">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <span>Curriculum Vitae (Editorial Sheet)</span>
           </button>
-          <button id="tabPdfBtn" onclick="switchResumeView('pdf')" class="px-4 py-2 rounded-lg font-display font-bold text-xs sm:text-sm transition-all bg-white text-[#4b5563] hover:text-[#1e2022] border-2 border-transparent flex items-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+          <button id="tabPdfBtn" onclick="switchResumeView('pdf')" class="px-4 py-2 rounded-lg font-editorial font-bold text-xs sm:text-sm transition-all text-[#a3a3a3] hover:text-white flex items-center gap-2">
+            <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
             <span>Official PDF Document Embed</span>
           </button>
         </div>
 
         <div class="hidden sm:flex items-center gap-2 pr-1">
-          <button onclick="window.print()" class="btn-stamp-secondary text-xs py-1.5 px-3 flex items-center gap-1 font-bold">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
-            <span>Print Sheet</span>
-          </button>
-          <a href="Farseen_Ahras_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-xs py-1.5 px-3 flex items-center gap-1 font-bold" title="Open PDF in new browser tab">
+          <a href="Farseen_Ahras_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-ghost-dark text-xs py-1.5 px-3 rounded-md flex items-center gap-1 font-bold" title="Open PDF in new tab">
             <span>Open in Tab ↗</span>
           </a>
         </div>
       </div>
 
-      <!-- VIEW 1: INTERACTIVE CURRICULUM VITAE (TEXT SHEET) -->
-      <article id="textViewContainer" class="wobbly-box bg-white p-6 sm:p-10 md:p-12 relative shadow-[6px_6px_0px_#1e2022] border-2 border-[#1e2022]">
+      <!-- VIEW 1: INTERACTIVE CURRICULUM VITAE (EDITORIAL SHEET) -->
+      <article id="textViewContainer" class="editorial-document-card p-6 sm:p-10 md:p-12 relative">
         
-        <!-- Washi Tape Pin at Top -->
-        <div class="washi-tape" aria-hidden="true"></div>
+        <!-- Top Editorial Accent Strip -->
+        <div class="h-1 w-24 bg-gradient-to-r from-[#991b1b] to-[#ef4444] rounded-full mb-6"></div>
 
         <!-- Header details -->
-        <header class="border-b-2 border-[#1e2022] pb-6 mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <header class="border-b border-white/10 pb-8 mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
           <div>
-            <div class="inline-block px-2.5 py-0.5 rounded bg-[#fef08a] border border-[#1e2022] text-[11px] font-mono font-bold text-[#1e2022] uppercase tracking-wider mb-2">
-              Curriculum Vitae • 2026
+            <div class="editorial-section-tag mb-3">
+              Curriculum Vitae // Systems &amp; Embedded
             </div>
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#1e2022] tracking-tight leading-none">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-black text-white tracking-tight leading-none uppercase">
               FARSEEN AHRAS RAUFALI
             </h1>
-            <div class="text-[#2563eb] font-mono text-xs sm:text-sm font-bold mt-2">
-              Mogral Puthur, Kasaragod, Kerala • +91 7012653215 • farseenahrasraufali@gmail.com
+            <div class="text-[#ef4444] font-mono text-xs sm:text-sm font-bold mt-3 flex flex-wrap items-center gap-2">
+              <span>Mogral Puthur, Kasaragod, Kerala</span>
+              <span class="text-white/30">•</span>
+              <span>+91 7012653215</span>
+              <span class="text-white/30">•</span>
+              <a href="mailto:farseenahrasraufali@gmail.com" class="hover:underline text-white">farseenahrasraufali@gmail.com</a>
             </div>
           </div>
-          <div class="flex flex-col sm:items-end gap-1.5 font-mono text-xs sm:text-sm font-bold">
-            <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="text-[#1e2022] hover:text-[#2563eb] hover:underline flex items-center gap-1">
-              github.com/Farseen-Ahras
+          
+          <div class="flex flex-col sm:items-end gap-2 font-mono text-xs sm:text-sm">
+            <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="text-[#a3a3a3] hover:text-white transition-colors flex items-center gap-1 font-bold">
+              <span>github.com/Farseen-Ahras</span>
+              <span class="text-[#ef4444]">↗</span>
             </a>
-            <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="text-[#2563eb] hover:underline">
-              linkedin.com/in/farseen-ahras
+            <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="text-[#ef4444] hover:underline font-bold flex items-center gap-1">
+              <span>linkedin.com/in/farseen-ahras</span>
+              <span>↗</span>
             </a>
-            <span class="text-xs font-mono font-bold text-[#059669] bg-[#dcfce7] px-2 py-0.5 rounded border border-[#86efac]">
-              VTU CGPA: 8.81 / 10
+            <span class="text-xs font-mono font-bold text-white bg-[#991b1b]/30 px-3 py-1 rounded-md border border-[#ef4444]/40 mt-1">
+              VTU PACE CGPA: 8.81 / 10
             </span>
           </div>
         </header>
 
         <!-- Professional Summary -->
-        <section class="mb-8">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="w-2.5 h-2.5 bg-[#2563eb] rounded-full border border-[#1e2022]"></span>
-            <h2 class="font-display text-sm sm:text-base text-[#2563eb] uppercase font-bold tracking-wider">
+        <section class="mb-10">
+          <div class="flex items-center gap-2.5 mb-3">
+            <span class="w-2 h-2 bg-[#dc2626] rounded-full shadow-[0_0_8px_#ef4444]"></span>
+            <h2 class="font-editorial text-xs sm:text-sm text-[#ef4444] uppercase font-bold tracking-widest">
               Professional Summary
             </h2>
           </div>
-          <div class="p-4 rounded-lg bg-[#fffefb] border border-[#1e2022]/30 text-xs sm:text-sm leading-relaxed text-[#374151]">
-            Computer Science and Engineering student focusing on software engineering, backend architectures, and systems programming. Strong hands-on proficiency in Python, Java, C++, and Linux, with experience designing real-time algorithms, state machines, and connected IoT platforms. Collaborative problem-solver passionate about clean, scalable software.
+          <div class="p-5 rounded-xl bg-white/[0.03] border border-white/10 text-xs sm:text-sm leading-relaxed text-[#d4d4d4]">
+            Computer Science and Engineering student focusing on software engineering, backend architectures, and systems programming. Strong hands-on proficiency in Python, Java, C++, and Linux, with experience designing real-time algorithms, state machines, and connected IoT platforms. Passionate about bridging hardware and software through clean, high-performance engineering.
           </div>
         </section>
 
         <!-- Education -->
-        <section class="mb-8">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="w-2.5 h-2.5 bg-[#f59e0b] rounded-full border border-[#1e2022]"></span>
-            <h2 class="font-display text-sm sm:text-base text-[#2563eb] uppercase font-bold tracking-wider">
+        <section class="mb-10">
+          <div class="flex items-center gap-2.5 mb-4">
+            <span class="w-2 h-2 bg-[#dc2626] rounded-full shadow-[0_0_8px_#ef4444]"></span>
+            <h2 class="font-editorial text-xs sm:text-sm text-[#ef4444] uppercase font-bold tracking-widest">
               Education
             </h2>
           </div>
-          <div class="space-y-3">
-            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1.5 p-3 rounded-lg border-2 border-[#1e2022] bg-[#fffefb]">
+          <div class="space-y-3.5">
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 p-4 rounded-xl border border-white/10 bg-white/[0.03] hover:border-[#991b1b]/50 transition-colors">
               <div>
-                <strong class="text-[#1e2022] font-bold text-sm sm:text-base">B.E. Computer Science and Engineering</strong> — P A College of Engineering (PACE), Mangaluru
-                <div class="text-xs text-[#6b7280]">Visvesvaraya Technological University (VTU)</div>
+                <strong class="text-white font-bold text-sm sm:text-base">B.E. Computer Science and Engineering</strong>
+                <div class="text-xs text-[#a3a3a3] mt-0.5">P A College of Engineering (PACE), Mangaluru • Visvesvaraya Technological University (VTU)</div>
               </div>
-              <span class="font-mono text-xs sm:text-sm font-bold text-[#2563eb] bg-[#eff6ff] px-2.5 py-1 rounded border border-[#bfdbfe] self-start sm:self-auto">
+              <span class="font-mono text-xs sm:text-sm font-bold text-[#ef4444] bg-[#991b1b]/20 px-3 py-1 rounded-md border border-[#ef4444]/30 self-start sm:self-auto shrink-0">
                 2022 – 2026 | CGPA: 8.81/10
               </span>
             </div>
-            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1.5 p-3 rounded-lg border border-[#1e2022]/40 bg-[#fffefb]">
+            
+            <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2 p-4 rounded-xl border border-white/10 bg-white/[0.03] hover:border-[#991b1b]/50 transition-colors">
               <div>
-                <strong class="text-[#1e2022] font-bold text-sm sm:text-base">High School (PCMC)</strong> — Dhakeerath EMHSS
-                <div class="text-xs text-[#6b7280]">Physics, Chemistry, Mathematics &amp; Computer Science</div>
+                <strong class="text-white font-bold text-sm sm:text-base">High School (PCMC)</strong>
+                <div class="text-xs text-[#a3a3a3] mt-0.5">Dhakeerath EMHSS • Physics, Chemistry, Mathematics &amp; Computer Science</div>
               </div>
-              <span class="font-mono text-xs sm:text-sm font-bold text-[#4b5563] bg-[#f3f4f6] px-2.5 py-1 rounded border border-[#d1d5db] self-start sm:self-auto">
+              <span class="font-mono text-xs sm:text-sm font-bold text-white bg-white/5 px-3 py-1 rounded-md border border-white/10 self-start sm:self-auto shrink-0">
                 2020 – 2022 | Percentage: 90%
               </span>
             </div>
           </div>
         </section>
 
-        <!-- Projects & Leadership -->
-        <section class="mb-8">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="w-2.5 h-2.5 bg-[#059669] rounded-full border border-[#1e2022]"></span>
-            <h2 class="font-display text-sm sm:text-base text-[#2563eb] uppercase font-bold tracking-wider">
+        <!-- Projects & Engineering Deliverables -->
+        <section class="mb-10">
+          <div class="flex items-center gap-2.5 mb-4">
+            <span class="w-2 h-2 bg-[#dc2626] rounded-full shadow-[0_0_8px_#ef4444]"></span>
+            <h2 class="font-editorial text-xs sm:text-sm text-[#ef4444] uppercase font-bold tracking-widest">
               Projects &amp; Engineering Deliverables
             </h2>
           </div>
           <div class="space-y-4">
             
-            <div class="p-3.5 rounded-lg border border-[#1e2022]/30 bg-[#fffefb]">
-              <div class="flex justify-between items-baseline font-bold text-[#1e2022] text-sm sm:text-base">
-                <span>Hydroponic Farming using IoT Devices</span>
-                <span class="font-mono text-xs text-[#059669] bg-[#dcfce7] px-2 py-0.5 rounded border border-[#86efac]">2026 – Present</span>
+            <!-- Project 1 -->
+            <div class="p-4 rounded-xl border border-white/10 bg-white/[0.03] hover:border-[#991b1b]/50 transition-colors">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <span class="font-editorial font-bold text-white text-sm sm:text-base">Hydroponic Farming using IoT Devices</span>
+                <span class="font-mono text-xs text-[#ef4444] bg-[#991b1b]/20 px-2.5 py-0.5 rounded border border-[#ef4444]/30 self-start sm:self-auto">2026 – Present</span>
               </div>
-              <p class="text-[#4b5563] text-xs sm:text-sm mt-1 leading-relaxed">
-                <strong>Lead Developer</strong> — Mini project building a hydroponic farming system using IoT devices. Leading the team in building the IoT system and coordinating development.
+              <p class="text-[#a3a3a3] text-xs sm:text-sm mt-1.5 leading-relaxed">
+                <strong class="text-white">Lead Developer:</strong> Undergrad mini-project building an automated hydroponic vertical farming system. Architecting ESP32 telemetry, EC/pH automated dosing loops, environmental monitoring, and cloud data aggregation.
               </p>
             </div>
 
-            <div class="p-3.5 rounded-lg border border-[#1e2022]/30 bg-[#fffefb]">
-              <div class="flex justify-between items-baseline font-bold text-[#1e2022] text-sm sm:text-base">
-                <span>Drone Flight Controller &amp; Embedded Systems</span>
-                <span class="font-mono text-xs text-[#2563eb] bg-[#dbeafe] px-2 py-0.5 rounded border border-[#93c5fd]">2025 – 2026</span>
+            <!-- Project 2 -->
+            <div class="p-4 rounded-xl border border-white/10 bg-white/[0.03] hover:border-[#991b1b]/50 transition-colors">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <span class="font-editorial font-bold text-white text-sm sm:text-base">Drone Flight Controller &amp; Embedded Firmware</span>
+                <span class="font-mono text-xs text-white bg-white/5 px-2.5 py-0.5 rounded border border-white/10 self-start sm:self-auto">2025 – 2026</span>
               </div>
-              <p class="text-[#4b5563] text-xs sm:text-sm mt-1 leading-relaxed">
-                <strong>Project Lead</strong> — ESP32 flight-control firmware with MPU6050 IMU, PWM ESCs, PPM receiver input and PID tuning. Debugged sensor orientation, drift and oscillation through iterative hardware and firmware testing.
+              <p class="text-[#a3a3a3] text-xs sm:text-sm mt-1.5 leading-relaxed">
+                <strong class="text-white">Project Lead:</strong> Custom ESP32 flight controller firmware featuring MPU6050 6-axis IMU interfacing, complementary drift filtering, 6-channel PPM receiver decoding, and tuned rate/angle PID loops.
               </p>
             </div>
 
-            <div class="p-3.5 rounded-lg border border-[#1e2022]/30 bg-[#fffefb]">
-              <div class="flex justify-between items-baseline font-bold text-[#1e2022] text-sm sm:text-base">
-                <span>IoT Workshops &amp; Home Automation</span>
-                <span class="font-mono text-xs text-[#6b7280] bg-[#f3f4f6] px-2 py-0.5 rounded border border-[#d1d5db]">2024 – 2025</span>
+            <!-- Project 3 -->
+            <div class="p-4 rounded-xl border border-white/10 bg-white/[0.03] hover:border-[#991b1b]/50 transition-colors">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <span class="font-editorial font-bold text-white text-sm sm:text-base">IoT Workshops &amp; Home Automation Hub</span>
+                <span class="font-mono text-xs text-white bg-white/5 px-2.5 py-0.5 rounded border border-white/10 self-start sm:self-auto">2024 – 2025</span>
               </div>
-              <p class="text-[#4b5563] text-xs sm:text-sm mt-1 leading-relaxed">
-                <strong>Project Lead</strong> — Led ESP32/IoT workshops covering sensors, displays, buzzers and Wi-Fi projects; built a Home Assistant-based automation system using ESP32, DHT22, PIR/IR sensors, relays, RGB status lighting and OTA updates.
+              <p class="text-[#a3a3a3] text-xs sm:text-sm mt-1.5 leading-relaxed">
+                <strong class="text-white">Project Lead:</strong> Led ESP32 and IoT workshops for collegiate developers; engineered a local Home Assistant hub with DHT22, PIR motion sensors, relay channels, and MQTT broker integration.
               </p>
             </div>
 
-            <div class="p-3.5 rounded-lg border border-[#1e2022]/30 bg-[#fffefb]">
-              <div class="flex justify-between items-baseline font-bold text-[#1e2022] text-sm sm:text-base">
-                <span>Head Volunteer, RC Car Workshop with IEEE</span>
-                <span class="font-mono text-xs text-[#6b7280] bg-[#f3f4f6] px-2 py-0.5 rounded border border-[#d1d5db]">2024 – 2025</span>
+            <!-- Project 4 -->
+            <div class="p-4 rounded-xl border border-white/10 bg-white/[0.03] hover:border-[#991b1b]/50 transition-colors">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <span class="font-editorial font-bold text-white text-sm sm:text-base">Head Volunteer — RC Car Workshop with IEEE</span>
+                <span class="font-mono text-xs text-white bg-white/5 px-2.5 py-0.5 rounded border border-white/10 self-start sm:self-auto">2024 – 2025</span>
               </div>
-              <p class="text-[#4b5563] text-xs sm:text-sm mt-1 leading-relaxed">
-                Led the volunteer team that organized and ran the workshop with IEEE Student Branch and ComedKares.
+              <p class="text-[#a3a3a3] text-xs sm:text-sm mt-1.5 leading-relaxed">
+                Led the student volunteer committee in organizing hands-on robotics sessions in partnership with IEEE Student Branch PACE and ComedKares.
               </p>
             </div>
 
           </div>
         </section>
 
-        <!-- Institutional Roles & Publications -->
-        <section class="mb-8">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="w-2.5 h-2.5 bg-[#7c3aed] rounded-full border border-[#1e2022]"></span>
-            <h2 class="font-display text-sm sm:text-base text-[#2563eb] uppercase font-bold tracking-wider">
-              Institutional Roles &amp; Publications
+        <!-- Institutional Roles & Leadership -->
+        <section class="mb-10">
+          <div class="flex items-center gap-2.5 mb-4">
+            <span class="w-2 h-2 bg-[#dc2626] rounded-full shadow-[0_0_8px_#ef4444]"></span>
+            <h2 class="font-editorial text-xs sm:text-sm text-[#ef4444] uppercase font-bold tracking-widest">
+              Institutional Leadership &amp; Editorial Roles
             </h2>
           </div>
-          <div class="p-4 rounded-lg border-2 border-[#1e2022] bg-[#fffefb]">
-            <ul class="list-disc list-inside space-y-2 text-[#374151] text-xs sm:text-sm font-body">
-              <li><strong>Chair</strong>, IEEE Geoscience and Remote Sensing Society (GRSS) &amp; Signal Processing Society (SPS) Student Chapter (1st/2nd yr to 3rd yr)</li>
-              <li><strong>Executive Committee (Execom) Member</strong>, IEEE Student Branch @ PACE</li>
-              <li><strong>Editorial Committee Member</strong>, Book of Abstracts — 2025 IEEE International Conference on Distributed Computing, VLSI, Electrical Circuits and Robotics (IEEE DISCOVER 2025)</li>
-              <li><strong>Member</strong>, GLUB (GNU/Linux Users' Branch) @ PACE</li>
-              <li><strong>Member</strong>, EMBED Club (Embedded Systems &amp; IoT) @ PACE</li>
+          <div class="p-5 rounded-xl border border-white/10 bg-white/[0.03]">
+            <ul class="space-y-2.5 text-xs sm:text-sm text-[#d4d4d4]">
+              <li class="flex items-start gap-2">
+                <span class="text-[#ef4444] mt-0.5 font-bold">▸</span>
+                <span><strong class="text-white">Chair:</strong> IEEE Geoscience and Remote Sensing Society (GRSS) &amp; Signal Processing Society (SPS) Student Chapter @ PACE (2023 – Present).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#ef4444] mt-0.5 font-bold">▸</span>
+                <span><strong class="text-white">Executive Committee (Execom) Member:</strong> IEEE Student Branch @ PACE.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#ef4444] mt-0.5 font-bold">▸</span>
+                <span><strong class="text-white">Editorial Committee Member:</strong> Book of Abstracts — 2025 IEEE International Conference on Distributed Computing, VLSI, Electrical Circuits and Robotics (IEEE DISCOVER 2025).</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#ef4444] mt-0.5 font-bold">▸</span>
+                <span><strong class="text-white">Core Member:</strong> GLUB (GNU/Linux Users' Branch) &amp; EMBED Club (Embedded Systems &amp; IoT) @ PACE.</span>
+              </li>
             </ul>
           </div>
         </section>
 
         <!-- Technical Skills & Certifications -->
-        <section class="border-t-2 border-[#1e2022] pt-6">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="w-2.5 h-2.5 bg-[#e11d48] rounded-full border border-[#1e2022]"></span>
-            <h2 class="font-display text-sm sm:text-base text-[#2563eb] uppercase font-bold tracking-wider">
+        <section class="border-t border-white/10 pt-8 mb-8">
+          <div class="flex items-center gap-2.5 mb-4">
+            <span class="w-2 h-2 bg-[#dc2626] rounded-full shadow-[0_0_8px_#ef4444]"></span>
+            <h2 class="font-editorial text-xs sm:text-sm text-[#ef4444] uppercase font-bold tracking-widest">
               Technical Skills &amp; Certifications
             </h2>
           </div>
-          <div class="space-y-2 text-xs sm:text-sm text-[#374151]">
-            <p><strong class="text-[#1e2022]">Languages:</strong> Python, Java, C++, C, Lua, JavaScript, HTML/CSS, SQL</p>
-            <p><strong class="text-[#1e2022]">Tools &amp; Systems:</strong> Git, GitHub, VS Code, Node.js, Arduino IDE, Linux, Home Assistant, PlatformIO</p>
-            <p><strong class="text-[#1e2022]">Certifications:</strong> CS50x (Harvard University), AI Tools Workshop (BE10X), RC Car Workshop (ComedKares)</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
+            <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10">
+              <span class="text-[#ef4444] font-mono font-bold block mb-1 uppercase text-xs">Core Programming</span>
+              <p class="text-[#d4d4d4]">Python, Java, C++, C, Lua, JavaScript, HTML5/CSS, SQL</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10">
+              <span class="text-[#ef4444] font-mono font-bold block mb-1 uppercase text-xs">Systems &amp; Hardware</span>
+              <p class="text-[#d4d4d4]">Linux / Bash, Git, ESP32, Raspberry Pi, Arduino, FreeRTOS, PlatformIO, Home Assistant</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10 md:col-span-2">
+              <span class="text-[#ef4444] font-mono font-bold block mb-1 uppercase text-xs">Accredited Certifications</span>
+              <p class="text-[#d4d4d4]">Harvard CS50x Certificate (Harvard University) • AI Tools Engineering (BE10X) • RC Robotics &amp; Hardware Workshop (ComedKares)</p>
+            </div>
           </div>
         </section>
 
-        <!-- Signature / Place footer -->
-        <div class="border-t border-[#1e2022]/30 pt-6 mt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs font-mono text-[#6b7280]">
-          <div>Official Verified Dossier • Kasaragod, Kerala</div>
-          <div class="font-bold text-[#1e2022]">Farseen Ahras Raufali</div>
+        <!-- Signature & Verification Footer -->
+        <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs font-mono text-[#a3a3a3]">
+          <div>Official Verified Dossier • Kasaragod, Kerala, India</div>
+          <div class="flex items-center gap-2">
+            <span>Verified Candidate:</span>
+            <span class="font-hand text-2xl text-white font-bold">Farseen</span>
+          </div>
         </div>
 
       </article>
 
       <!-- VIEW 2: OFFICIAL PDF DOCUMENT EMBED -->
       <section id="pdfViewContainer" class="hidden">
-        <div class="wobbly-box bg-white p-3 sm:p-5 relative shadow-[6px_6px_0px_#1e2022] border-2 border-[#1e2022]">
+        <div class="editorial-document-card p-4 sm:p-6 relative">
           
-          <div class="washi-tape" aria-hidden="true"></div>
-
           <!-- PDF Controls Bar -->
-          <div class="flex flex-wrap items-center justify-between gap-3 p-3 bg-[#f8f5ee] border-2 border-[#1e2022] rounded-lg mb-4">
-            <div class="flex items-center gap-2 text-xs sm:text-sm font-mono font-bold text-[#1e2022]">
-              <span class="w-2.5 h-2.5 rounded-full bg-[#059669]"></span>
+          <div class="flex flex-wrap items-center justify-between gap-3 p-3 bg-white/5 border border-white/10 rounded-xl mb-4">
+            <div class="flex items-center gap-2 text-xs sm:text-sm font-mono text-white">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#ef4444] animate-pulse"></span>
               <span>Document: Farseen_Ahras_Resume.pdf (75 KB)</span>
             </div>
             <div class="flex items-center gap-2">
-              <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-stamp-primary text-xs py-1.5 px-3 flex items-center gap-1.5 font-bold">
+              <a href="Farseen_Ahras_Resume.pdf" download="Farseen_Ahras_Resume.pdf" class="btn-crimson text-xs py-1.5 px-3 rounded-md flex items-center gap-1.5 font-bold">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                 <span>Download PDF</span>
               </a>
-              <a href="Farseen_Ahras_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-stamp-secondary text-xs py-1.5 px-3 flex items-center gap-1 font-bold">
+              <a href="Farseen_Ahras_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-ghost-dark text-xs py-1.5 px-3 rounded-md flex items-center gap-1 font-bold">
                 <span>Open in Tab ↗</span>
               </a>
             </div>
           </div>
 
           <!-- Embedded PDF Frame -->
-          <div class="w-full bg-[#e5e7eb] rounded-lg overflow-hidden border-2 border-[#1e2022]" style="height: 82vh; min-height: 550px;">
+          <div class="w-full bg-[#090909] rounded-xl overflow-hidden border border-white/10" style="height: 82vh; min-height: 550px;">
             <iframe src="Farseen_Ahras_Resume.pdf#view=FitH" class="w-full h-full" title="Official Farseen Ahras Resume PDF"></iframe>
           </div>
 
@@ -362,18 +389,18 @@
       </section>
 
       <!-- Bottom Quick Navigation (Non-Print) -->
-      <div class="no-print mt-8 flex flex-wrap items-center justify-between gap-4">
-        <a href="index.html" class="btn-stamp-primary text-sm font-bold px-5 py-2.5 flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      <div class="no-print mt-10 flex flex-wrap items-center justify-between gap-4">
+        <a href="index.html" class="btn-ghost-dark text-xs sm:text-sm font-bold px-5 py-3 rounded-lg flex items-center gap-2">
+          <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
           <span>Return to Interactive Portfolio</span>
         </a>
 
-        <div class="flex items-center gap-2">
-          <a href="biodata.html" class="btn-stamp-secondary text-sm font-bold px-4 py-2.5 flex items-center gap-2" title="View Official Biodata Sheet">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+        <div class="flex items-center gap-3">
+          <a href="biodata.html" class="btn-ghost-dark text-xs sm:text-sm font-bold px-4 py-3 rounded-lg flex items-center gap-2" title="View Official Biodata Sheet">
+            <svg class="w-4 h-4 text-[#ef4444]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
             <span>View Biodata Page</span>
           </a>
-          <button onclick="window.print()" class="btn-stamp-secondary text-sm font-bold px-4 py-2.5 flex items-center gap-2">
+          <button onclick="window.print()" class="btn-crimson text-xs sm:text-sm font-bold px-4 py-3 rounded-lg flex items-center gap-2">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
             <span>Print Sheet</span>
           </button>
@@ -383,20 +410,20 @@
     </div>
   </main>
 
-  <!-- Footer (Paper Stamp Credits) -->
-  <footer class="no-print border-t-2 border-[#1e2022] bg-[#faf7f2] py-8 text-center text-xs font-mono text-[#6b7280]">
+  <!-- Footer -->
+  <footer class="no-print border-t border-white/10 bg-[#090909] py-8 text-center text-xs font-mono text-[#a3a3a3]">
     <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
       <div>
-        © 2026 <strong class="text-[#1e2022]">Farseen Ahras Raufali</strong> • All Rights Reserved.
+        © 2026 <strong class="text-white">Farseen Ahras Raufali</strong> • All Rights Reserved.
       </div>
       <div class="flex items-center gap-4">
-        <a href="index.html" class="hover:text-[#2563eb] underline font-bold">Main Portfolio</a>
+        <a href="index.html" class="hover:text-white transition-colors underline">Main Portfolio</a>
         <span>•</span>
-        <a href="biodata.html" class="hover:text-[#2563eb] underline font-bold">Biodata</a>
+        <a href="biodata.html" class="hover:text-white transition-colors underline">Biodata</a>
         <span>•</span>
-        <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="hover:text-[#2563eb] underline font-bold">GitHub</a>
+        <a href="https://github.com/Farseen-Ahras" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors underline">GitHub</a>
         <span>•</span>
-        <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="hover:text-[#2563eb] underline font-bold">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/farseen-ahras/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors underline">LinkedIn</a>
       </div>
     </div>
   </footer>
@@ -412,20 +439,20 @@
         textContainer.classList.add('hidden');
         pdfContainer.classList.remove('hidden');
 
-        tabPdfBtn.classList.add('bg-[#fef08a]', 'text-[#1e2022]', 'border-[#1e2022]', 'shadow-[2px_2px_0px_#1e2022]');
-        tabPdfBtn.classList.remove('bg-white', 'text-[#4b5563]', 'border-transparent');
+        tabPdfBtn.classList.add('bg-[#991b1b]', 'text-white', 'shadow-[0_2px_12px_rgba(153,27,27,0.4)]');
+        tabPdfBtn.classList.remove('text-[#a3a3a3]');
 
-        tabTextBtn.classList.remove('bg-[#fef08a]', 'text-[#1e2022]', 'border-[#1e2022]', 'shadow-[2px_2px_0px_#1e2022]');
-        tabTextBtn.classList.add('bg-white', 'text-[#4b5563]', 'border-transparent');
+        tabTextBtn.classList.remove('bg-[#991b1b]', 'text-white', 'shadow-[0_2px_12px_rgba(153,27,27,0.4)]');
+        tabTextBtn.classList.add('text-[#a3a3a3]');
       } else {
         pdfContainer.classList.add('hidden');
         textContainer.classList.remove('hidden');
 
-        tabTextBtn.classList.add('bg-[#fef08a]', 'text-[#1e2022]', 'border-[#1e2022]', 'shadow-[2px_2px_0px_#1e2022]');
-        tabTextBtn.classList.remove('bg-white', 'text-[#4b5563]', 'border-transparent');
+        tabTextBtn.classList.add('bg-[#991b1b]', 'text-white', 'shadow-[0_2px_12px_rgba(153,27,27,0.4)]');
+        tabTextBtn.classList.remove('text-[#a3a3a3]');
 
-        tabPdfBtn.classList.remove('bg-[#fef08a]', 'text-[#1e2022]', 'border-[#1e2022]', 'shadow-[2px_2px_0px_#1e2022]');
-        tabPdfBtn.classList.add('bg-white', 'text-[#4b5563]', 'border-transparent');
+        tabPdfBtn.classList.remove('bg-[#991b1b]', 'text-white', 'shadow-[0_2px_12px_rgba(153,27,27,0.4)]');
+        tabPdfBtn.classList.add('text-[#a3a3a3]');
       }
     }
   </script>
