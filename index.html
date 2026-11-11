@@ -160,19 +160,28 @@
       </span>
     </div>
 
-    <!-- MIDDLE LAYER (z-10): Central Portrait Halo & Silhouette Graphic -->
-    <div id="heroPortrait" class="absolute z-10 inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
-      <div class="relative w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] lg:w-[580px] lg:h-[580px] rounded-full flex items-center justify-center">
-        <!-- Radial crimson spotlight aura -->
-        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#991b1b]/30 via-transparent to-[#dc2626]/20 filter blur-3xl"></div>
+    <!-- MIDDLE LAYER (z-10): Central Cutout Portrait with Transparent Background Overlapping "PORTFOLIO" -->
+    <div id="heroPortrait" class="absolute z-10 inset-0 flex items-end justify-center pointer-events-none select-none pb-0 overflow-hidden" aria-hidden="true">
+      <div class="relative flex items-end justify-center h-full max-h-[88vh] w-full max-w-5xl">
+        <!-- Radial Crimson Ambient Aura behind Portrait -->
+        <div class="absolute bottom-6 w-[320px] sm:w-[480px] lg:w-[620px] h-[320px] sm:h-[480px] lg:h-[580px] rounded-full bg-gradient-to-t from-[#991b1b]/40 via-[#ef4444]/15 to-transparent filter blur-[100px] opacity-70"></div>
         
-        <!-- Architectural framing rings -->
-        <div class="absolute inset-8 rounded-full border border-white/5 border-dashed"></div>
-        <div class="absolute inset-16 rounded-full border border-[#991b1b]/20"></div>
+        <!-- Subtle Architectural Coordinate Grid Line behind Portrait -->
+        <div class="absolute bottom-12 w-full max-w-xl h-px bg-gradient-to-r from-transparent via-[#991b1b]/50 to-transparent"></div>
+        <div class="absolute bottom-16 text-[10px] font-mono tracking-widest text-[#737373]/60 uppercase hidden sm:block">
+          FA // SYSTEM ARCHITECT // LAT 12.8702° N
+        </div>
 
-        <!-- Portrait Image (Integrated from assets with graceful editorial fallback) -->
-        <div class="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-[#991b1b] shadow-[0_0_40px_rgba(153,27,27,0.35)] opacity-85">
-          <img src="assets/profile.jpg" alt="Farseen Ahras" class="w-full h-full object-cover filter contrast-125 brightness-95" onerror="this.src='data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\' fill=\'%23111111\'><circle cx=\'50\' cy=\'40\' r=\'22\' fill=\'%23262626\'/><path d=\'M15 95 C 15 70, 85 70, 85 95 Z\' fill=\'%231f1f1f\'/></svg>'">
+        <!-- Transparent Cutout Portrait of Farseen Ahras -->
+        <div class="relative z-10 flex items-end justify-center h-full max-h-[75vh] lg:max-h-[82vh]">
+          <img 
+            src="assets/profile.png" 
+            srcset="assets/profile.png 1x, assets/profile@2x.png 2x" 
+            alt="Farseen Ahras — Full-Stack &amp; Embedded Systems Engineer" 
+            class="hero-portrait-cutout h-full max-h-[58vh] sm:max-h-[68vh] lg:max-h-[78vh] w-auto object-contain object-bottom filter contrast-110 brightness-105 drop-shadow-[0_20px_40px_rgba(0,0,0,0.95)] drop-shadow-[0_0_30px_rgba(153,27,27,0.3)]"
+            loading="eager"
+            onerror="this.src='assets/profile.jpg'"
+          >
         </div>
       </div>
     </div>
@@ -182,7 +191,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
         <!-- Left Side: Editorial Typography & Call To Action -->
-        <div class="lg:col-span-8 flex flex-col items-start text-left">
+        <div class="lg:col-span-7 flex flex-col items-start text-left">
           
           <!-- Handwritten Greeting -->
           <div class="flex items-center gap-2 mb-2">
@@ -227,7 +236,7 @@
         </div>
 
         <!-- Right Side: Vertical Stack of Stats Cards with Giant Red Numbers -->
-        <div class="lg:col-span-4 flex flex-col gap-3.5 w-full lg:max-w-xs ml-auto">
+        <div class="lg:col-span-5 flex flex-col gap-3.5 w-full lg:max-w-xs ml-auto">
           
           <!-- Stat 1: 8.81 CGPA -->
           <div class="hero-stat-item p-4 rounded-xl bg-[#111111]/80 border border-white/10 backdrop-blur-sm hover:border-[#dc2626] transition-colors">
